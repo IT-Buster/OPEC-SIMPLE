@@ -237,5 +237,29 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "ed8026417287c70c",
+        "type": "modbus-write",
+        "z": "1e78c2098878e540",
+        "name": "Pos-SET",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "4",
+        "quantity": "1",
+        "server": "2a13aec920287264",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 600,
+        "y": 520,
+        "wires": [
+            [],
+            []
+        ]
     }
 ]

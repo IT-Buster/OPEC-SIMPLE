@@ -42,7 +42,7 @@
         "type": "modbus-getter",
         "z": "1e78c2098878e540",
         "name": "SIMPLE-PLC",
-        "showStatusActivities": true,
+        "showStatusActivities": false,
         "showErrors": true,
         "showWarnings": true,
         "logIOActivities": false,

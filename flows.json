@@ -38,12 +38,12 @@
         "showLogs": true
     },
     {
-        "id": "0cbbefa2d97bcb09",
+        "id": "b2627ed9b87f3e29",
         "type": "modbus-getter",
         "z": "1e78c2098878e540",
         "name": "SIMPLE-PLC",
-        "showStatusActivities": false,
-        "showErrors": false,
+        "showStatusActivities": true,
+        "showErrors": true,
         "showWarnings": true,
         "logIOActivities": false,
         "unitid": "2",
@@ -58,11 +58,67 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 410,
-        "y": 280,
+        "x": 530,
+        "y": 200,
         "wires": [
-            [],
-            []
+            [
+                "22872504a233f9fe"
+            ],
+            [
+                "c9f79cb93cee558a"
+            ]
         ]
+    },
+    {
+        "id": "3838d094c68b467f",
+        "type": "configurable interval",
+        "z": "1e78c2098878e540",
+        "name": "configurable interval",
+        "interval": 10,
+        "onstart": false,
+        "do_enable": true,
+        "msg": "ping",
+        "showstatus": true,
+        "unit": "seconds",
+        "statusformat": "YYYY-MM-D HH:mm:ss",
+        "x": 260,
+        "y": 200,
+        "wires": [
+            [
+                "b2627ed9b87f3e29"
+            ]
+        ]
+    },
+    {
+        "id": "22872504a233f9fe",
+        "type": "debug",
+        "z": "1e78c2098878e540",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "c9f79cb93cee558a",
+        "type": "debug",
+        "z": "1e78c2098878e540",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 380,
+        "wires": []
     }
 ]

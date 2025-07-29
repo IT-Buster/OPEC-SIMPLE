@@ -41,7 +41,7 @@
         "id": "b2627ed9b87f3e29",
         "type": "modbus-getter",
         "z": "1e78c2098878e540",
-        "name": "SIMPLE-PLC",
+        "name": "SIMPLE-PLC-MAIN-REGISTER",
         "showStatusActivities": false,
         "showErrors": true,
         "showWarnings": false,
@@ -58,7 +58,7 @@
         "keepMsgProperties": true,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 450,
+        "x": 510,
         "y": 200,
         "wires": [
             [],

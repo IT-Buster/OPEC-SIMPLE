@@ -140,11 +140,11 @@
         "id": "c6536cc019278032",
         "type": "display property",
         "z": "1e78c2098878e540",
-        "name": "",
+        "name": "Temp CO",
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 1020,
+        "x": 1000,
         "y": 60,
         "wires": [
             []
@@ -214,11 +214,11 @@
         "id": "6c19f631b87e5dc5",
         "type": "display property",
         "z": "1e78c2098878e540",
-        "name": "",
+        "name": "Pozycja",
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 1020,
+        "x": 1000,
         "y": 220,
         "wires": [
             []
@@ -228,11 +228,11 @@
         "id": "859bfc1c669b4854",
         "type": "display property",
         "z": "1e78c2098878e540",
-        "name": "",
+        "name": "Temp ZEW",
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 1020,
+        "x": 1010,
         "y": 140,
         "wires": [
             []

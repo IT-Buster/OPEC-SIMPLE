@@ -297,7 +297,7 @@
         "id": "243b35468db52ac4",
         "type": "debug",
         "z": "1e78c2098878e540",
-        "name": "debug 1",
+        "name": "debug poz",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -306,7 +306,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
+        "x": 890,
         "y": 640,
         "wires": []
     }

@@ -58,6 +58,22 @@
         "className": ""
     },
     {
+        "id": "b9294cc7665a6f87",
+        "type": "ui_tab",
+        "name": "Tab 1",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b6f19b7ee6bab273",
+        "type": "ui_tab",
+        "name": "Tab 2",
+        "icon": "dashboard",
+        "order": 2
+    },
+    {
         "id": "b2627ed9b87f3e29",
         "type": "modbus-getter",
         "z": "1e78c2098878e540",

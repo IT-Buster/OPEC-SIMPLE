@@ -156,9 +156,9 @@
         "type": "display property",
         "z": "1e78c2098878e540",
         "name": "",
-        "property": "msg.topic",
+        "property": "msg.payload",
         "showDate": 0,
-        "showTime": 0,
+        "showTime": true,
         "x": 1080,
         "y": 280,
         "wires": [

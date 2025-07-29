@@ -58,8 +58,8 @@
         "keepMsgProperties": true,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 510,
-        "y": 200,
+        "x": 470,
+        "y": 140,
         "wires": [
             [],
             [
@@ -101,8 +101,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 400,
+        "x": 600,
+        "y": 500,
         "wires": []
     },
     {
@@ -142,8 +142,8 @@
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 900,
-        "y": 240,
+        "x": 1020,
+        "y": 300,
         "wires": [
             []
         ]
@@ -160,8 +160,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 700,
-        "y": 100,
+        "x": 760,
+        "y": 280,
         "wires": [
             [
                 "c6536cc019278032"

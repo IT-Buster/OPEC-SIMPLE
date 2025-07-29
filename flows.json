@@ -55,7 +55,7 @@
         "ioFile": "",
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
-        "keepMsgProperties": false,
+        "keepMsgProperties": true,
         "delayOnStart": false,
         "startDelayTime": "",
         "x": 630,
@@ -120,5 +120,34 @@
         "x": 1060,
         "y": 400,
         "wires": []
+    },
+    {
+        "id": "d57c08874870f0b3",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 120,
+        "wires": [
+            [
+                "b2627ed9b87f3e29"
+            ]
+        ]
     }
 ]

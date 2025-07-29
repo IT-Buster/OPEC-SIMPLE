@@ -42,7 +42,7 @@
         "type": "modbus-getter",
         "z": "1e78c2098878e540",
         "name": "SIMPLE-PLC-MAIN-REGISTER",
-        "showStatusActivities": false,
+        "showStatusActivities": true,
         "showErrors": true,
         "showWarnings": false,
         "logIOActivities": false,

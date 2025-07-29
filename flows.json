@@ -64,7 +64,9 @@
             [],
             [
                 "c9f79cb93cee558a",
-                "2c8e29558bef67fc"
+                "2c8e29558bef67fc",
+                "af5c63dab0f87aba",
+                "54eedb2aa9a6fc18"
             ]
         ]
     },
@@ -143,7 +145,7 @@
         "showDate": 0,
         "showTime": true,
         "x": 1020,
-        "y": 300,
+        "y": 280,
         "wires": [
             []
         ]
@@ -152,7 +154,7 @@
         "id": "2c8e29558bef67fc",
         "type": "function",
         "z": "1e78c2098878e540",
-        "name": "function 1",
+        "name": "TempCO-extract",
         "func": "msg.payload = msg.payload.data[5] / 10;\nmsg.topic = \"TempCO\";\nmsg.timestamp = new Date().toString();\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -160,12 +162,80 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
+        "x": 780,
         "y": 280,
         "wires": [
             [
                 "c6536cc019278032"
             ]
+        ]
+    },
+    {
+        "id": "af5c63dab0f87aba",
+        "type": "function",
+        "z": "1e78c2098878e540",
+        "name": "Pozycja-extract",
+        "func": "msg.volt = msg.payload.data[0];\nmsg.payload = msg.payload.data[0] / 1000;\nmsg.topic = \"Pozycja\";\nmsg.timestamp = new Date().toString();\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 200,
+        "wires": [
+            [
+                "6c19f631b87e5dc5"
+            ]
+        ]
+    },
+    {
+        "id": "54eedb2aa9a6fc18",
+        "type": "function",
+        "z": "1e78c2098878e540",
+        "name": "TempZEW-extract",
+        "func": "msg.payload = msg.payload.data[4] / 10;\nmsg.topic = \"TempZEW\";\nmsg.timestamp = new Date().toString();\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 120,
+        "wires": [
+            [
+                "859bfc1c669b4854"
+            ]
+        ]
+    },
+    {
+        "id": "6c19f631b87e5dc5",
+        "type": "display property",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "property": "msg.payload",
+        "showDate": 0,
+        "showTime": true,
+        "x": 1020,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "859bfc1c669b4854",
+        "type": "display property",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "property": "msg.payload",
+        "showDate": 0,
+        "showTime": true,
+        "x": 1020,
+        "y": 120,
+        "wires": [
+            []
         ]
     }
 ]

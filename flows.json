@@ -58,12 +58,10 @@
         "keepMsgProperties": true,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 630,
+        "x": 450,
         "y": 200,
         "wires": [
-            [
-                "22872504a233f9fe"
-            ],
+            [],
             [
                 "c9f79cb93cee558a",
                 "2c8e29558bef67fc"
@@ -82,28 +80,11 @@
         "showstatus": true,
         "unit": "seconds",
         "statusformat": "YYYY-MM-D HH:mm:ss",
-        "x": 260,
-        "y": 200,
+        "x": 140,
+        "y": 220,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "22872504a233f9fe",
-        "type": "debug",
-        "z": "1e78c2098878e540",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1000,
-        "y": 80,
-        "wires": []
     },
     {
         "id": "c9f79cb93cee558a",
@@ -118,7 +99,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1060,
+        "x": 680,
         "y": 400,
         "wires": []
     },
@@ -143,8 +124,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 260,
-        "y": 120,
+        "x": 120,
+        "y": 80,
         "wires": [
             [
                 "b2627ed9b87f3e29"
@@ -159,8 +140,8 @@
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 1080,
-        "y": 280,
+        "x": 860,
+        "y": 220,
         "wires": [
             []
         ]
@@ -177,8 +158,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 880,
-        "y": 200,
+        "x": 680,
+        "y": 180,
         "wires": [
             [
                 "c6536cc019278032"

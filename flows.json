@@ -65,7 +65,8 @@
                 "22872504a233f9fe"
             ],
             [
-                "c9f79cb93cee558a"
+                "c9f79cb93cee558a",
+                "2c8e29558bef67fc"
             ]
         ]
     },
@@ -147,6 +148,40 @@
         "wires": [
             [
                 "b2627ed9b87f3e29"
+            ]
+        ]
+    },
+    {
+        "id": "c6536cc019278032",
+        "type": "display property",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "property": "msg.topic",
+        "showDate": 0,
+        "showTime": 0,
+        "x": 1080,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2c8e29558bef67fc",
+        "type": "function",
+        "z": "1e78c2098878e540",
+        "name": "function 1",
+        "func": "msg.payload = msg.payload.data[5] / 10;\nmsg.topic = \"TempCO\";\nmsg.timestamp = new Date().toString();\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 200,
+        "wires": [
+            [
+                "c6536cc019278032"
             ]
         ]
     }

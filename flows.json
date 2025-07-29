@@ -140,8 +140,8 @@
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 860,
-        "y": 220,
+        "x": 900,
+        "y": 240,
         "wires": [
             []
         ]

@@ -283,7 +283,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "5000",
+        "payload": "1000",
         "payloadType": "num",
         "x": 170,
         "y": 520,

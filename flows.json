@@ -195,7 +195,7 @@
         "logIOActivities": false,
         "showErrors": true,
         "showWarnings": false,
-        "unitid": "2",
+        "unitid": "1",
         "dataType": "HoldingRegister",
         "adr": "4",
         "quantity": "6",

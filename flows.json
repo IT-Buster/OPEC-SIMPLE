@@ -58,8 +58,8 @@
         "keepMsgProperties": true,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 470,
-        "y": 140,
+        "x": 450,
+        "y": 180,
         "wires": [
             [],
             [
@@ -83,7 +83,7 @@
         "unit": "seconds",
         "statusformat": "YYYY-MM-D HH:mm:ss",
         "x": 140,
-        "y": 220,
+        "y": 300,
         "wires": [
             [
                 "b2627ed9b87f3e29"
@@ -128,8 +128,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 120,
-        "y": 80,
+        "x": 140,
+        "y": 60,
         "wires": [
             [
                 "b2627ed9b87f3e29"

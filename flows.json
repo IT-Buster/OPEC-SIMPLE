@@ -184,5 +184,54 @@
                 "c6536cc019278032"
             ]
         ]
+    },
+    {
+        "id": "2f47cdbb7d1c09ca",
+        "type": "modbus-read",
+        "z": "1e78c2098878e540",
+        "name": "TestMODBUS",
+        "topic": "simpleall",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "",
+        "adr": "4",
+        "quantity": "6",
+        "rate": "5",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "2a13aec920287264",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 270,
+        "y": 420,
+        "wires": [
+            [],
+            [
+                "9244487b4b9a91cf"
+            ]
+        ]
+    },
+    {
+        "id": "9244487b4b9a91cf",
+        "type": "debug",
+        "z": "1e78c2098878e540",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 460,
+        "wires": []
     }
 ]

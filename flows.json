@@ -78,7 +78,7 @@
         "keepMsgProperties": true,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 270,
+        "x": 190,
         "y": 180,
         "wires": [
             [],
@@ -123,8 +123,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 320,
+        "x": 440,
+        "y": 260,
         "wires": []
     },
     {
@@ -164,8 +164,8 @@
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 840,
-        "y": 60,
+        "x": 700,
+        "y": 80,
         "wires": [
             [
                 "5e0acc103c67a156"
@@ -184,8 +184,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 60,
+        "x": 460,
+        "y": 80,
         "wires": [
             [
                 "c6536cc019278032"
@@ -204,8 +204,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 220,
+        "x": 460,
+        "y": 200,
         "wires": [
             [
                 "6c19f631b87e5dc5"
@@ -224,7 +224,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
+        "x": 470,
         "y": 140,
         "wires": [
             [
@@ -240,8 +240,8 @@
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 840,
-        "y": 220,
+        "x": 700,
+        "y": 200,
         "wires": [
             []
         ]
@@ -254,7 +254,7 @@
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 850,
+        "x": 710,
         "y": 140,
         "wires": [
             []
@@ -356,8 +356,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1050,
-        "y": 60,
+        "x": 870,
+        "y": 80,
         "wires": []
     }
 ]

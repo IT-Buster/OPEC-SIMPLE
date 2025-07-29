@@ -191,7 +191,7 @@
         "z": "1e78c2098878e540",
         "name": "TestMODBUS",
         "topic": "simpleall",
-        "showStatusActivities": false,
+        "showStatusActivities": true,
         "logIOActivities": false,
         "showErrors": false,
         "showWarnings": true,

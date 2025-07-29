@@ -38,6 +38,26 @@
         "showLogs": true
     },
     {
+        "id": "aa396a8b9bffcdde",
+        "type": "ui_group",
+        "name": "Main",
+        "tab": "",
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "557c76555cf781ce",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "b2627ed9b87f3e29",
         "type": "modbus-getter",
         "z": "1e78c2098878e540",
@@ -317,7 +337,7 @@
         "type": "ui_gauge",
         "z": "1e78c2098878e540",
         "name": "",
-        "group": "",
+        "group": "557c76555cf781ce",
         "order": 0,
         "width": 0,
         "height": 0,

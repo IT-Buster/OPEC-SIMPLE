@@ -491,7 +491,7 @@
         "id": "7a38821f5a60e33c",
         "type": "inject",
         "z": "1e78c2098878e540",
-        "name": "",
+        "name": "TempZew",
         "props": [
             {
                 "p": "payload"
@@ -508,7 +508,7 @@
         "topic": "TempZEW",
         "payload": "25",
         "payloadType": "str",
-        "x": 970,
+        "x": 980,
         "y": 40,
         "wires": [
             [

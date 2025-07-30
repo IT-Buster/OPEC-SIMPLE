@@ -452,15 +452,15 @@
         "name": "",
         "property": "payload",
         "fieldType": "msg",
-        "width": "400",
+        "width": "600",
         "height": 160,
         "points": "40",
         "active": true,
         "passthru": false,
         "hide": true,
         "outputs": 0,
-        "x": 850,
-        "y": 140,
+        "x": 290,
+        "y": 500,
         "wires": []
     }
 ]

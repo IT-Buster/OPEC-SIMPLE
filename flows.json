@@ -281,7 +281,8 @@
         "y": 80,
         "wires": [
             [
-                "5daf448cace14950"
+                "5daf448cace14950",
+                "c03008d7c7b1400a"
             ]
         ]
     },
@@ -464,8 +465,8 @@
         "passthru": false,
         "hide": true,
         "outputs": 0,
-        "x": 630,
-        "y": 460,
+        "x": 690,
+        "y": 360,
         "wires": []
     },
     {
@@ -515,5 +516,23 @@
                 "5daf448cace14950"
             ]
         ]
+    },
+    {
+        "id": "c03008d7c7b1400a",
+        "type": "data-view",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "property": "payload",
+        "fieldType": "msg",
+        "width": "600",
+        "height": 160,
+        "points": "40",
+        "active": true,
+        "passthru": false,
+        "hide": true,
+        "outputs": 0,
+        "x": 670,
+        "y": 640,
+        "wires": []
     }
 ]

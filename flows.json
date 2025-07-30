@@ -531,8 +531,8 @@
         "passthru": false,
         "hide": true,
         "outputs": 0,
-        "x": 670,
-        "y": 640,
+        "x": 690,
+        "y": 580,
         "wires": []
     }
 ]

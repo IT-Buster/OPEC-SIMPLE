@@ -462,5 +462,24 @@
         "x": 290,
         "y": 500,
         "wires": []
+    },
+    {
+        "id": "5daf448cace14950",
+        "type": "thingspeak42",
+        "z": "1e78c2098878e540",
+        "name": "OPEC",
+        "delay": "30",
+        "topic1": "TempZEW",
+        "topic2": "TempCO",
+        "topic3": "Pozycja",
+        "topic4": "Task100",
+        "topic5": "Task101",
+        "topic6": "Task118",
+        "topic7": "",
+        "topic8": "",
+        "endpoint": "https://thingspeak.com",
+        "x": 1250,
+        "y": 140,
+        "wires": []
     }
 ]

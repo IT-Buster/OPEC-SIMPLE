@@ -277,7 +277,7 @@
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 700,
+        "x": 660,
         "y": 80,
         "wires": [
             [
@@ -353,7 +353,7 @@
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 700,
+        "x": 660,
         "y": 200,
         "wires": [
             []
@@ -367,7 +367,7 @@
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 710,
+        "x": 670,
         "y": 140,
         "wires": [
             []
@@ -459,7 +459,7 @@
         "passthru": false,
         "hide": true,
         "outputs": 0,
-        "x": 1030,
+        "x": 890,
         "y": 80,
         "wires": []
     }

@@ -507,7 +507,7 @@
         "onceDelay": 0.1,
         "topic": "TempZEW",
         "payload": "25",
-        "payloadType": "num",
+        "payloadType": "str",
         "x": 970,
         "y": 40,
         "wires": [

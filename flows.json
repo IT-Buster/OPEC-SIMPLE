@@ -192,7 +192,7 @@
         "delayOnStart": false,
         "startDelayTime": "",
         "x": 190,
-        "y": 180,
+        "y": 140,
         "wires": [
             [],
             [
@@ -216,7 +216,7 @@
         "unit": "seconds",
         "statusformat": "YYYY-MM-D HH:mm:ss",
         "x": 140,
-        "y": 300,
+        "y": 260,
         "wires": [
             [
                 "b2627ed9b87f3e29"
@@ -237,7 +237,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 440,
-        "y": 260,
+        "y": 220,
         "wires": []
     },
     {
@@ -262,7 +262,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 60,
+        "y": 20,
         "wires": [
             [
                 "b2627ed9b87f3e29"
@@ -278,7 +278,7 @@
         "showDate": 0,
         "showTime": true,
         "x": 660,
-        "y": 80,
+        "y": 40,
         "wires": [
             [
                 "5daf448cace14950",
@@ -299,7 +299,7 @@
         "finalize": "",
         "libs": [],
         "x": 460,
-        "y": 80,
+        "y": 40,
         "wires": [
             [
                 "c6536cc019278032"
@@ -319,7 +319,7 @@
         "finalize": "",
         "libs": [],
         "x": 460,
-        "y": 200,
+        "y": 160,
         "wires": [
             [
                 "6c19f631b87e5dc5"
@@ -339,7 +339,7 @@
         "finalize": "",
         "libs": [],
         "x": 470,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "859bfc1c669b4854"
@@ -355,10 +355,11 @@
         "showDate": 0,
         "showTime": true,
         "x": 660,
-        "y": 200,
+        "y": 160,
         "wires": [
             [
-                "5daf448cace14950"
+                "5daf448cace14950",
+                "bd09d6777578e0a1"
             ]
         ]
     },
@@ -371,7 +372,7 @@
         "showDate": 0,
         "showTime": true,
         "x": 670,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "9d6f3c55beed1de2",
@@ -397,7 +398,7 @@
         "delayOnStart": false,
         "startDelayTime": "",
         "x": 260,
-        "y": 380,
+        "y": 340,
         "wires": [
             [],
             [
@@ -427,7 +428,7 @@
         "payload": "1000",
         "payloadType": "num",
         "x": 110,
-        "y": 380,
+        "y": 340,
         "wires": [
             [
                 "ed8026417287c70c"
@@ -448,7 +449,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 430,
-        "y": 400,
+        "y": 360,
         "wires": []
     },
     {
@@ -466,7 +467,7 @@
         "hide": true,
         "outputs": 0,
         "x": 690,
-        "y": 360,
+        "y": 220,
         "wires": []
     },
     {
@@ -485,7 +486,7 @@
         "topic8": "",
         "endpoint": "https://thingspeak.com",
         "x": 1250,
-        "y": 140,
+        "y": 100,
         "wires": []
     },
     {
@@ -510,7 +511,7 @@
         "payload": "25",
         "payloadType": "str",
         "x": 980,
-        "y": 40,
+        "y": 20,
         "wires": [
             [
                 "5daf448cace14950"
@@ -532,7 +533,25 @@
         "hide": true,
         "outputs": 0,
         "x": 690,
-        "y": 580,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "bd09d6777578e0a1",
+        "type": "data-view",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "property": "payload",
+        "fieldType": "msg",
+        "width": "600",
+        "height": 160,
+        "points": "40",
+        "active": true,
+        "passthru": false,
+        "hide": true,
+        "outputs": 0,
+        "x": 690,
+        "y": 660,
         "wires": []
     }
 ]

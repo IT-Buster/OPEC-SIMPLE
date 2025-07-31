@@ -614,8 +614,8 @@
         "y": 200,
         "wires": [
             [
-                "chart",
-                "debug"
+                "debug",
+                "9145add364ade1a9"
             ]
         ]
     },
@@ -663,39 +663,6 @@
         ]
     },
     {
-        "id": "chart",
-        "type": "ui_chart",
-        "z": "dd5ef55af08a4ccc",
-        "name": "Temp CO",
-        "group": "dashboard_group",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "Temperatura CO",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "15",
-        "ymax": "75",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "colors": [
-            "#ff0000"
-        ],
-        "outputs": 1,
-        "x": 700,
-        "y": 200,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "debug",
         "type": "debug",
         "z": "dd5ef55af08a4ccc",
@@ -706,8 +673,26 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 700,
-        "y": 250,
+        "x": 810,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "9145add364ade1a9",
+        "type": "data-view",
+        "z": "dd5ef55af08a4ccc",
+        "name": "",
+        "property": "payload",
+        "fieldType": "msg",
+        "width": 200,
+        "height": 160,
+        "points": 10,
+        "active": true,
+        "passthru": false,
+        "hide": true,
+        "outputs": 0,
+        "x": 870,
+        "y": 180,
         "wires": []
     }
 ]

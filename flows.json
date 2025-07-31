@@ -648,7 +648,7 @@
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
-        "initialize": "",
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\n// Code added here will be run once\n// whenever the node is started.\nlet zawor = flow.get(\"zawor_pozycja\")\n\n\nnode.status({\n    fill: \"blue\",\n    shape: \"ring\",\n    text: `Zawór: ${zawor}`\n});",
         "finalize": "",
         "libs": [],
         "x": 440,

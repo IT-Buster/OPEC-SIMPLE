@@ -618,7 +618,7 @@
         "id": "70eadfcba4c536ed",
         "type": "inject",
         "z": "6de31ff16789035c",
-        "name": "Ustaw zawór 5000",
+        "name": "Ustaw zawór 4000",
         "props": [
             {
                 "p": "payload"
@@ -629,10 +629,10 @@
         "once": false,
         "onceDelay": "",
         "topic": "",
-        "payload": "5000",
+        "payload": "4000",
         "payloadType": "num",
         "x": 150,
-        "y": 260,
+        "y": 340,
         "wires": [
             [
                 "59062f0b0ae01ac1"
@@ -694,7 +694,7 @@
         "payload": "0",
         "payloadType": "num",
         "x": 160,
-        "y": 380,
+        "y": 460,
         "wires": [
             [
                 "59062f0b0ae01ac1"
@@ -762,7 +762,7 @@
         "payload": "2000",
         "payloadType": "num",
         "x": 150,
-        "y": 300,
+        "y": 380,
         "wires": [
             [
                 "59062f0b0ae01ac1"
@@ -787,7 +787,7 @@
         "payload": "1000",
         "payloadType": "num",
         "x": 150,
-        "y": 340,
+        "y": 420,
         "wires": [
             [
                 "59062f0b0ae01ac1"
@@ -860,6 +860,52 @@
             [
                 "b510f327b47c6c1c"
             ]
+        ]
+    },
+    {
+        "id": "77507b6c42a02f35",
+        "type": "inject",
+        "z": "6de31ff16789035c",
+        "name": "Ustaw zawór 5000",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "5000",
+        "payloadType": "num",
+        "x": 150,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d8e13ad596364938",
+        "type": "inject",
+        "z": "6de31ff16789035c",
+        "name": "Ustaw zawór 6000",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "6000",
+        "payloadType": "num",
+        "x": 150,
+        "y": 260,
+        "wires": [
+            []
         ]
     }
 ]

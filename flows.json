@@ -775,10 +775,6 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
             }
         ],
         "repeat": "",
@@ -786,7 +782,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "10",
+        "payload": "10.5",
         "payloadType": "num",
         "x": 470,
         "y": 40,

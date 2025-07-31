@@ -8,12 +8,11 @@
         "env": []
     },
     {
-        "id": "dd5ef55af08a4ccc",
+        "id": "6de31ff16789035c",
         "type": "tab",
         "label": "Symulator",
         "disabled": false,
-        "info": "",
-        "env": []
+        "info": ""
     },
     {
         "id": "2a13aec920287264",
@@ -580,9 +579,9 @@
         "wires": []
     },
     {
-        "id": "inject_loop",
+        "id": "451c143bbd7fccc9",
         "type": "inject",
-        "z": "dd5ef55af08a4ccc",
+        "z": "6de31ff16789035c",
         "name": "Co 5 sek",
         "props": [],
         "repeat": "5",
@@ -595,16 +594,16 @@
         "y": 340,
         "wires": [
             [
-                "simulate_temp"
+                "2560ccc065e5b1fc"
             ]
         ]
     },
     {
-        "id": "simulate_temp",
+        "id": "2560ccc065e5b1fc",
         "type": "function",
-        "z": "dd5ef55af08a4ccc",
+        "z": "6de31ff16789035c",
         "name": "Symulacja temperatury CO",
-        "func": "// Aktualna temperatura\nlet temp = flow.get(\"sym_temp\") || 20.0;\n\n// Pozycja zaworu CO (0–100%)\nlet pos = flow.get(\"zawor_pozycja\") || 0; // można ustawić ręcznie lub z injecta\n\n// Przelicz tempo zmian (zakres od -0.05 do +0.3)\nlet heatingMaxRate = 0.3;    // maksymalny wzrost temp. przy 100%\nlet coolingRate = -0.05;     // spadek temp. przy 0%\n\nlet delta = coolingRate + (heatingMaxRate - coolingRate) * (pos / 100);\n\n// Inercja cieplna\nlet newTemp = temp + delta;\n\n// Ogranicz zakres\nif (newTemp > 70) newTemp = 70;\nif (newTemp < 15) newTemp = 15;\n\nflow.set(\"sym_temp\", newTemp);\n\nmsg.payload = {\n    temperatura: parseFloat(newTemp.toFixed(2)),\n    zawor: pos\n};\n\nreturn msg;",
+        "func": "// Aktualna temperatura\nlet temp = flow.get(\"sym_temp\") || 20.0;\n\n// Pozycja zaworu CO (0–100%)\nlet pos = flow.get(\"zawor_pozycja\") || 0;\n\n// Przelicz tempo zmian\nlet heatingMaxRate = 0.3;\nlet coolingRate = -0.05;\nlet delta = coolingRate + (heatingMaxRate - coolingRate) * (pos / 100);\n\nlet newTemp = temp + delta;\nif (newTemp > 70) newTemp = 70;\nif (newTemp < 15) newTemp = 15;\n\nflow.set(\"sym_temp\", newTemp);\n\nlet history = flow.get(\"sym_hist\") || [];\nhistory.push({\n    czas: new Date().toLocaleTimeString(),\n    temperatura: parseFloat(newTemp.toFixed(2)),\n    zawor: pos\n});\nif (history.length > 50) history.shift();\nflow.set(\"sym_hist\", history);\n\nmsg.payload = history;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -615,15 +614,15 @@
         "y": 340,
         "wires": [
             [
-                "debug",
-                "54c44ea581746bb3"
+                "aabff1b06eb75c20",
+                "a1d39d792e220805"
             ]
         ]
     },
     {
-        "id": "set_zawor",
+        "id": "70eadfcba4c536ed",
         "type": "inject",
-        "z": "dd5ef55af08a4ccc",
+        "z": "6de31ff16789035c",
         "name": "Ustaw zawór 75%",
         "props": [
             {
@@ -640,14 +639,14 @@
         "y": 540,
         "wires": [
             [
-                "set_zawor_func"
+                "59062f0b0ae01ac1"
             ]
         ]
     },
     {
-        "id": "set_zawor_func",
+        "id": "59062f0b0ae01ac1",
         "type": "function",
-        "z": "dd5ef55af08a4ccc",
+        "z": "6de31ff16789035c",
         "name": "Zapisz pozycję zaworu",
         "func": "flow.set(\"zawor_pozycja\", msg.payload);\nreturn msg;",
         "outputs": 1,
@@ -660,14 +659,14 @@
         "y": 540,
         "wires": [
             [
-                "debug"
+                "aabff1b06eb75c20"
             ]
         ]
     },
     {
-        "id": "debug",
+        "id": "aabff1b06eb75c20",
         "type": "debug",
-        "z": "dd5ef55af08a4ccc",
+        "z": "6de31ff16789035c",
         "name": "Debug",
         "active": false,
         "tosidebar": true,
@@ -682,9 +681,9 @@
         "wires": []
     },
     {
-        "id": "54c44ea581746bb3",
+        "id": "eaf7ec52e407afa0",
         "type": "debug",
-        "z": "dd5ef55af08a4ccc",
+        "z": "6de31ff16789035c",
         "name": "debug 1",
         "active": true,
         "tosidebar": true,
@@ -699,9 +698,9 @@
         "wires": []
     },
     {
-        "id": "4030f6be8a419182",
+        "id": "134fa4630f650662",
         "type": "inject",
-        "z": "dd5ef55af08a4ccc",
+        "z": "6de31ff16789035c",
         "name": "Ustaw zawór 0%",
         "props": [
             {
@@ -719,14 +718,14 @@
         "y": 580,
         "wires": [
             [
-                "set_zawor_func"
+                "59062f0b0ae01ac1"
             ]
         ]
     },
     {
-        "id": "513be020340b93b4",
+        "id": "0b8f6c1f46eb226d",
         "type": "inject",
-        "z": "dd5ef55af08a4ccc",
+        "z": "6de31ff16789035c",
         "name": "Ustaw zawór 100%",
         "props": [
             {
@@ -744,15 +743,15 @@
         "y": 500,
         "wires": [
             [
-                "set_zawor_func"
+                "59062f0b0ae01ac1"
             ]
         ]
     },
     {
-        "id": "433d0577147364a7",
+        "id": "a1d39d792e220805",
         "type": "data-view",
-        "z": "dd5ef55af08a4ccc",
-        "name": "",
+        "z": "6de31ff16789035c",
+        "name": "Tabela historii",
         "property": "payload",
         "fieldType": "msg",
         "width": 200,
@@ -760,7 +759,7 @@
         "points": 10,
         "active": true,
         "passthru": false,
-        "hide": true,
+        "hide": false,
         "outputs": 0,
         "x": 850,
         "y": 220,

@@ -852,7 +852,7 @@
         "topic": "",
         "payload": "6",
         "payloadType": "num",
-        "x": 230,
+        "x": 170,
         "y": 120,
         "wires": [
             [
@@ -867,6 +867,7 @@
         "name": "Sterowanie siłownikiem",
         "func": "// Zakładamy, że temperatura zewnętrzna w msg.payload\nlet tempOut = msg.payload;\nlet targetTemp;\nlet valvePosition;\nlet pumpState;\n\nif (tempOut >= 12) {\n    targetTemp = 0;\n    valvePosition = 0;\n    pumpState = \"OFF\";\n} else {\n    // Interpolacja liniowa według krzywej temperaturowej\n    if (tempOut <= 0) targetTemp = 50;\n    else if (tempOut >= 10) targetTemp = 42;\n    else {\n        // 0-5°C: 50–47°C\n        if (tempOut <= 5) {\n            targetTemp = 50 - ((tempOut / 5) * 3); // 50 do 47\n        } else {\n            // 5-10°C: 47–42°C\n            targetTemp = 47 - (((tempOut - 5) / 5) * 5); // 47 do 42\n        }\n    }\n\n    // Przelicz temperaturę CO na pozycję siłownika 0–10000\n    // Zakładamy: 0°C → 0, 60°C → 10000 (pełne otwarcie)\n    valvePosition = Math.round((targetTemp / 60) * 10000);\n    pumpState = \"ON\";\n}\n\n// Wyjście\nreturn [\n    { payload: valvePosition }, // Wyjście zaworu\n    { payload: pumpState },     // Wyjście pompy\n    { payload: targetTemp }     // Docelowa temperatura CO\n];",
         "outputs": 3,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",

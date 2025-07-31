@@ -618,7 +618,7 @@
         "id": "70eadfcba4c536ed",
         "type": "inject",
         "z": "6de31ff16789035c",
-        "name": "Ustaw zawór 2000",
+        "name": "Ustaw zawór 5000",
         "props": [
             {
                 "p": "payload"
@@ -629,7 +629,7 @@
         "once": false,
         "onceDelay": "",
         "topic": "",
-        "payload": "2000",
+        "payload": "5000",
         "payloadType": "num",
         "x": 150,
         "y": 260,

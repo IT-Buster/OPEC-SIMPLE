@@ -590,7 +590,7 @@
         "onceDelay": "1",
         "topic": "",
         "payloadType": "date",
-        "x": 150,
+        "x": 130,
         "y": 340,
         "wires": [
             [
@@ -636,7 +636,7 @@
         "payload": "75",
         "payloadType": "num",
         "x": 150,
-        "y": 540,
+        "y": 480,
         "wires": [
             [
                 "59062f0b0ae01ac1"
@@ -655,8 +655,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 540,
+        "x": 460,
+        "y": 480,
         "wires": [
             [
                 "aabff1b06eb75c20"
@@ -676,8 +676,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 850,
-        "y": 600,
+        "x": 690,
+        "y": 480,
         "wires": []
     },
     {
@@ -715,7 +715,7 @@
         "payload": "0",
         "payloadType": "num",
         "x": 140,
-        "y": 580,
+        "y": 520,
         "wires": [
             [
                 "59062f0b0ae01ac1"
@@ -740,7 +740,7 @@
         "payload": "100",
         "payloadType": "num",
         "x": 150,
-        "y": 500,
+        "y": 440,
         "wires": [
             [
                 "59062f0b0ae01ac1"
@@ -764,5 +764,19 @@
         "x": 850,
         "y": 220,
         "wires": []
+    },
+    {
+        "id": "dd644660f35030d2",
+        "type": "display property",
+        "z": "6de31ff16789035c",
+        "name": "",
+        "property": "msg.topic",
+        "showDate": 0,
+        "showTime": 0,
+        "x": 600,
+        "y": 140,
+        "wires": [
+            []
+        ]
     }
 ]

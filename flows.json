@@ -879,7 +879,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 110,
-        "y": 360,
+        "y": 320,
         "wires": [
             [
                 "b510f327b47c6c1c"
@@ -902,6 +902,31 @@
         "y": 360,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "f8f88274f40abeea",
+        "type": "inject",
+        "z": "6de31ff16789035c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 110,
+        "y": 380,
+        "wires": [
+            [
+                "b510f327b47c6c1c"
+            ]
         ]
     }
 ]

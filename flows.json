@@ -895,8 +895,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 750,
-        "y": 100,
+        "x": 1090,
+        "y": 60,
         "wires": []
     },
     {
@@ -910,8 +910,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 740,
-        "y": 140,
+        "x": 1080,
+        "y": 100,
         "wires": []
     },
     {
@@ -925,8 +925,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 760,
-        "y": 180,
+        "x": 1100,
+        "y": 140,
         "wires": []
     },
     {

@@ -618,7 +618,7 @@
         "id": "70eadfcba4c536ed",
         "type": "inject",
         "z": "6de31ff16789035c",
-        "name": "Ustaw zawór 75%",
+        "name": "Ustaw zawór 2000",
         "props": [
             {
                 "p": "payload"
@@ -629,7 +629,7 @@
         "once": false,
         "onceDelay": "",
         "topic": "",
-        "payload": "7500",
+        "payload": "2000",
         "payloadType": "num",
         "x": 150,
         "y": 260,
@@ -705,7 +705,7 @@
         "id": "0b8f6c1f46eb226d",
         "type": "inject",
         "z": "6de31ff16789035c",
-        "name": "Ustaw zawór 100%",
+        "name": "Ustaw zawór 10000",
         "props": [
             {
                 "p": "payload"
@@ -748,7 +748,7 @@
         "id": "513cb550c91c5d9b",
         "type": "inject",
         "z": "6de31ff16789035c",
-        "name": "Ustaw zawór 20%",
+        "name": "Ustaw zawór 2000",
         "props": [
             {
                 "p": "payload"
@@ -773,7 +773,7 @@
         "id": "beb4bd7500b0dde2",
         "type": "inject",
         "z": "6de31ff16789035c",
-        "name": "Ustaw zawór 10%",
+        "name": "Ustaw zawór 1000",
         "props": [
             {
                 "p": "payload"

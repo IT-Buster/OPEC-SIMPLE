@@ -752,7 +752,7 @@
         "name": "Tabela historii",
         "property": "payload",
         "fieldType": "msg",
-        "width": 200,
+        "width": "400",
         "height": 160,
         "points": "40",
         "active": true,

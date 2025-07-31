@@ -827,7 +827,7 @@
         "func": "let stan = flow.get(\"pompa_stan\");\n\n// Status na flow z dodatkowymi informacjami\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `Pompa: ${stan}`\n});\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
-        "noerr": 0,
+        "noerr": 1,
         "initialize": "// Code added here will be run once\n// whenever the node is started.\nlet pos = flow.get(\"zawor_pozycja\") || 0;\n\nnode.status({\n    fill: \"blue\",\n    shape: \"ring\",\n    text: `Pompa: ${poz}`\n});",
         "finalize": "",
         "libs": [],

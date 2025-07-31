@@ -828,7 +828,7 @@
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "",
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nnode.status({\n    fill: \"blue\",\n    shape: \"ring\",\n    text: `Pompa: Test`\n});",
         "finalize": "",
         "libs": [],
         "x": 400,

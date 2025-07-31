@@ -591,8 +591,8 @@
         "onceDelay": "1",
         "topic": "",
         "payloadType": "date",
-        "x": 250,
-        "y": 200,
+        "x": 230,
+        "y": 340,
         "wires": [
             [
                 "simulate_temp"
@@ -611,8 +611,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
-        "y": 200,
+        "x": 440,
+        "y": 340,
         "wires": [
             [
                 "debug",
@@ -636,8 +636,8 @@
         "onceDelay": "",
         "payload": "75",
         "payloadType": "num",
-        "x": 170,
-        "y": 320,
+        "x": 190,
+        "y": 540,
         "wires": [
             [
                 "set_zawor_func"
@@ -656,8 +656,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
-        "y": 300,
+        "x": 520,
+        "y": 540,
         "wires": [
             [
                 "debug"
@@ -733,8 +733,8 @@
         "topic": "",
         "payload": "0",
         "payloadType": "num",
-        "x": 160,
-        "y": 360,
+        "x": 180,
+        "y": 580,
         "wires": [
             [
                 "set_zawor_func"
@@ -758,8 +758,8 @@
         "topic": "",
         "payload": "100",
         "payloadType": "num",
-        "x": 170,
-        "y": 280,
+        "x": 190,
+        "y": 500,
         "wires": [
             [
                 "set_zawor_func"

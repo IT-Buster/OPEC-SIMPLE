@@ -766,5 +766,34 @@
                 "set_zawor_func"
             ]
         ]
+    },
+    {
+        "id": "01c19099aff69e74",
+        "type": "inject",
+        "z": "dd5ef55af08a4ccc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 470,
+        "y": 40,
+        "wires": [
+            [
+                "9145add364ade1a9"
+            ]
+        ]
     }
 ]

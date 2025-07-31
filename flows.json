@@ -632,7 +632,7 @@
         "topic": "",
         "payload": "7500",
         "payloadType": "num",
-        "x": 130,
+        "x": 150,
         "y": 540,
         "wires": [
             [
@@ -652,7 +652,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
+        "x": 460,
         "y": 540,
         "wires": [
             [
@@ -673,7 +673,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 670,
+        "x": 690,
         "y": 540,
         "wires": []
     },
@@ -690,8 +690,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
-        "y": 400,
+        "x": 720,
+        "y": 460,
         "wires": []
     },
     {
@@ -711,8 +711,8 @@
         "topic": "",
         "payload": "0",
         "payloadType": "num",
-        "x": 120,
-        "y": 580,
+        "x": 160,
+        "y": 660,
         "wires": [
             [
                 "59062f0b0ae01ac1"
@@ -736,7 +736,7 @@
         "topic": "",
         "payload": "10000",
         "payloadType": "num",
-        "x": 130,
+        "x": 150,
         "y": 500,
         "wires": [
             [
@@ -772,6 +772,29 @@
         "showTime": true,
         "x": 680,
         "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "513cb550c91c5d9b",
+        "type": "inject",
+        "z": "6de31ff16789035c",
+        "name": "Ustaw zawór 20%",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "2000",
+        "payloadType": "num",
+        "x": 150,
+        "y": 580,
         "wires": [
             []
         ]

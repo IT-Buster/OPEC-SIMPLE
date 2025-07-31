@@ -603,7 +603,7 @@
         "type": "function",
         "z": "6de31ff16789035c",
         "name": "Symulacja temperatury CO",
-        "func": "// Aktualna temperatura\nlet temp = flow.get(\"sym_temp\") || 20.0;\n\n// Pozycja zaworu CO (0–100%)\nlet pos = flow.get(\"zawor_pozycja\") || 0;\n\n// Przelicz tempo zmian\nlet heatingMaxRate = 0.3;\nlet coolingRate = -0.05;\nlet delta = coolingRate + (heatingMaxRate - coolingRate) * (pos / 100);\n\nlet newTemp = temp + delta;\nif (newTemp > 70) newTemp = 70;\nif (newTemp < 15) newTemp = 15;\n\nflow.set(\"sym_temp\", newTemp);\n\nlet history = flow.get(\"sym_hist\") || [];\nhistory.push({\n    czas: new Date().toLocaleTimeString(),\n    temperatura: parseFloat(newTemp.toFixed(2)),\n    zawor: pos\n});\nif (history.length > 50) history.shift();\nflow.set(\"sym_hist\", history);\n\nmsg.payload = history;\nreturn msg;",
+        "func": "// Aktualna temperatura\nlet temp = flow.get(\"sym_temp\") || 20.0;\n\n// Pozycja zaworu CO (0–100%)\nlet pos = flow.get(\"zawor_pozycja\") || 0;\n\n// Oblicz zmianę\nlet heatingMaxRate = 0.3;\nlet coolingRate = -0.05;\nlet delta = coolingRate + (heatingMaxRate - coolingRate) * (pos / 100);\n\nlet newTemp = temp + delta;\n\n// Ograniczenia\nif (newTemp > 70) newTemp = 70;\nif (newTemp < 15) newTemp = 15;\n\nflow.set(\"sym_temp\", newTemp);\n\n// Wysyłamy tylko liczbę!\nmsg.payload = parseFloat(newTemp.toFixed(2));\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,

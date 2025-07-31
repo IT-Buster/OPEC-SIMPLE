@@ -637,8 +637,8 @@
         "onceDelay": "",
         "payload": "75",
         "payloadType": "num",
-        "x": 280,
-        "y": 300,
+        "x": 190,
+        "y": 280,
         "wires": [
             [
                 "set_zawor_func"
@@ -712,5 +712,30 @@
         "x": 840,
         "y": 360,
         "wires": []
+    },
+    {
+        "id": "4030f6be8a419182",
+        "type": "inject",
+        "z": "dd5ef55af08a4ccc",
+        "name": "Ustaw zawór 0%",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 180,
+        "y": 380,
+        "wires": [
+            [
+                "set_zawor_func"
+            ]
+        ]
     }
 ]

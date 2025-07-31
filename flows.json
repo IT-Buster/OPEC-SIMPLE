@@ -590,7 +590,7 @@
         "onceDelay": "1",
         "topic": "",
         "payloadType": "date",
-        "x": 230,
+        "x": 150,
         "y": 340,
         "wires": [
             [
@@ -610,7 +610,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
+        "x": 380,
         "y": 340,
         "wires": [
             [
@@ -635,7 +635,7 @@
         "onceDelay": "",
         "payload": "75",
         "payloadType": "num",
-        "x": 190,
+        "x": 150,
         "y": 540,
         "wires": [
             [
@@ -714,7 +714,7 @@
         "topic": "",
         "payload": "0",
         "payloadType": "num",
-        "x": 180,
+        "x": 140,
         "y": 580,
         "wires": [
             [
@@ -739,7 +739,7 @@
         "topic": "",
         "payload": "100",
         "payloadType": "num",
-        "x": 190,
+        "x": 150,
         "y": 500,
         "wires": [
             [

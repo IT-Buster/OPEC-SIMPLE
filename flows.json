@@ -772,8 +772,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 260,
-        "y": 420,
+        "x": 280,
+        "y": 40,
         "wires": [
             [],
             [
@@ -803,7 +803,7 @@
         "payload": "2000",
         "payloadType": "num",
         "x": 110,
-        "y": 420,
+        "y": 40,
         "wires": [
             [
                 "ed8026417287c70c"
@@ -823,8 +823,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 430,
-        "y": 440,
+        "x": 470,
+        "y": 40,
         "wires": []
     }
 ]

@@ -637,8 +637,8 @@
         "onceDelay": "",
         "payload": "75",
         "payloadType": "num",
-        "x": 190,
-        "y": 280,
+        "x": 170,
+        "y": 320,
         "wires": [
             [
                 "set_zawor_func"
@@ -652,6 +652,7 @@
         "name": "Zapisz pozycję zaworu",
         "func": "flow.set(\"zawor_pozycja\", msg.payload);\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -669,12 +670,14 @@
         "type": "debug",
         "z": "dd5ef55af08a4ccc",
         "name": "Debug",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
         "x": 850,
         "y": 600,
         "wires": []
@@ -706,7 +709,8 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 840,
@@ -730,8 +734,33 @@
         "topic": "",
         "payload": "0",
         "payloadType": "num",
-        "x": 180,
-        "y": 380,
+        "x": 160,
+        "y": 360,
+        "wires": [
+            [
+                "set_zawor_func"
+            ]
+        ]
+    },
+    {
+        "id": "513be020340b93b4",
+        "type": "inject",
+        "z": "dd5ef55af08a4ccc",
+        "name": "Ustaw zawór 100%",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "100",
+        "payloadType": "num",
+        "x": 170,
+        "y": 280,
         "wires": [
             [
                 "set_zawor_func"

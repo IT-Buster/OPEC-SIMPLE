@@ -953,5 +953,30 @@
                 "logic"
             ]
         ]
+    },
+    {
+        "id": "inject_cyclic",
+        "type": "inject",
+        "z": "ed392b0a7f59b9ad",
+        "name": "Cykliczne dane (symulacja)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "{\"temp_out\": 3, \"temp_co\": 44, \"valve_feedback\": 3200}",
+        "payloadType": "json",
+        "x": 220,
+        "y": 360,
+        "wires": [
+            [
+                "logic"
+            ]
+        ]
     }
 ]

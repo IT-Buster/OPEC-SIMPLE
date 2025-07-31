@@ -687,7 +687,7 @@
         "type": "data-view",
         "z": "dd5ef55af08a4ccc",
         "name": "",
-        "property": "payload.temperatura",
+        "property": "payload",
         "fieldType": "msg",
         "width": 200,
         "height": 160,
@@ -696,7 +696,7 @@
         "passthru": false,
         "hide": true,
         "outputs": 0,
-        "x": 910,
+        "x": 870,
         "y": 40,
         "wires": []
     },
@@ -774,9 +774,7 @@
         "name": "",
         "props": [
             {
-                "p": "payload.temperatura",
-                "v": "10",
-                "vt": "num"
+                "p": "payload"
             },
             {
                 "p": "topic",
@@ -788,6 +786,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
+        "payload": "10",
+        "payloadType": "num",
         "x": 470,
         "y": 40,
         "wires": [

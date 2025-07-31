@@ -713,7 +713,7 @@
         "payload": "0",
         "payloadType": "num",
         "x": 160,
-        "y": 660,
+        "y": 700,
         "wires": [
             [
                 "59062f0b0ae01ac1"
@@ -834,6 +834,31 @@
         "y": 80,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "beb4bd7500b0dde2",
+        "type": "inject",
+        "z": "6de31ff16789035c",
+        "name": "Ustaw zawór 10%",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "1000",
+        "payloadType": "num",
+        "x": 150,
+        "y": 620,
+        "wires": [
+            [
+                "59062f0b0ae01ac1"
+            ]
         ]
     }
 ]

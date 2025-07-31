@@ -599,7 +599,7 @@
         "type": "function",
         "z": "6de31ff16789035c",
         "name": "Symulacja temperatury CO",
-        "func": "// Aktualna temperatura\nlet temp = flow.get(\"sym_temp\") || 20.0;\n\n// Pozycja zaworu (0–10000), wymuszona na number\nlet pos = Number(flow.get(\"zawor_pozycja\")) || 0;\nlet posFraction = Math.min(Math.max(pos / 10000, 0), 1);\n\n// Pompa - konwertujemy na boolean bezpiecznie\nlet pompaVal = flow.get(\"pompa_stan\");\nlet pompaOn = (pompaVal === true || pompaVal === \"true\" || pompaVal === 1);\n\n// Parametry\nlet heatingMaxRatePerMin = 0.3;\nlet coolingRatePassive = -0.05;\nlet coolingRateActive = -10.0;\n\n// Krok symulacji\nlet stepSec = 5;\nlet stepFrac = stepSec / 60;\n\n// Oblicz deltę temperatury\nlet deltaPerStep;\n\nif (pos === 0) {\n    deltaPerStep = (pompaOn ? coolingRateActive : coolingRatePassive) * stepFrac;\n} else {\n    let coolingBase = pompaOn ? coolingRateActive : coolingRatePassive;\n    deltaPerStep = (coolingBase + (heatingMaxRatePerMin - coolingBase) * posFraction) * stepFrac;\n}\n\nlet newTemp = temp + deltaPerStep;\n\n// Ograniczenia\nif (newTemp > 70) newTemp = 70;\nif (newTemp < 15) newTemp = 15;\n\nflow.set(\"sym_temp\", newTemp);\n\n// Pokaż status z delta, pompaOn i pozycją\nnode.status({\n  fill: \"blue\",\n  shape: \"dot\",\n  text: `ΔT ${deltaPerStep.toFixed(2)} °C | pompa: ${pompaOn} | pos: ${pos}`\n});\n\nmsg.payload = parseFloat(newTemp.toFixed(2));\nreturn msg;\n",
+        "func": "// Aktualna temperatura\nlet temp = flow.get(\"sym_temp\") || 20.0;\n\n// Pozycja zaworu (0–10000)\nlet pos = flow.get(\"zawor_pozycja\") || 0;\nlet posFraction = Math.min(Math.max(pos / 10000, 0), 1);\n\n// Czy pompa pracuje?\nlet pompaOn = flow.get(\"pompa_stan\") === true;\n\n// Parametry\nlet heatingMaxRatePerMin = 0.3;    // grzanie\nlet coolingRatePassive = -0.05;    // stygnięcie bez przepływu\nlet coolingRateActive = -10.0;     // stygnięcie z pompą i zamkniętym zaworem\n\n// Krok symulacji\nlet stepSec = 5;\nlet stepFrac = stepSec / 60;\n\n// Oblicz deltę\nlet deltaPerStep;\n\nif (pos === 0) {\n    // Zawór całkowicie zamknięty\n    deltaPerStep = (pompaOn ? coolingRateActive : coolingRatePassive) * stepFrac;\n} else {\n    // Zawór otwarty — interpolacja\n    // Uwaga: chłodzenie zależy od przepływu, czyli obecności pompy\n    let coolingBase = pompaOn ? coolingRateActive : coolingRatePassive;\n    deltaPerStep = (coolingBase + (heatingMaxRatePerMin - coolingBase) * posFraction) * stepFrac;\n}\n\n// Zastosuj zmianę temperatury\nlet newTemp = temp + deltaPerStep;\n\n// Ogranicz zakres\nif (newTemp > 70) newTemp = 70;\nif (newTemp < 15) newTemp = 15;\n\nflow.set(\"sym_temp\", newTemp);\n\n// Status na flow\nnode.status({fill:\"blue\",shape:\"ring\",text:`ΔT ${deltaPerStep.toFixed(2)} °C`});\n\nmsg.payload = parseFloat(newTemp.toFixed(2));\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -859,6 +859,47 @@
             [
                 "59062f0b0ae01ac1"
             ]
+        ]
+    },
+    {
+        "id": "a908e1f3f5acb6d7",
+        "type": "inject",
+        "z": "6de31ff16789035c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 110,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b510f327b47c6c1c",
+        "type": "function",
+        "z": "6de31ff16789035c",
+        "name": "function 2",
+        "func": "flow.set(\"pompa_stan\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 360,
+        "wires": [
+            []
         ]
     }
 ]

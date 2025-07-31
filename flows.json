@@ -606,6 +606,7 @@
         "name": "Symulacja temperatury CO",
         "func": "// Aktualna temperatura\nlet temp = flow.get(\"sym_temp\") || 20.0;\n\n// Pozycja zaworu CO (0–100%)\nlet pos = flow.get(\"zawor_pozycja\") || 0; // można ustawić ręcznie lub z injecta\n\n// Przelicz tempo zmian (zakres od -0.05 do +0.3)\nlet heatingMaxRate = 0.3;    // maksymalny wzrost temp. przy 100%\nlet coolingRate = -0.05;     // spadek temp. przy 0%\n\nlet delta = coolingRate + (heatingMaxRate - coolingRate) * (pos / 100);\n\n// Inercja cieplna\nlet newTemp = temp + delta;\n\n// Ogranicz zakres\nif (newTemp > 70) newTemp = 70;\nif (newTemp < 15) newTemp = 15;\n\nflow.set(\"sym_temp\", newTemp);\n\nmsg.payload = {\n    temperatura: parseFloat(newTemp.toFixed(2)),\n    zawor: pos\n};\n\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -615,7 +616,7 @@
         "wires": [
             [
                 "debug",
-                "9145add364ade1a9"
+                "54c44ea581746bb3"
             ]
         ]
     },
@@ -691,8 +692,24 @@
         "passthru": false,
         "hide": true,
         "outputs": 0,
-        "x": 870,
-        "y": 180,
+        "x": 1010,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "54c44ea581746bb3",
+        "type": "debug",
+        "z": "dd5ef55af08a4ccc",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 240,
         "wires": []
     }
 ]

@@ -585,12 +585,11 @@
         "onceDelay": "1",
         "topic": "",
         "payloadType": "date",
-        "x": 110,
-        "y": 200,
+        "x": 130,
+        "y": 40,
         "wires": [
             [
-                "2560ccc065e5b1fc",
-                "ac6734338cabb66f"
+                "2560ccc065e5b1fc"
             ]
         ]
     },
@@ -606,13 +605,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 200,
+        "x": 400,
+        "y": 40,
         "wires": [
             [
                 "aabff1b06eb75c20",
-                "a1d39d792e220805",
-                "dd644660f35030d2"
+                "a1d39d792e220805"
             ]
         ]
     },
@@ -674,25 +672,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 690,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "eaf7ec52e407afa0",
-        "type": "debug",
-        "z": "6de31ff16789035c",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 720,
-        "y": 460,
+        "x": 890,
+        "y": 340,
         "wires": []
     },
     {
@@ -759,23 +740,9 @@
         "passthru": false,
         "hide": false,
         "outputs": 0,
-        "x": 680,
-        "y": 180,
+        "x": 860,
+        "y": 40,
         "wires": []
-    },
-    {
-        "id": "dd644660f35030d2",
-        "type": "display property",
-        "z": "6de31ff16789035c",
-        "name": "",
-        "property": "msg.payload",
-        "showDate": 0,
-        "showTime": true,
-        "x": 680,
-        "y": 20,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "513cb550c91c5d9b",
@@ -800,40 +767,6 @@
             [
                 "59062f0b0ae01ac1"
             ]
-        ]
-    },
-    {
-        "id": "ac6734338cabb66f",
-        "type": "function",
-        "z": "6de31ff16789035c",
-        "name": "function 1",
-        "func": "msg.payload = flow.get(\"zawor_pozycja\");\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 340,
-        "y": 120,
-        "wires": [
-            [
-                "8b8c649bd58f7aec"
-            ]
-        ]
-    },
-    {
-        "id": "8b8c649bd58f7aec",
-        "type": "display property",
-        "z": "6de31ff16789035c",
-        "name": "",
-        "property": "msg.payload",
-        "showDate": 0,
-        "showTime": true,
-        "x": 680,
-        "y": 80,
-        "wires": [
-            []
         ]
     },
     {
@@ -879,7 +812,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 110,
-        "y": 320,
+        "y": 100,
         "wires": [
             [
                 "b510f327b47c6c1c"
@@ -890,16 +823,16 @@
         "id": "b510f327b47c6c1c",
         "type": "function",
         "z": "6de31ff16789035c",
-        "name": "function 2",
-        "func": "flow.set(\"pompa_stan\", msg.payload);\nreturn msg;",
+        "name": "PompaOn",
+        "func": "flow.set(\"pompa_stan\", msg.payload);\n\n// Status na flow z dodatkowymi informacjami\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `Pompa: ${pompaOn}`\n});\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
-        "noerr": 0,
+        "noerr": 1,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 320,
-        "y": 360,
+        "y": 140,
         "wires": [
             []
         ]
@@ -922,7 +855,7 @@
         "payload": "false",
         "payloadType": "bool",
         "x": 110,
-        "y": 380,
+        "y": 160,
         "wires": [
             [
                 "b510f327b47c6c1c"

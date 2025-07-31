@@ -2,7 +2,7 @@
     {
         "id": "1e78c2098878e540",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Odczyt",
         "disabled": false,
         "info": "",
         "env": []
@@ -13,6 +13,14 @@
         "label": "Symulator Siłownika",
         "disabled": false,
         "info": ""
+    },
+    {
+        "id": "85249515dfc449d5",
+        "type": "tab",
+        "label": "Termostat",
+        "disabled": false,
+        "info": "",
+        "env": []
     },
     {
         "id": "2a13aec920287264",
@@ -216,11 +224,10 @@
         "delayOnStart": false,
         "startDelayTime": "",
         "x": 190,
-        "y": 140,
+        "y": 40,
         "wires": [
             [],
             [
-                "c9f79cb93cee558a",
                 "2c8e29558bef67fc",
                 "af5c63dab0f87aba",
                 "54eedb2aa9a6fc18"
@@ -239,54 +246,8 @@
         "showstatus": true,
         "unit": "seconds",
         "statusformat": "YYYY-MM-D HH:mm:ss",
-        "x": 140,
-        "y": 260,
-        "wires": [
-            [
-                "b2627ed9b87f3e29"
-            ]
-        ]
-    },
-    {
-        "id": "c9f79cb93cee558a",
-        "type": "debug",
-        "z": "1e78c2098878e540",
-        "name": "debug 2",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 440,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "d57c08874870f0b3",
-        "type": "inject",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 20,
+        "x": 120,
+        "y": 340,
         "wires": [
             [
                 "b2627ed9b87f3e29"
@@ -301,7 +262,7 @@
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 660,
+        "x": 520,
         "y": 40,
         "wires": [
             [
@@ -321,8 +282,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
-        "y": 40,
+        "x": 320,
+        "y": 100,
         "wires": [
             [
                 "c6536cc019278032"
@@ -341,8 +302,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
-        "y": 160,
+        "x": 320,
+        "y": 220,
         "wires": [
             [
                 "6c19f631b87e5dc5"
@@ -361,8 +322,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 100,
+        "x": 330,
+        "y": 160,
         "wires": [
             [
                 "859bfc1c669b4854"
@@ -377,7 +338,7 @@
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 660,
+        "x": 520,
         "y": 160,
         "wires": [
             [
@@ -393,85 +354,13 @@
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 670,
+        "x": 530,
         "y": 100,
         "wires": [
             [
                 "9d6f3c55beed1de2"
             ]
         ]
-    },
-    {
-        "id": "ed8026417287c70c",
-        "type": "modbus-write",
-        "z": "1e78c2098878e540",
-        "name": "Pos-SET",
-        "showStatusActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "2",
-        "dataType": "HoldingRegister",
-        "adr": "4",
-        "quantity": "1",
-        "server": "2a13aec920287264",
-        "emptyMsgOnFail": false,
-        "keepMsgProperties": false,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 260,
-        "y": 340,
-        "wires": [
-            [],
-            [
-                "243b35468db52ac4"
-            ]
-        ]
-    },
-    {
-        "id": "bf71e8624b4cf66c",
-        "type": "inject",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "2000",
-        "payloadType": "num",
-        "x": 110,
-        "y": 340,
-        "wires": [
-            [
-                "ed8026417287c70c"
-            ]
-        ]
-    },
-    {
-        "id": "243b35468db52ac4",
-        "type": "debug",
-        "z": "1e78c2098878e540",
-        "name": "debug poz",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 430,
-        "y": 360,
-        "wires": []
     },
     {
         "id": "9d6f3c55beed1de2",
@@ -487,55 +376,9 @@
         "passthru": false,
         "hide": true,
         "outputs": 0,
-        "x": 690,
-        "y": 220,
+        "x": 730,
+        "y": 100,
         "wires": []
-    },
-    {
-        "id": "5daf448cace14950",
-        "type": "thingspeak42",
-        "z": "1e78c2098878e540",
-        "name": "OPEC",
-        "delay": "30",
-        "topic1": "TempZEW",
-        "topic2": "TempCO",
-        "topic3": "Pozycja",
-        "topic4": "Task100",
-        "topic5": "Task101",
-        "topic6": "Task118",
-        "topic7": "",
-        "topic8": "",
-        "endpoint": "https://thingspeak.com",
-        "x": 1190,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "7a38821f5a60e33c",
-        "type": "inject",
-        "z": "1e78c2098878e540",
-        "name": "TempZew",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "TempZEW",
-        "payload": "25",
-        "payloadType": "str",
-        "x": 980,
-        "y": 20,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "c03008d7c7b1400a",
@@ -551,8 +394,8 @@
         "passthru": false,
         "hide": true,
         "outputs": 0,
-        "x": 690,
-        "y": 440,
+        "x": 510,
+        "y": 300,
         "wires": []
     },
     {
@@ -569,8 +412,8 @@
         "passthru": false,
         "hide": true,
         "outputs": 0,
-        "x": 690,
-        "y": 660,
+        "x": 510,
+        "y": 520,
         "wires": []
     },
     {
@@ -911,5 +754,77 @@
                 "59062f0b0ae01ac1"
             ]
         ]
+    },
+    {
+        "id": "ed8026417287c70c",
+        "type": "modbus-write",
+        "z": "85249515dfc449d5",
+        "name": "Pos-SET",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "4",
+        "quantity": "1",
+        "server": "2a13aec920287264",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 260,
+        "y": 420,
+        "wires": [
+            [],
+            [
+                "243b35468db52ac4"
+            ]
+        ]
+    },
+    {
+        "id": "bf71e8624b4cf66c",
+        "type": "inject",
+        "z": "85249515dfc449d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2000",
+        "payloadType": "num",
+        "x": 110,
+        "y": 420,
+        "wires": [
+            [
+                "ed8026417287c70c"
+            ]
+        ]
+    },
+    {
+        "id": "243b35468db52ac4",
+        "type": "debug",
+        "z": "85249515dfc449d5",
+        "name": "debug poz",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 440,
+        "wires": []
     }
 ]

@@ -774,7 +774,9 @@
         "name": "",
         "props": [
             {
-                "p": "payload"
+                "p": "payload.temperatura",
+                "v": "10",
+                "vt": "num"
             },
             {
                 "p": "topic",
@@ -786,8 +788,6 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "10",
-        "payloadType": "num",
         "x": 470,
         "y": 40,
         "wires": [

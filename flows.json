@@ -615,7 +615,8 @@
         "wires": [
             [
                 "aabff1b06eb75c20",
-                "a1d39d792e220805"
+                "a1d39d792e220805",
+                "dd644660f35030d2"
             ]
         ]
     },
@@ -770,10 +771,10 @@
         "type": "display property",
         "z": "6de31ff16789035c",
         "name": "",
-        "property": "msg.topic",
+        "property": "msg.payload",
         "showDate": 0,
-        "showTime": 0,
-        "x": 600,
+        "showTime": true,
+        "x": 760,
         "y": 140,
         "wires": [
             []

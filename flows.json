@@ -713,7 +713,7 @@
         "payload": "0",
         "payloadType": "num",
         "x": 160,
-        "y": 700,
+        "y": 660,
         "wires": [
             [
                 "59062f0b0ae01ac1"
@@ -754,7 +754,7 @@
         "fieldType": "msg",
         "width": 200,
         "height": 160,
-        "points": 10,
+        "points": "40",
         "active": true,
         "passthru": false,
         "hide": false,

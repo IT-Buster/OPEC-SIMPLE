@@ -23,6 +23,14 @@
         "env": []
     },
     {
+        "id": "ed392b0a7f59b9ad",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "2a13aec920287264",
         "type": "modbus-client",
         "name": "usb-conn",
@@ -825,6 +833,101 @@
         "statusType": "auto",
         "x": 470,
         "y": 40,
+        "wires": []
+    },
+    {
+        "id": "temp_ext",
+        "type": "inject",
+        "z": "ed392b0a7f59b9ad",
+        "name": "Temperatura zewnętrzna",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "6",
+        "payloadType": "num",
+        "x": 230,
+        "y": 120,
+        "wires": [
+            [
+                "logic"
+            ]
+        ]
+    },
+    {
+        "id": "logic",
+        "type": "function",
+        "z": "ed392b0a7f59b9ad",
+        "name": "Sterowanie siłownikiem",
+        "func": "// Zakładamy, że temperatura zewnętrzna w msg.payload\nlet tempOut = msg.payload;\nlet targetTemp;\nlet valvePosition;\nlet pumpState;\n\nif (tempOut >= 12) {\n    targetTemp = 0;\n    valvePosition = 0;\n    pumpState = \"OFF\";\n} else {\n    // Interpolacja liniowa według krzywej temperaturowej\n    if (tempOut <= 0) targetTemp = 50;\n    else if (tempOut >= 10) targetTemp = 42;\n    else {\n        // 0-5°C: 50–47°C\n        if (tempOut <= 5) {\n            targetTemp = 50 - ((tempOut / 5) * 3); // 50 do 47\n        } else {\n            // 5-10°C: 47–42°C\n            targetTemp = 47 - (((tempOut - 5) / 5) * 5); // 47 do 42\n        }\n    }\n\n    // Przelicz temperaturę CO na pozycję siłownika 0–10000\n    // Zakładamy: 0°C → 0, 60°C → 10000 (pełne otwarcie)\n    valvePosition = Math.round((targetTemp / 60) * 10000);\n    pumpState = \"ON\";\n}\n\n// Wyjście\nreturn [\n    { payload: valvePosition }, // Wyjście zaworu\n    { payload: pumpState },     // Wyjście pompy\n    { payload: targetTemp }     // Docelowa temperatura CO\n];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 120,
+        "wires": [
+            [
+                "debug_valve"
+            ],
+            [
+                "debug_pump"
+            ],
+            [
+                "debug_temp"
+            ]
+        ]
+    },
+    {
+        "id": "debug_valve",
+        "type": "debug",
+        "z": "ed392b0a7f59b9ad",
+        "name": "Siłownik (0–10000)",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 750,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "debug_pump",
+        "type": "debug",
+        "z": "ed392b0a7f59b9ad",
+        "name": "Pompa (ON/OFF)",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 740,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "debug_temp",
+        "type": "debug",
+        "z": "ed392b0a7f59b9ad",
+        "name": "Docelowa temp. CO",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 760,
+        "y": 180,
         "wires": []
     }
 ]

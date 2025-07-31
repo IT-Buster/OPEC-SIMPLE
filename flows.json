@@ -589,7 +589,8 @@
         "y": 200,
         "wires": [
             [
-                "2560ccc065e5b1fc"
+                "2560ccc065e5b1fc",
+                "ac6734338cabb66f"
             ]
         ]
     },
@@ -759,7 +760,7 @@
         "hide": false,
         "outputs": 0,
         "x": 680,
-        "y": 120,
+        "y": 180,
         "wires": []
     },
     {
@@ -771,7 +772,7 @@
         "showDate": 0,
         "showTime": true,
         "x": 680,
-        "y": 40,
+        "y": 20,
         "wires": [
             []
         ]
@@ -799,6 +800,40 @@
             [
                 "59062f0b0ae01ac1"
             ]
+        ]
+    },
+    {
+        "id": "ac6734338cabb66f",
+        "type": "function",
+        "z": "6de31ff16789035c",
+        "name": "function 1",
+        "func": "msg.payload = flow.get(\"zawor_pozycja\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 120,
+        "wires": [
+            [
+                "8b8c649bd58f7aec"
+            ]
+        ]
+    },
+    {
+        "id": "8b8c649bd58f7aec",
+        "type": "display property",
+        "z": "6de31ff16789035c",
+        "name": "",
+        "property": "msg.payload",
+        "showDate": 0,
+        "showTime": true,
+        "x": 680,
+        "y": 80,
+        "wires": [
+            []
         ]
     }
 ]

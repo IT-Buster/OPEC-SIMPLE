@@ -644,7 +644,7 @@
         "type": "function",
         "z": "6de31ff16789035c",
         "name": "Zapisz pozycję zaworu",
-        "func": "flow.set(\"zawor_pozycja\", msg.payload);\nreturn msg; ",
+        "func": "flow.set(\"zawor_pozycja\", msg.payload);\n\n// Status na flow z dodatkowymi informacjami\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `Zawór: ${msg.payload}`\n});\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,

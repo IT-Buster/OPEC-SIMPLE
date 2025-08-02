@@ -562,7 +562,7 @@
         "z": "1e78c2098878e540",
         "name": "debug 3",
         "active": true,
-        "tosidebar": true,
+        "tosidebar": false,
         "console": false,
         "tostatus": true,
         "complete": "payload",

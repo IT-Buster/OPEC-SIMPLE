@@ -649,6 +649,35 @@
         ]
     },
     {
+        "id": "a2f8f9231c0240da",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 680,
+        "wires": [
+            [
+                "0eccd18fcd4a9b44"
+            ]
+        ]
+    },
+    {
         "id": "451c143bbd7fccc9",
         "type": "inject",
         "z": "6de31ff16789035c",

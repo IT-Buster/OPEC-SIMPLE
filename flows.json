@@ -347,8 +347,8 @@
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 520,
-        "y": 160,
+        "x": 540,
+        "y": 200,
         "wires": [
             [
                 "bd09d6777578e0a1"
@@ -560,7 +560,7 @@
         "id": "8807f25f368dbbcd",
         "type": "debug",
         "z": "1e78c2098878e540",
-        "name": "debug 3",
+        "name": "Pozycja",
         "active": true,
         "tosidebar": false,
         "console": false,
@@ -569,8 +569,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 530,
-        "y": 240,
+        "x": 540,
+        "y": 280,
         "wires": []
     },
     {

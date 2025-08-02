@@ -444,8 +444,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 330,
-        "y": 540,
+        "x": 350,
+        "y": 420,
         "wires": [
             [
                 "c4a03ebdf905a40b",
@@ -469,8 +469,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 200,
-        "y": 680,
+        "x": 220,
+        "y": 540,
         "wires": [
             [
                 "b518a86b021392a6"
@@ -490,7 +490,7 @@
         "finalize": "",
         "libs": [],
         "x": 420,
-        "y": 680,
+        "y": 540,
         "wires": [
             [
                 "01eebfdfebd03d7d"
@@ -510,8 +510,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
-        "y": 740,
+        "x": 640,
+        "y": 620,
         "wires": []
     },
     {
@@ -527,8 +527,8 @@
         "targetType": "msg",
         "statusVal": "payload[18]",
         "statusType": "auto",
-        "x": 590,
-        "y": 560,
+        "x": 630,
+        "y": 540,
         "wires": []
     },
     {
@@ -578,8 +578,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 590,
-        "y": 500,
+        "x": 630,
+        "y": 480,
         "wires": []
     },
     {
@@ -595,8 +595,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 590,
-        "y": 440,
+        "x": 630,
+        "y": 420,
         "wires": []
     },
     {
@@ -616,8 +616,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 120,
-        "y": 460,
+        "x": 140,
+        "y": 420,
         "wires": [
             [
                 "e5317afdda80f861"

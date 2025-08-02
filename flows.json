@@ -447,7 +447,9 @@
         "y": 540,
         "wires": [
             [
-                "c4a03ebdf905a40b"
+                "c4a03ebdf905a40b",
+                "5ff0f91f6c0b0887",
+                "38b9777b50d3c0cf"
             ],
             [
                 "c1fea26965fc587b"
@@ -536,8 +538,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
-        "y": 620,
+        "x": 580,
+        "y": 740,
         "wires": []
     },
     {
@@ -546,7 +548,7 @@
         "z": "1e78c2098878e540",
         "name": "pay18",
         "active": true,
-        "tosidebar": true,
+        "tosidebar": false,
         "console": false,
         "tostatus": true,
         "complete": "payload[18]",
@@ -554,7 +556,7 @@
         "statusVal": "payload[18]",
         "statusType": "auto",
         "x": 590,
-        "y": 500,
+        "y": 560,
         "wires": []
     },
     {
@@ -589,6 +591,40 @@
         "statusType": "auto",
         "x": 540,
         "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5ff0f91f6c0b0887",
+        "type": "debug",
+        "z": "1e78c2098878e540",
+        "name": "pay1",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[1]",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 590,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "38b9777b50d3c0cf",
+        "type": "debug",
+        "z": "1e78c2098878e540",
+        "name": "pay 0",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload[0]",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 590,
+        "y": 440,
         "wires": []
     },
     {

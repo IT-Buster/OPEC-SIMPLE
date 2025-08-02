@@ -349,7 +349,7 @@
         "showDate": 0,
         "showTime": true,
         "x": 540,
-        "y": 220,
+        "y": 240,
         "wires": [
             [
                 "bd09d6777578e0a1"
@@ -571,7 +571,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 540,
-        "y": 280,
+        "y": 320,
         "wires": []
     },
     {

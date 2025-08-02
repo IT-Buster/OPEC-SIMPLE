@@ -384,8 +384,8 @@
         "passthru": false,
         "hide": true,
         "outputs": 0,
-        "x": 730,
-        "y": 100,
+        "x": 990,
+        "y": 40,
         "wires": []
     },
     {
@@ -402,8 +402,8 @@
         "passthru": false,
         "hide": true,
         "outputs": 0,
-        "x": 510,
-        "y": 300,
+        "x": 990,
+        "y": 260,
         "wires": []
     },
     {
@@ -420,8 +420,120 @@
         "passthru": false,
         "hide": true,
         "outputs": 0,
-        "x": 510,
-        "y": 520,
+        "x": 990,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "b518a86b021392a6",
+        "type": "modbus-flex-getter",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "server": "2a13aec920287264",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 570,
+        "y": 620,
+        "wires": [
+            [],
+            [
+                "c1fea26965fc587b"
+            ]
+        ]
+    },
+    {
+        "id": "e5317afdda80f861",
+        "type": "function",
+        "z": "1e78c2098878e540",
+        "name": "function 1",
+        "func": "msg.payload = { \n    'fc': 3, \n    'unitid': 2, \n    'address': 100, \n    'quantity': 19 \n} \n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 620,
+        "wires": [
+            [
+                "b518a86b021392a6"
+            ]
+        ]
+    },
+    {
+        "id": "c1fea26965fc587b",
+        "type": "function",
+        "z": "1e78c2098878e540",
+        "name": "function 2",
+        "func": "msg.payload = [msg.payload[0], msg.payload[1],msg.payload[18] ];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 620,
+        "wires": [
+            [
+                "01eebfdfebd03d7d"
+            ]
+        ]
+    },
+    {
+        "id": "3a987cfcea26723f",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 480,
+        "wires": [
+            [
+                "e5317afdda80f861"
+            ]
+        ]
+    },
+    {
+        "id": "01eebfdfebd03d7d",
+        "type": "debug",
+        "z": "1e78c2098878e540",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 620,
         "wires": []
     },
     {

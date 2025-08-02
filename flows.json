@@ -270,7 +270,7 @@
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 520,
+        "x": 540,
         "y": 40,
         "wires": [
             [
@@ -363,8 +363,8 @@
         "property": "msg.payload",
         "showDate": 0,
         "showTime": true,
-        "x": 530,
-        "y": 100,
+        "x": 550,
+        "y": 120,
         "wires": [
             [
                 "9d6f3c55beed1de2"

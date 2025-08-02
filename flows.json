@@ -311,7 +311,7 @@
         "finalize": "",
         "libs": [],
         "x": 320,
-        "y": 220,
+        "y": 260,
         "wires": [
             [
                 "6c19f631b87e5dc5",
@@ -332,7 +332,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 160,
+        "y": 180,
         "wires": [
             [
                 "859bfc1c669b4854"
@@ -348,7 +348,7 @@
         "showDate": 0,
         "showTime": true,
         "x": 540,
-        "y": 200,
+        "y": 220,
         "wires": [
             [
                 "bd09d6777578e0a1"
@@ -442,8 +442,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 390,
-        "y": 480,
+        "x": 330,
+        "y": 540,
         "wires": [
             [
                 "c4a03ebdf905a40b"
@@ -465,8 +465,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 220,
-        "y": 620,
+        "x": 200,
+        "y": 680,
         "wires": [
             [
                 "b518a86b021392a6"
@@ -485,8 +485,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
-        "y": 620,
+        "x": 420,
+        "y": 680,
         "wires": [
             [
                 "01eebfdfebd03d7d"
@@ -515,7 +515,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 480,
+        "y": 540,
         "wires": [
             [
                 "e5317afdda80f861"
@@ -535,8 +535,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 640,
-        "y": 480,
+        "x": 560,
+        "y": 540,
         "wires": []
     },
     {
@@ -552,8 +552,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 570,
-        "y": 360,
+        "x": 560,
+        "y": 500,
         "wires": []
     },
     {

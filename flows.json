@@ -632,7 +632,7 @@
         "showStatusActivities": false,
         "showErrors": false,
         "showWarnings": true,
-        "unitid": "",
+        "unitid": "2",
         "dataType": "HoldingRegister",
         "adr": "118",
         "quantity": "1",

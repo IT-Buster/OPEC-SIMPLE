@@ -441,8 +441,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 570,
-        "y": 620,
+        "x": 390,
+        "y": 480,
         "wires": [
             [],
             [
@@ -462,7 +462,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
+        "x": 220,
         "y": 620,
         "wires": [
             [
@@ -482,7 +482,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 900,
+        "x": 460,
         "y": 620,
         "wires": [
             [
@@ -511,7 +511,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
+        "x": 100,
         "y": 480,
         "wires": [
             [
@@ -532,8 +532,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1220,
-        "y": 620,
+        "x": 640,
+        "y": 480,
         "wires": []
     },
     {

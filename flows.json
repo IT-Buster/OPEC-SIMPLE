@@ -575,6 +575,41 @@
         "wires": []
     },
     {
+        "id": "7e7c8b43b07b3003",
+        "type": "ping",
+        "z": "1e78c2098878e540",
+        "protocol": "Automatic",
+        "mode": "timed",
+        "name": "",
+        "host": "www.google.com",
+        "timer": "20",
+        "inputs": 0,
+        "x": 220,
+        "y": 660,
+        "wires": [
+            [
+                "ccb7d79ee9f83360"
+            ]
+        ]
+    },
+    {
+        "id": "ccb7d79ee9f83360",
+        "type": "debug",
+        "z": "1e78c2098878e540",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 660,
+        "wires": []
+    },
+    {
         "id": "451c143bbd7fccc9",
         "type": "inject",
         "z": "6de31ff16789035c",

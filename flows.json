@@ -581,7 +581,7 @@
         "protocol": "Automatic",
         "mode": "timed",
         "name": "",
-        "host": "www.google.com",
+        "host": "thingspeak.com",
         "timer": "20",
         "inputs": 0,
         "x": 220,

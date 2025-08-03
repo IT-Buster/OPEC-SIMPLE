@@ -731,7 +731,7 @@
         "unitid": "2",
         "dataType": "HoldingRegister",
         "adr": "100",
-        "quantity": "18",
+        "quantity": "19",
         "rate": "15",
         "rateUnit": "s",
         "delayOnStart": false,

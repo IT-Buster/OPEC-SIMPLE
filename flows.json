@@ -284,14 +284,14 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "TempCO-extract",
-        "func": "msg.payload = msg.payload.data[5] / 10;\nmsg.topic = \"TempCO\";\nmsg.timestamp = new Date().toString();\n\nflow.set(\"tempco\", msg.payload);\n\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `TempCO: ${msg.payload} °C | Time: ${msg.timestamp}`\n});\n\nreturn msg;",
+        "func": "msg.payload = msg.payload.data[5] / 10;\nmsg.topic = \"TempCO\";\n//msg.timestamp = new Date().toString();\nmsg.timestamp = new Date().toISOString().replace('T', ' ').substring(0, 19);\nflow.set(\"tempco\", msg.payload);\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `TempCO: ${msg.payload} °C | Time: ${msg.timestamp}`\n});\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
+        "x": 200,
         "y": 100,
         "wires": [
             [

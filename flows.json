@@ -508,7 +508,7 @@
         "id": "53fa855dc695dd45",
         "type": "modbus-read",
         "z": "1e78c2098878e540",
-        "name": "PLC-READ",
+        "name": "PLC-Task",
         "topic": "",
         "showStatusActivities": false,
         "logIOActivities": false,
@@ -527,7 +527,7 @@
         "ioFile": "",
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
-        "x": 150,
+        "x": 140,
         "y": 200,
         "wires": [
             [],

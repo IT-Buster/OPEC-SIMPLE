@@ -694,23 +694,6 @@
         ]
     },
     {
-        "id": "666ce3eaee0ce79a",
-        "type": "debug",
-        "z": "1e78c2098878e540",
-        "name": "100",
-        "active": true,
-        "tosidebar": false,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload[0]",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 390,
-        "y": 240,
-        "wires": []
-    },
-    {
         "id": "44b4420a6ffe2a33",
         "type": "inject",
         "z": "1e78c2098878e540",
@@ -737,6 +720,54 @@
             [
                 "e5317afdda80f861"
             ]
+        ]
+    },
+    {
+        "id": "53fa855dc695dd45",
+        "type": "modbus-read",
+        "z": "1e78c2098878e540",
+        "name": "PLC-READ",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "100",
+        "quantity": "19",
+        "rate": "15",
+        "rateUnit": "s",
+        "delayOnStart": true,
+        "startDelayTime": "3",
+        "server": "2a13aec920287264",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "097df399214566b1",
+        "type": "function",
+        "z": "1e78c2098878e540",
+        "name": "PLC100",
+        "func": "msg.payload = msg.payload.data[0];\nmsg.topic = \"plc100\";\nmsg.timestamp = new Intl.DateTimeFormat('pl-PL', {\n  hour: '2-digit', minute: '2-digit', second: '2-digit',\n  year: 'numeric', month: '2-digit', day: '2-digit',\n  hour12: false\n}).format(new Date()).replace(',', '');\n\nflow.set(\"plc100\", msg.payload);\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `PLC100: ${msg.payload} °C | Time: ${msg.timestamp}`\n});\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 220,
+        "wires": [
+            []
         ]
     },
     {

@@ -275,7 +275,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 180,
+        "x": 500,
         "y": 100,
         "wires": [
             [
@@ -288,7 +288,7 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "Pozycja-extract",
-        "func": "msg.volt = msg.payload.data[0];\nmsg.payload = msg.payload.data[0] / 1000;\nmsg.topic = \"Pozycja\";\nmsg.timestamp = new Date().toString();\n\nflow.set(\"pozycja\", msg.payload);\n\nreturn msg;",
+        "func": "msg.volt = msg.payload.data[0];\nmsg.payload = msg.payload.data[0] / 1000;\nmsg.topic = \"Pozycja\";\nmsg.timestamp = new Intl.DateTimeFormat('pl-PL', {\n  hour: '2-digit', minute: '2-digit', second: '2-digit',\n  year: 'numeric', month: '2-digit', day: '2-digit',\n  hour12: false\n}).format(new Date()).replace(',', '');\n\nflow.set(\"pozycja\", msg.payload);\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `Pozycja: ${msg.payload} °C | Time: ${msg.timestamp}`\n});\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -316,12 +316,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 330,
-        "y": 180,
+        "x": 510,
+        "y": 40,
         "wires": [
             [
-                "859bfc1c669b4854",
-                "d9017f0d93bc193b"
+                "9d6f3c55beed1de2"
             ]
         ]
     },
@@ -338,22 +337,6 @@
         "wires": [
             [
                 "bd09d6777578e0a1"
-            ]
-        ]
-    },
-    {
-        "id": "859bfc1c669b4854",
-        "type": "display property",
-        "z": "1e78c2098878e540",
-        "name": "Temp ZEW",
-        "property": "msg.payload",
-        "showDate": 0,
-        "showTime": true,
-        "x": 550,
-        "y": 120,
-        "wires": [
-            [
-                "9d6f3c55beed1de2"
             ]
         ]
     },
@@ -530,23 +513,6 @@
         "statusType": "auto",
         "x": 540,
         "y": 320,
-        "wires": []
-    },
-    {
-        "id": "d9017f0d93bc193b",
-        "type": "debug",
-        "z": "1e78c2098878e540",
-        "name": "TempZew",
-        "active": true,
-        "tosidebar": false,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 540,
-        "y": 180,
         "wires": []
     },
     {

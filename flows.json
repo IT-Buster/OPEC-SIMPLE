@@ -235,11 +235,7 @@
         "y": 40,
         "wires": [
             [],
-            [
-                "2c8e29558bef67fc",
-                "af5c63dab0f87aba",
-                "54eedb2aa9a6fc18"
-            ]
+            []
         ]
     },
     {
@@ -255,7 +251,7 @@
         "unit": "seconds",
         "statusformat": "YYYY-MM-D HH:mm:ss",
         "x": 120,
-        "y": 340,
+        "y": 160,
         "wires": [
             [
                 "b2627ed9b87f3e29",
@@ -295,12 +291,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 260,
+        "x": 500,
+        "y": 160,
         "wires": [
             [
-                "6c19f631b87e5dc5",
-                "8807f25f368dbbcd"
+                "bd09d6777578e0a1"
             ]
         ]
     },
@@ -321,22 +316,6 @@
         "wires": [
             [
                 "9d6f3c55beed1de2"
-            ]
-        ]
-    },
-    {
-        "id": "6c19f631b87e5dc5",
-        "type": "display property",
-        "z": "1e78c2098878e540",
-        "name": "Pozycja",
-        "property": "msg.payload",
-        "showDate": 0,
-        "showTime": true,
-        "x": 540,
-        "y": 240,
-        "wires": [
-            [
-                "bd09d6777578e0a1"
             ]
         ]
     },
@@ -496,23 +475,6 @@
         "statusType": "auto",
         "x": 630,
         "y": 500,
-        "wires": []
-    },
-    {
-        "id": "8807f25f368dbbcd",
-        "type": "debug",
-        "z": "1e78c2098878e540",
-        "name": "Pozycja",
-        "active": true,
-        "tosidebar": false,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 540,
-        "y": 320,
         "wires": []
     },
     {
@@ -769,6 +731,40 @@
         "y": 760,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "a3d43e6609be7e87",
+        "type": "modbus-read",
+        "z": "1e78c2098878e540",
+        "name": "PLC-READ",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "4",
+        "quantity": "6",
+        "rate": "15",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "2a13aec920287264",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 270,
+        "y": 300,
+        "wires": [
+            [],
+            [
+                "54eedb2aa9a6fc18",
+                "2c8e29558bef67fc",
+                "af5c63dab0f87aba"
+            ]
         ]
     },
     {

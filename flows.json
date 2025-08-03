@@ -211,55 +211,6 @@
         "collapse": false
     },
     {
-        "id": "b2627ed9b87f3e29",
-        "type": "modbus-getter",
-        "z": "1e78c2098878e540",
-        "name": "SIMPLE-PLC-MAIN-REGISTER",
-        "showStatusActivities": true,
-        "showErrors": true,
-        "showWarnings": false,
-        "logIOActivities": false,
-        "unitid": "2",
-        "dataType": "HoldingRegister",
-        "adr": "4",
-        "quantity": "6",
-        "server": "2a13aec920287264",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": false,
-        "keepMsgProperties": true,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 190,
-        "y": 40,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "3838d094c68b467f",
-        "type": "configurable interval",
-        "z": "1e78c2098878e540",
-        "name": "configurable interval",
-        "interval": 10,
-        "onstart": false,
-        "do_enable": true,
-        "msg": "ping",
-        "showstatus": true,
-        "unit": "seconds",
-        "statusformat": "YYYY-MM-D HH:mm:ss",
-        "x": 120,
-        "y": 160,
-        "wires": [
-            [
-                "b2627ed9b87f3e29",
-                "d1620b93df8f29de"
-            ]
-        ]
-    },
-    {
         "id": "2c8e29558bef67fc",
         "type": "function",
         "z": "1e78c2098878e540",
@@ -271,7 +222,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
+        "x": 420,
         "y": 100,
         "wires": [
             [
@@ -291,7 +242,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
+        "x": 420,
         "y": 160,
         "wires": [
             [
@@ -311,7 +262,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 510,
+        "x": 430,
         "y": 40,
         "wires": [
             [
@@ -756,8 +707,8 @@
         "ioFile": "",
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
-        "x": 270,
-        "y": 300,
+        "x": 150,
+        "y": 40,
         "wires": [
             [],
             [
@@ -765,6 +716,36 @@
                 "2c8e29558bef67fc",
                 "af5c63dab0f87aba"
             ]
+        ]
+    },
+    {
+        "id": "f602a76ae29e8af4",
+        "type": "modbus-read",
+        "z": "1e78c2098878e540",
+        "name": "PLC-READ",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "100",
+        "quantity": "18",
+        "rate": "15",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "2a13aec920287264",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [],
+            []
         ]
     },
     {

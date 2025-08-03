@@ -1151,8 +1151,8 @@
         "topic": "",
         "payload": "6",
         "payloadType": "num",
-        "x": 170,
-        "y": 60,
+        "x": 230,
+        "y": 40,
         "wires": [
             []
         ]
@@ -1169,8 +1169,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
-        "y": 120,
+        "x": 610,
+        "y": 80,
         "wires": [
             [
                 "debug_valve"
@@ -1245,8 +1245,8 @@
         "topic": "",
         "payload": "{\"temp_out\": 3, \"temp_co\": 44, \"valve_feedback\": 3200}",
         "payloadType": "json",
-        "x": 140,
-        "y": 180,
+        "x": 280,
+        "y": 80,
         "wires": [
             [
                 "logic"
@@ -1271,7 +1271,7 @@
         "payload": "{\"temp_out\": 3, \"temp_co\": 44, \"valve_feedback\": 3200}",
         "payloadType": "json",
         "x": 220,
-        "y": 360,
+        "y": 120,
         "wires": [
             [
                 "logic"

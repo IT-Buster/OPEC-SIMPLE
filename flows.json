@@ -697,7 +697,7 @@
         "unitid": "2",
         "dataType": "HoldingRegister",
         "adr": "4",
-        "quantity": "119",
+        "quantity": "6",
         "rate": "15",
         "rateUnit": "s",
         "delayOnStart": false,

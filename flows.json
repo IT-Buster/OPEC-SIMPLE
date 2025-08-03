@@ -438,8 +438,8 @@
         "topic7": "",
         "topic8": "",
         "endpoint": "https://thingspeak.com",
-        "x": 690,
-        "y": 560,
+        "x": 630,
+        "y": 500,
         "wires": []
     },
     {
@@ -575,41 +575,6 @@
         "wires": []
     },
     {
-        "id": "7e7c8b43b07b3003",
-        "type": "ping",
-        "z": "1e78c2098878e540",
-        "protocol": "Automatic",
-        "mode": "timed",
-        "name": "",
-        "host": "thingspeak.com",
-        "timer": "20",
-        "inputs": 0,
-        "x": 220,
-        "y": 660,
-        "wires": [
-            [
-                "ccb7d79ee9f83360"
-            ]
-        ]
-    },
-    {
-        "id": "ccb7d79ee9f83360",
-        "type": "debug",
-        "z": "1e78c2098878e540",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 460,
-        "y": 620,
-        "wires": []
-    },
-    {
         "id": "f8b5fae7efb01a27",
         "type": "http request",
         "z": "1e78c2098878e540",
@@ -624,24 +589,60 @@
         "insecureHTTPParser": false,
         "authType": "",
         "senderr": false,
-        "headers": [
-            {
-                "keyType": "Content-Type",
-                "keyValue": "",
-                "valueType": "other",
-                "valueValue": ""
-            },
-            {
-                "keyType": "other",
-                "keyValue": "api_key",
-                "valueType": "other",
-                "valueValue": "DR68GTX4J0WJA08J"
-            }
-        ],
-        "x": 570,
-        "y": 720,
+        "headers": [],
+        "x": 530,
+        "y": 640,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "7fb3450e1fc0e231",
+        "type": "function",
+        "z": "1e78c2098878e540",
+        "name": "function 1",
+        "func": "msg.headers = {\n  \"Content-Type\": \"application/x-www-form-urlencoded\"\n};\nmsg.payload = \"api_key=DR68GTX4J0WJA08J&field1=23\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 640,
+        "wires": [
+            [
+                "f8b5fae7efb01a27"
+            ]
+        ]
+    },
+    {
+        "id": "014582931a39ee3a",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 640,
+        "wires": [
+            [
+                "7fb3450e1fc0e231"
+            ]
         ]
     },
     {

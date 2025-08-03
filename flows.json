@@ -325,144 +325,6 @@
         "wires": []
     },
     {
-        "id": "b518a86b021392a6",
-        "type": "modbus-flex-getter",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "showStatusActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "logIOActivities": false,
-        "server": "2a13aec920287264",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": false,
-        "keepMsgProperties": false,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 350,
-        "y": 420,
-        "wires": [
-            [
-                "c4a03ebdf905a40b",
-                "5ff0f91f6c0b0887",
-                "38b9777b50d3c0cf"
-            ],
-            [
-                "c1fea26965fc587b"
-            ]
-        ]
-    },
-    {
-        "id": "e5317afdda80f861",
-        "type": "function",
-        "z": "1e78c2098878e540",
-        "name": "function 1",
-        "func": "msg.payload = { \n    'fc': 3, \n    'unitid': 2, \n    'address': 100, \n    'quantity': 19 \n} \n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 220,
-        "y": 540,
-        "wires": [
-            [
-                "b518a86b021392a6"
-            ]
-        ]
-    },
-    {
-        "id": "c1fea26965fc587b",
-        "type": "function",
-        "z": "1e78c2098878e540",
-        "name": "function 2",
-        "func": "msg.payload = [msg.payload[0], msg.payload[1],msg.payload[18] ];\n\nflow.set(\"plc100\", msg.payload[0]);\nflow.set(\"plc101\", msg.payload[1]);\nflow.set(\"plc118\", msg.payload[18]);\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 420,
-        "y": 540,
-        "wires": [
-            [
-                "01eebfdfebd03d7d"
-            ]
-        ]
-    },
-    {
-        "id": "01eebfdfebd03d7d",
-        "type": "debug",
-        "z": "1e78c2098878e540",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 640,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "c4a03ebdf905a40b",
-        "type": "debug",
-        "z": "1e78c2098878e540",
-        "name": "118",
-        "active": true,
-        "tosidebar": false,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload[18]",
-        "targetType": "msg",
-        "statusVal": "payload[18]",
-        "statusType": "auto",
-        "x": 630,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "5ff0f91f6c0b0887",
-        "type": "debug",
-        "z": "1e78c2098878e540",
-        "name": "101",
-        "active": true,
-        "tosidebar": false,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload[1]",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 630,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "38b9777b50d3c0cf",
-        "type": "debug",
-        "z": "1e78c2098878e540",
-        "name": "100",
-        "active": true,
-        "tosidebar": false,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload[0]",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 630,
-        "y": 380,
-        "wires": []
-    },
-    {
         "id": "0eccd18fcd4a9b44",
         "type": "modbus-write",
         "z": "1e78c2098878e540",
@@ -479,8 +341,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 360,
-        "y": 700,
+        "x": 380,
+        "y": 440,
         "wires": [
             [],
             []
@@ -503,8 +365,8 @@
         "topic": "",
         "payload": "0",
         "payloadType": "num",
-        "x": 110,
-        "y": 680,
+        "x": 130,
+        "y": 420,
         "wires": [
             [
                 "0eccd18fcd4a9b44",
@@ -529,8 +391,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 360,
-        "y": 640,
+        "x": 380,
+        "y": 380,
         "wires": [
             [],
             []
@@ -553,8 +415,8 @@
         "topic": "",
         "payload": "1",
         "payloadType": "num",
-        "x": 110,
-        "y": 740,
+        "x": 130,
+        "y": 480,
         "wires": [
             [
                 "0eccd18fcd4a9b44"
@@ -576,8 +438,8 @@
         "topic7": "",
         "topic8": "",
         "endpoint": "https://thingspeak.com",
-        "x": 1190,
-        "y": 880,
+        "x": 450,
+        "y": 540,
         "wires": []
     },
     {
@@ -601,62 +463,12 @@
         "topic": "TempZew",
         "payload": "20",
         "payloadType": "num",
-        "x": 490,
-        "y": 880,
+        "x": 170,
+        "y": 540,
         "wires": [
             [
                 "86ef01d5251463e9"
             ]
-        ]
-    },
-    {
-        "id": "15ecc044141f4de3",
-        "type": "inject",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 500,
-        "y": 940,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1ed0b6215f176b54",
-        "type": "delay",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "15",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "15",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1060,
-        "y": 760,
-        "wires": [
-            []
         ]
     },
     {
@@ -694,35 +506,6 @@
         ]
     },
     {
-        "id": "44b4420a6ffe2a33",
-        "type": "inject",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "5",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 320,
-        "wires": [
-            [
-                "e5317afdda80f861"
-            ]
-        ]
-    },
-    {
         "id": "53fa855dc695dd45",
         "type": "modbus-read",
         "z": "1e78c2098878e540",
@@ -745,8 +528,8 @@
         "ioFile": "",
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
-        "x": 170,
-        "y": 220,
+        "x": 150,
+        "y": 200,
         "wires": [
             [],
             [
@@ -766,8 +549,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 220,
+        "x": 180,
+        "y": 280,
         "wires": [
             []
         ]

@@ -521,7 +521,7 @@
         "rate": "15",
         "rateUnit": "s",
         "delayOnStart": true,
-        "startDelayTime": "3",
+        "startDelayTime": "1",
         "server": "2a13aec920287264",
         "useIOFile": false,
         "ioFile": "",

@@ -284,7 +284,7 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "TempCO-extract",
-        "func": "msg.payload = msg.payload.data[5] / 10;\nmsg.topic = \"TempCO\";\nmsg.timestamp = new Date().toString();\n\nflow.set(\"tempco\", msg.payload);\n\nreturn msg;",
+        "func": "msg.payload = msg.payload.data[5] / 10;\nmsg.topic = \"TempCO\";\nmsg.timestamp = new Date().toString();\n\nflow.set(\"tempco\", msg.payload);\n\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `TempCO: ${msg.payload} °C | Time: ${msg.timestamp}`\n});\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,

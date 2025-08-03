@@ -304,7 +304,7 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "Pozycja-extract",
-        "func": "msg.volt = msg.payload.data[0];\nmsg.payload = msg.payload.data[0] / 1000;\nmsg.topic = \"Pozycja\";\nmsg.timestamp = new Date().toString();\nreturn msg;",
+        "func": "msg.volt = msg.payload.data[0];\nmsg.payload = msg.payload.data[0] / 1000;\nmsg.topic = \"Pozycja\";\nmsg.timestamp = new Date().toString();\n\nflow.set(\"pozycja\", msg.payload);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -325,7 +325,7 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "TempZEW-extract",
-        "func": "msg.payload = msg.payload.data[4] / 10;\nmsg.topic = \"TempZEW\";\nmsg.timestamp = new Date().toString();\nreturn msg;",
+        "func": "msg.payload = msg.payload.data[4] / 10;\nmsg.topic = \"TempZEW\";\nmsg.timestamp = new Date().toString();\n\nflow.set(\"tempzew\", msg.payload);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -482,7 +482,7 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "function 2",
-        "func": "msg.payload = [msg.payload[0], msg.payload[1],msg.payload[18] ];\nreturn msg;",
+        "func": "msg.payload = [msg.payload[0], msg.payload[1],msg.payload[18] ];\n\nflow.set(\"plc100\", msg.payload[0]);\nflow.set(\"plc101\", msg.payload[1]);\nflow.set(\"plc118\", msg.payload[18]);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -764,7 +764,7 @@
         "payload": "20",
         "payloadType": "num",
         "x": 490,
-        "y": 820,
+        "y": 880,
         "wires": [
             [
                 "86ef01d5251463e9"

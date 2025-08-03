@@ -724,6 +724,81 @@
         ]
     },
     {
+        "id": "86ef01d5251463e9",
+        "type": "thingspeak42",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "delay": "15",
+        "topic1": "TempZew",
+        "topic2": "TempCO",
+        "topic3": "Pozycja",
+        "topic4": "Task100",
+        "topic5": "Task101",
+        "topic6": "Task118",
+        "topic7": "",
+        "topic8": "",
+        "endpoint": "https://thingspeak.com",
+        "x": 1190,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "b98d17300e10168b",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "TempZew",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 810,
+        "y": 800,
+        "wires": [
+            [
+                "86ef01d5251463e9"
+            ]
+        ]
+    },
+    {
+        "id": "15ecc044141f4de3",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 800,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "451c143bbd7fccc9",
         "type": "inject",
         "z": "6de31ff16789035c",

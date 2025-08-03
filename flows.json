@@ -463,31 +463,6 @@
         "wires": []
     },
     {
-        "id": "d1620b93df8f29de",
-        "type": "delay",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 140,
-        "y": 420,
-        "wires": [
-            [
-                "e5317afdda80f861"
-            ]
-        ]
-    },
-    {
         "id": "0eccd18fcd4a9b44",
         "type": "modbus-write",
         "z": "1e78c2098878e540",
@@ -734,6 +709,35 @@
         "x": 390,
         "y": 240,
         "wires": []
+    },
+    {
+        "id": "44b4420a6ffe2a33",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "6",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 320,
+        "wires": [
+            [
+                "e5317afdda80f861"
+            ]
+        ]
     },
     {
         "id": "451c143bbd7fccc9",

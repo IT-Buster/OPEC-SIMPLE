@@ -284,7 +284,7 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "TempCO-extract",
-        "func": "msg.payload = msg.payload.data[5] / 10;\nmsg.topic = \"TempCO\";\nmsg.timestamp = new Date().toString();\nreturn msg;",
+        "func": "msg.payload = msg.payload.data[5] / 10;\nmsg.topic = \"TempCO\";\nmsg.timestamp = new Date().toString();\n\nflow.set(\"tempco\", msg.payload);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -518,7 +518,7 @@
         "id": "c4a03ebdf905a40b",
         "type": "debug",
         "z": "1e78c2098878e540",
-        "name": "pay18",
+        "name": "118",
         "active": true,
         "tosidebar": false,
         "console": false,
@@ -569,7 +569,7 @@
         "id": "5ff0f91f6c0b0887",
         "type": "debug",
         "z": "1e78c2098878e540",
-        "name": "pay1",
+        "name": "101",
         "active": true,
         "tosidebar": false,
         "console": false,
@@ -586,7 +586,7 @@
         "id": "38b9777b50d3c0cf",
         "type": "debug",
         "z": "1e78c2098878e540",
-        "name": "pay 0",
+        "name": "100",
         "active": true,
         "tosidebar": false,
         "console": false,
@@ -763,8 +763,8 @@
         "topic": "TempZew",
         "payload": "20",
         "payloadType": "num",
-        "x": 810,
-        "y": 800,
+        "x": 490,
+        "y": 820,
         "wires": [
             [
                 "86ef01d5251463e9"
@@ -792,8 +792,31 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 800,
-        "y": 900,
+        "x": 500,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ed0b6215f176b54",
+        "type": "delay",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "15",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "15",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1060,
+        "y": 760,
         "wires": [
             []
         ]

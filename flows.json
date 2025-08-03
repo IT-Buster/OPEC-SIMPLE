@@ -266,8 +266,7 @@
         "y": 40,
         "wires": [
             [
-                "9d6f3c55beed1de2",
-                "86ef01d5251463e9"
+                "9d6f3c55beed1de2"
             ]
         ]
     },
@@ -424,54 +423,6 @@
         ]
     },
     {
-        "id": "86ef01d5251463e9",
-        "type": "thingspeak42",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "delay": "15",
-        "topic1": "tempzew",
-        "topic2": "TempCO",
-        "topic3": "Pozycja",
-        "topic4": "Task100",
-        "topic5": "Task101",
-        "topic6": "Task118",
-        "topic7": "",
-        "topic8": "",
-        "endpoint": "https://thingspeak.com",
-        "x": 630,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "b98d17300e10168b",
-        "type": "inject",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "tempzew",
-        "payload": "25",
-        "payloadType": "num",
-        "x": 170,
-        "y": 540,
-        "wires": [
-            [
-                "86ef01d5251463e9"
-            ]
-        ]
-    },
-    {
         "id": "a3d43e6609be7e87",
         "type": "modbus-read",
         "z": "1e78c2098878e540",
@@ -578,7 +529,7 @@
         "id": "f8b5fae7efb01a27",
         "type": "http request",
         "z": "1e78c2098878e540",
-        "name": "",
+        "name": "ThingSpeak",
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
@@ -590,8 +541,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 530,
-        "y": 640,
+        "x": 670,
+        "y": 560,
         "wires": [
             []
         ]
@@ -601,15 +552,15 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "function 1",
-        "func": "msg.headers = {\n  \"Content-Type\": \"application/x-www-form-urlencoded\"\n};\nmsg.payload = \"api_key=DR68GTX4J0WJA08J&field1=23\";\nreturn msg;",
+        "func": "msg.headers = {\n  \"Content-Type\": \"application/x-www-form-urlencoded\"\n};\nmsg.payload = \"api_key=DR68GTX4J0WJA08J&field2=23\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 640,
+        "x": 460,
+        "y": 560,
         "wires": [
             [
                 "f8b5fae7efb01a27"
@@ -637,8 +588,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
-        "y": 640,
+        "x": 180,
+        "y": 600,
         "wires": [
             [
                 "7fb3450e1fc0e231"

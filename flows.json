@@ -264,22 +264,6 @@
         ]
     },
     {
-        "id": "c6536cc019278032",
-        "type": "display property",
-        "z": "1e78c2098878e540",
-        "name": "Temp CO",
-        "property": "msg.payload",
-        "showDate": 0,
-        "showTime": true,
-        "x": 540,
-        "y": 40,
-        "wires": [
-            [
-                "c03008d7c7b1400a"
-            ]
-        ]
-    },
-    {
         "id": "2c8e29558bef67fc",
         "type": "function",
         "z": "1e78c2098878e540",
@@ -295,7 +279,7 @@
         "y": 100,
         "wires": [
             [
-                "c6536cc019278032"
+                "c03008d7c7b1400a"
             ]
         ]
     },
@@ -325,7 +309,7 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "TempZEW-extract",
-        "func": "msg.payload = msg.payload.data[4] / 10;\nmsg.topic = \"TempZEW\";\nmsg.timestamp = new Date().toString();\n\nflow.set(\"tempzew\", msg.payload);\n\nreturn msg;",
+        "func": "msg.payload = msg.payload.data[4] / 10;\nmsg.topic = \"TempZEW\";\nmsg.timestamp = new Intl.DateTimeFormat('pl-PL', {\n  hour: '2-digit', minute: '2-digit', second: '2-digit',\n  year: 'numeric', month: '2-digit', day: '2-digit',\n  hour12: false\n}).format(new Date()).replace(',', '');\n\nflow.set(\"tempzew\", msg.payload);\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `TempZEW: ${msg.payload} °C | Time: ${msg.timestamp}`\n});\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,

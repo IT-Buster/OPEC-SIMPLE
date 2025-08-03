@@ -215,7 +215,7 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "TempCO-extract",
-        "func": "msg.payload = msg.payload.data[5] / 10;\nmsg.topic = \"TempCO\";\n// msg.timestamp = new Date().toString();\n// msg.timestamp = new Date().toISOString().replace('T', ' ').substring(0, 19);\nmsg.timestamp = new Intl.DateTimeFormat('pl-PL', {\n  hour: '2-digit', minute: '2-digit', second: '2-digit',\n  year: 'numeric', month: '2-digit', day: '2-digit',\n  hour12: false\n}).format(new Date()).replace(',', '');\n\nflow.set(\"tempco\", msg.payload);\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `TempCO: ${msg.payload} °C | Time: ${msg.timestamp}`\n});\n\nreturn msg;",
+        "func": "msg.payload = msg.payload.data[5] / 10;\nmsg.topic = \"TempCO\";\nmsg.timestamp = new Intl.DateTimeFormat('pl-PL', {\n  hour: '2-digit', minute: '2-digit', second: '2-digit',\n  year: 'numeric', month: '2-digit', day: '2-digit',\n  hour12: false\n}).format(new Date()).replace(',', '');\n\nflow.set(\"tempco\", msg.payload);\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `TempCO: ${msg.payload} °C | Time: ${msg.timestamp}`\n});\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -369,8 +369,7 @@
         "y": 420,
         "wires": [
             [
-                "0eccd18fcd4a9b44",
-                "b4a5c6b9a8798535"
+                "0eccd18fcd4a9b44"
             ]
         ]
     },

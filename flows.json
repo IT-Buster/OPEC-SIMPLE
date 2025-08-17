@@ -426,7 +426,6 @@
         "id": "a3d43e6609be7e87",
         "type": "modbus-read",
         "z": "1e78c2098878e540",
-        "d": true,
         "name": "PLC-READ",
         "topic": "",
         "showStatusActivities": false,

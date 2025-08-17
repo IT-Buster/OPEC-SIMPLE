@@ -624,6 +624,7 @@
         "id": "451c143bbd7fccc9",
         "type": "inject",
         "z": "6de31ff16789035c",
+        "d": true,
         "name": "Co 5 sek",
         "props": [],
         "repeat": "5",
@@ -631,7 +632,6 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payloadType": "date",
         "x": 130,
         "y": 40,
         "wires": [

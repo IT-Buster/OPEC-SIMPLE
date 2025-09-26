@@ -249,9 +249,9 @@
         "y": 100,
         "wires": [
             [
-                "c03008d7c7b1400a",
                 "a1b2c3d4abcd5678",
-                "568c2ffe47e00ceb"
+                "568c2ffe47e00ceb",
+                "c03008d7c7b1400a"
             ]
         ]
     },
@@ -1328,29 +1328,6 @@
         "headers": [],
         "x": 1330,
         "y": 20,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ea74b386306c157d",
-        "type": "delay",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1120,
-        "y": 300,
         "wires": [
             []
         ]

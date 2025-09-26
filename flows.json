@@ -1337,7 +1337,7 @@
         "type": "delay",
         "z": "1e78c2098878e540",
         "name": "",
-        "pauseType": "rate",
+        "pauseType": "delay",
         "timeout": "30",
         "timeoutUnits": "seconds",
         "rate": "1",
@@ -1349,7 +1349,7 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 1160,
+        "x": 1020,
         "y": 20,
         "wires": [
             [

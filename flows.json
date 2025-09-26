@@ -997,7 +997,7 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "Termostat",
-        "func": "let tempNastawa = flow.get(\"temperatura_nastawa\")\nlet tempObecna = msg.payload\n\n\nreturn msg;",
+        "func": "let tempNastawa = flow.get(\"temperatura_nastawa\")\nlet tempObecna = msg.payload\n\n\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `NASTAWA: ${tempNastawa} | Time: ${msg.timestamp}`\n});\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,

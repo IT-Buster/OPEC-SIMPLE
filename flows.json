@@ -269,7 +269,8 @@
         "y": 160,
         "wires": [
             [
-                "bd09d6777578e0a1"
+                "bd09d6777578e0a1",
+                "a1b2c3d4abcd5678"
             ]
         ]
     },
@@ -899,6 +900,68 @@
                 "6f48287671bc7669"
             ]
         ]
+    },
+    {
+        "id": "e1d2b3c4abcd1234",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "Nowa wartość",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "123",
+        "payloadType": "num",
+        "x": 670,
+        "y": 900,
+        "wires": [
+            [
+                "a1b2c3d4abcd5678"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4abcd5678",
+        "type": "function",
+        "z": "1e78c2098878e540",
+        "name": "Przesuń tablicę",
+        "func": "// Pobierz tablicę z context\nlet arr = flow.get(\"tablica\") || [];\n\n// Dodaj nowy element na początku\narr.unshift(msg.payload);\n\n// Utrzymuj maksymalnie 10 elementów\nif (arr.length > 10) {\n    arr = arr.slice(0,10);\n}\n\n// Zapisz do flow context\nflow.set(\"tablica\", arr);\n\n// Wyślij tablicę dalej\nmsg.payload = arr;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 900,
+        "wires": [
+            [
+                "f1e2d3c4abcd9876"
+            ]
+        ]
+    },
+    {
+        "id": "f1e2d3c4abcd9876",
+        "type": "debug",
+        "z": "1e78c2098878e540",
+        "name": "Podgląd tablicy",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 900,
+        "wires": []
     },
     {
         "id": "ed8026417287c70c",

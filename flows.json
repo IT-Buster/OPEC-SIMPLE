@@ -998,7 +998,7 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "Termostat",
-        "func": "let tempNastawa = flow.get(\"temperatura_nastawa\")\nlet tempObecna = msg.payload\n\nlet delta = tempNastawa - tempObecna\n\n\n\n\n\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `NASTAWA: ${delta} | Time: ${msg.timestamp}`\n});\n\nreturn msg;",
+        "func": "let tempNastawa = flow.get(\"temperatura_nastawa\")\nlet tempObecna = msg.payload\n\nlet delta = tempNastawa - tempObecna\n\n\n\n\nmsg.payload = delta\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `NASTAWA: ${delta} | Time: ${msg.timestamp}`\n});\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1008,7 +1008,9 @@
         "x": 820,
         "y": 960,
         "wires": [
-            []
+            [
+                "2a8b443c64393111"
+            ]
         ]
     },
     {
@@ -1034,6 +1036,23 @@
             [],
             []
         ]
+    },
+    {
+        "id": "2a8b443c64393111",
+        "type": "debug",
+        "z": "1e78c2098878e540",
+        "name": "Delta",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 940,
+        "wires": []
     },
     {
         "id": "ed8026417287c70c",

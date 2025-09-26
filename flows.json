@@ -1031,7 +1031,7 @@
         "delayOnStart": false,
         "startDelayTime": "",
         "x": 1200,
-        "y": 1000,
+        "y": 1060,
         "wires": [
             [],
             []
@@ -1050,8 +1050,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1070,
-        "y": 940,
+        "x": 1110,
+        "y": 960,
         "wires": []
     },
     {

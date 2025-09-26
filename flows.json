@@ -992,7 +992,8 @@
         "wires": [
             [
                 "2a8b443c64393111",
-                "cf8d225c092417f5"
+                "cf8d225c092417f5",
+                "a181afc9dcf4f025"
             ]
         ]
     },
@@ -1135,6 +1136,23 @@
             [
                 "f5a1b2c3d4e5f678"
             ]
+        ]
+    },
+    {
+        "id": "a181afc9dcf4f025",
+        "type": "file",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "filename": "",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1120,
+        "y": 900,
+        "wires": [
+            []
         ]
     },
     {

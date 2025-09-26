@@ -902,31 +902,6 @@
         ]
     },
     {
-        "id": "e1d2b3c4abcd1234",
-        "type": "inject",
-        "z": "1e78c2098878e540",
-        "name": "Nowa wartość",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "123",
-        "payloadType": "num",
-        "x": 670,
-        "y": 900,
-        "wires": [
-            [
-                "a1b2c3d4abcd5678"
-            ]
-        ]
-    },
-    {
         "id": "a1b2c3d4abcd5678",
         "type": "function",
         "z": "1e78c2098878e540",
@@ -938,8 +913,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 900,
-        "y": 900,
+        "x": 780,
+        "y": 820,
         "wires": [
             [
                 "f1e2d3c4abcd9876",
@@ -960,15 +935,15 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1130,
-        "y": 900,
+        "x": 1080,
+        "y": 800,
         "wires": []
     },
     {
         "id": "e62df778543d201d",
         "type": "debug",
         "z": "1e78c2098878e540",
-        "name": "Podgląd tablicy",
+        "name": "Watosc z tablicy",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -977,8 +952,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1140,
-        "y": 1000,
+        "x": 1080,
+        "y": 860,
         "wires": []
     },
     {

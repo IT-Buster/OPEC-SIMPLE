@@ -942,7 +942,8 @@
         "y": 900,
         "wires": [
             [
-                "f1e2d3c4abcd9876"
+                "f1e2d3c4abcd9876",
+                "e62df778543d201d"
             ]
         ]
     },
@@ -961,6 +962,23 @@
         "statusType": "auto",
         "x": 1130,
         "y": 900,
+        "wires": []
+    },
+    {
+        "id": "e62df778543d201d",
+        "type": "debug",
+        "z": "1e78c2098878e540",
+        "name": "Podgląd tablicy",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload[0]",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 1000,
         "wires": []
     },
     {

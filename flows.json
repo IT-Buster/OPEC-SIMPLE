@@ -556,77 +556,6 @@
         "wires": []
     },
     {
-        "id": "f8b5fae7efb01a27",
-        "type": "http request",
-        "z": "1e78c2098878e540",
-        "name": "ThingSpeak",
-        "method": "POST",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "https://api.thingspeak.com/update",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 410,
-        "y": 720,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7fb3450e1fc0e231",
-        "type": "function",
-        "z": "1e78c2098878e540",
-        "name": "function 1",
-        "func": "msg.headers = {\n  \"Content-Type\": \"application/x-www-form-urlencoded\"\n};\nmsg.payload = \"api_key=DR68GTX4J0WJA08J&field2=23\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 260,
-        "y": 720,
-        "wires": [
-            [
-                "f8b5fae7efb01a27"
-            ]
-        ]
-    },
-    {
-        "id": "014582931a39ee3a",
-        "type": "inject",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 720,
-        "wires": [
-            [
-                "7fb3450e1fc0e231"
-            ]
-        ]
-    },
-    {
         "id": "8cf97f8067a9d5a6",
         "type": "inject",
         "z": "1e78c2098878e540",
@@ -669,8 +598,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 440,
-        "y": 880,
+        "x": 340,
+        "y": 660,
         "wires": [
             [],
             []
@@ -693,8 +622,8 @@
         "topic": "",
         "payload": "2000",
         "payloadType": "num",
-        "x": 190,
-        "y": 860,
+        "x": 110,
+        "y": 700,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -718,8 +647,8 @@
         "topic": "",
         "payload": "1000",
         "payloadType": "num",
-        "x": 190,
-        "y": 820,
+        "x": 110,
+        "y": 660,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -743,8 +672,8 @@
         "topic": "",
         "payload": "3000",
         "payloadType": "num",
-        "x": 190,
-        "y": 980,
+        "x": 110,
+        "y": 820,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -768,8 +697,8 @@
         "topic": "",
         "payload": "4000",
         "payloadType": "num",
-        "x": 190,
-        "y": 1140,
+        "x": 110,
+        "y": 980,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -793,8 +722,8 @@
         "topic": "",
         "payload": "3200",
         "payloadType": "num",
-        "x": 190,
-        "y": 1020,
+        "x": 110,
+        "y": 860,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -818,8 +747,8 @@
         "topic": "",
         "payload": "3400",
         "payloadType": "num",
-        "x": 190,
-        "y": 1060,
+        "x": 110,
+        "y": 900,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -843,8 +772,8 @@
         "topic": "",
         "payload": "3600",
         "payloadType": "num",
-        "x": 190,
-        "y": 1100,
+        "x": 110,
+        "y": 940,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -868,8 +797,8 @@
         "topic": "",
         "payload": "2700",
         "payloadType": "num",
-        "x": 190,
-        "y": 940,
+        "x": 110,
+        "y": 780,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -893,8 +822,8 @@
         "topic": "",
         "payload": "2500",
         "payloadType": "num",
-        "x": 190,
-        "y": 900,
+        "x": 110,
+        "y": 740,
         "wires": [
             [
                 "6f48287671bc7669"

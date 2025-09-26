@@ -768,7 +768,7 @@
         "payload": "4000",
         "payloadType": "num",
         "x": 190,
-        "y": 980,
+        "y": 1020,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -794,6 +794,31 @@
         "payloadType": "num",
         "x": 190,
         "y": 940,
+        "wires": [
+            [
+                "6f48287671bc7669"
+            ]
+        ]
+    },
+    {
+        "id": "085e699e22f5190c",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "3400",
+        "payloadType": "num",
+        "x": 190,
+        "y": 980,
         "wires": [
             [
                 "6f48287671bc7669"

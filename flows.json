@@ -768,6 +768,31 @@
         "payload": "4000",
         "payloadType": "num",
         "x": 190,
+        "y": 980,
+        "wires": [
+            [
+                "6f48287671bc7669"
+            ]
+        ]
+    },
+    {
+        "id": "c4ebc7abbda93c83",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "3200",
+        "payloadType": "num",
+        "x": 190,
         "y": 940,
         "wires": [
             [

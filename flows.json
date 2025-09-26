@@ -976,8 +976,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 280,
-        "y": 40,
+        "x": 420,
+        "y": 200,
         "wires": [
             [],
             [
@@ -1027,8 +1027,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 470,
-        "y": 40,
+        "x": 750,
+        "y": 200,
         "wires": []
     },
     {

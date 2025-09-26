@@ -1194,7 +1194,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1140,
+        "x": 1100,
         "y": 1040,
         "wires": [
             [
@@ -1216,15 +1216,15 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "30",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 920,
-        "y": 1020,
+        "x": 950,
+        "y": 1040,
         "wires": [
             [
                 "8b78f5a8abf76e4d"
@@ -1243,7 +1243,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1320,
+        "x": 1280,
         "y": 1040,
         "wires": []
     },

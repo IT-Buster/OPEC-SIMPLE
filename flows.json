@@ -989,7 +989,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "flow.temperatura_nastawa",
+                "p": "temperatura_nastawa",
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
@@ -1032,6 +1032,7 @@
         "name": "Pobierz flow.temperatura_nastawa",
         "func": "let nastawa = flow.get(\"temperatura_nastawa\") || 0;\nmsg.payload = \"Aktualna nastawa: \" + nastawa + \" °C\";\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",

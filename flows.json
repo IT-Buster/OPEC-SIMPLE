@@ -1292,7 +1292,7 @@
         "id": "c95435dbb60939ea",
         "type": "function",
         "z": "1e78c2098878e540",
-        "name": "zew",
+        "name": "pozycja",
         "func": "// Pobieramy temperaturę zewnętrzną z flow\nlet pozycja = Number(flow.get(\"pozycja\")) || 0;\n\n// Tworzymy URL do ThingSpeak\nlet writeAPIKey = \"DR68GTX4J0WJA08J\";\nlet url = `https://api.thingspeak.com/update?api_key=${writeAPIKey}&field3=${pozycja}`;\n\n// Przekazujemy URL do HTTP request node\nmsg.url = url;\nmsg.method = \"GET\"; // GET dla prostego zapisu\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
@@ -1300,7 +1300,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
+        "x": 740,
         "y": 160,
         "wires": [
             []

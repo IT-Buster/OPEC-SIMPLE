@@ -1265,7 +1265,9 @@
         "x": 730,
         "y": 80,
         "wires": [
-            []
+            [
+                "b888b715ed15d9f2"
+            ]
         ]
     },
     {
@@ -1283,7 +1285,9 @@
         "x": 730,
         "y": 120,
         "wires": [
-            []
+            [
+                "b888b715ed15d9f2"
+            ]
         ]
     },
     {
@@ -1300,6 +1304,30 @@
         "libs": [],
         "x": 730,
         "y": 160,
+        "wires": [
+            [
+                "b888b715ed15d9f2"
+            ]
+        ]
+    },
+    {
+        "id": "b888b715ed15d9f2",
+        "type": "http request",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1130,
+        "y": 40,
         "wires": [
             []
         ]

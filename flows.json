@@ -652,6 +652,55 @@
         ]
     },
     {
+        "id": "6f48287671bc7669",
+        "type": "modbus-write",
+        "z": "1e78c2098878e540",
+        "name": "Siłownik",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "6",
+        "quantity": "1",
+        "server": "2a13aec920287264",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 380,
+        "y": 900,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b475f31fb4451340",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1000",
+        "payloadType": "num",
+        "x": 190,
+        "y": 880,
+        "wires": [
+            [
+                "6f48287671bc7669"
+            ]
+        ]
+    },
+    {
         "id": "ed8026417287c70c",
         "type": "modbus-write",
         "z": "85249515dfc449d5",

@@ -957,27 +957,109 @@
         "wires": []
     },
     {
-        "id": "e9d5f8430a1e98fa",
-        "type": "switch",
+        "id": "c1f3a1abf3c1d111",
+        "type": "inject",
         "z": "1e78c2098878e540",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
+        "name": "Ustaw nastawę 22",
+        "props": [
             {
-                "t": "eq",
-                "v": "",
-                "vt": "str"
+                "p": "payload"
             }
         ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 870,
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "22",
+        "payloadType": "num",
+        "x": 540,
+        "y": 1000,
+        "wires": [
+            [
+                "f5a1b2c3d4e5f678"
+            ]
+        ]
+    },
+    {
+        "id": "f5a1b2c3d4e5f678",
+        "type": "change",
+        "z": "1e78c2098878e540",
+        "name": "Zapisz do flow.temperatura_nastawa",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flow.temperatura_nastawa",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "x": 830,
         "y": 1000,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "a2b3c4d5e6f7a890",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "Odczytaj nastawę",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 540,
+        "y": 1060,
+        "wires": [
+            [
+                "b3c4d5e6f7a8b901"
+            ]
+        ]
+    },
+    {
+        "id": "b3c4d5e6f7a8b901",
+        "type": "function",
+        "z": "1e78c2098878e540",
+        "name": "Pobierz flow.temperatura_nastawa",
+        "func": "let nastawa = flow.get(\"temperatura_nastawa\") || 0;\nmsg.payload = \"Aktualna nastawa: \" + nastawa + \" °C\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 1060,
+        "wires": [
+            [
+                "d4e5f6a7b8c9d012"
+            ]
+        ]
+    },
+    {
+        "id": "d4e5f6a7b8c9d012",
+        "type": "debug",
+        "z": "1e78c2098878e540",
+        "name": "Podgląd nastawy",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 1060,
+        "wires": []
     },
     {
         "id": "ed8026417287c70c",
@@ -1245,111 +1327,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "c1f3a1abf3c1d111",
-        "type": "inject",
-        "z": "ed392b0a7f59b9ad",
-        "name": "Ustaw nastawę 22",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "22",
-        "payloadType": "num",
-        "x": 250,
-        "y": 400,
-        "wires": [
-            [
-                "f5a1b2c3d4e5f678"
-            ]
-        ]
-    },
-    {
-        "id": "f5a1b2c3d4e5f678",
-        "type": "change",
-        "z": "ed392b0a7f59b9ad",
-        "name": "Zapisz do flow.temperatura_nastawa",
-        "rules": [
-            {
-                "t": "set",
-                "p": "flow.temperatura_nastawa",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "x": 540,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a2b3c4d5e6f7a890",
-        "type": "inject",
-        "z": "ed392b0a7f59b9ad",
-        "name": "Odczytaj nastawę",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "date",
-        "x": 250,
-        "y": 460,
-        "wires": [
-            [
-                "b3c4d5e6f7a8b901"
-            ]
-        ]
-    },
-    {
-        "id": "b3c4d5e6f7a8b901",
-        "type": "function",
-        "z": "ed392b0a7f59b9ad",
-        "name": "Pobierz flow.temperatura_nastawa",
-        "func": "let nastawa = flow.get(\"temperatura_nastawa\") || 0;\nmsg.payload = \"Aktualna nastawa: \" + nastawa + \" °C\";\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 560,
-        "y": 460,
-        "wires": [
-            [
-                "d4e5f6a7b8c9d012"
-            ]
-        ]
-    },
-    {
-        "id": "d4e5f6a7b8c9d012",
-        "type": "debug",
-        "z": "ed392b0a7f59b9ad",
-        "name": "Podgląd nastawy",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 810,
-        "y": 460,
-        "wires": []
     },
     {
         "id": "451c143bbd7fccc9",

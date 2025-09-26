@@ -1143,13 +1143,13 @@
         "type": "file",
         "z": "1e78c2098878e540",
         "name": "",
-        "filename": "",
+        "filename": "/tmp/file.txt",
         "filenameType": "str",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 1120,
+        "x": 1130,
         "y": 900,
         "wires": [
             []

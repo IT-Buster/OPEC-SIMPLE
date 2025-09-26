@@ -998,7 +998,7 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "Termostat",
-        "func": "let tempNastawa = Number(flow.get(\"temperatura_nastawa\")) || 0;\nlet tempObecna = Number(msg.payload[0]) || 0;\n\nmsg.topic = \"Regulacja\"\n\nlet delta = tempNastawa - tempObecna;\nmsg.delta = delta.toFixed(1);\n// gdy ujemna to grzejemy \n// gdy dodatnia i duża różnica to chłodzimy\n\n// sprawdzamy jaka duża różnica - ustalamy jak dużo otworzyć\nlet roznica = Math.abs(msg.payload[0] - msg.payload[9])\n\n// regulacja \nif ( delta > 0 )\n\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `DELTA: ${msg.delta} | Time: ${msg.timestamp}`\n});\n\nmsg.nastawa = tempNastawa\nmsg.obecna = tempObecna\n\nreturn msg[null,null,null];",
+        "func": "let tempNastawa = Number(flow.get(\"temperatura_nastawa\")) || 0;\nlet tempObecna = Number(msg.payload[0]) || 0;\n\nmsg.topic = \"Regulacja\"\n\nlet delta = tempNastawa - tempObecna;\nmsg.delta = delta.toFixed(1);\n// gdy ujemna to grzejemy \n// gdy dodatnia i duża różnica to chłodzimy\n\n// sprawdzamy jaka duża różnica - ustalamy jak dużo otworzyć\nlet roznica = Math.abs(msg.payload[0] - msg.payload[9])\n\n// regulacja \nif ( delta > 0 )\n\n\nif (delta > 0) {\n    // wyjście 1\n    return [msg, null, null];\n} else if ( delta < 0) {\n    // wyjście 2\n    return [null, msg, null];\n} else {\n    // wyjście 3\n    return [null, null, msg];\n}\n\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `DELTA: ${msg.delta} | Time: ${msg.timestamp}`\n});\n\nmsg.nastawa = tempNastawa\nmsg.obecna = tempObecna\n\nreturn msg[null,null,null];",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
@@ -1012,10 +1012,10 @@
                 "2a8b443c64393111"
             ],
             [
-                "89a65b922ae199c2"
+                "705b97f5ea11671f"
             ],
             [
-                "705b97f5ea11671f"
+                "89a65b922ae199c2"
             ]
         ]
     },
@@ -1037,7 +1037,7 @@
         "delayOnStart": false,
         "startDelayTime": "",
         "x": 1160,
-        "y": 1040,
+        "y": 1100,
         "wires": [
             [],
             []
@@ -1052,7 +1052,7 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "obecna",
+        "complete": "\"Grzejemy\"",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
@@ -1094,12 +1094,12 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "obecna",
+        "complete": "\"Zostawiamy\"",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 1170,
-        "y": 960,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1111,12 +1111,12 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "obecna",
+        "complete": "\"Chlodzimy\"",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 1170,
-        "y": 1000,
+        "y": 960,
         "wires": []
     },
     {

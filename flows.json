@@ -847,7 +847,6 @@
         "wires": [
             [
                 "f1e2d3c4abcd9876",
-                "e62df778543d201d",
                 "0e0c32ae656ae513"
             ]
         ]
@@ -857,7 +856,7 @@
         "type": "debug",
         "z": "1e78c2098878e540",
         "name": "Podgląd tablicy",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -867,23 +866,6 @@
         "statusType": "auto",
         "x": 1080,
         "y": 800,
-        "wires": []
-    },
-    {
-        "id": "e62df778543d201d",
-        "type": "debug",
-        "z": "1e78c2098878e540",
-        "name": "Watosc z tablicy",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload[0]",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1080,
-        "y": 860,
         "wires": []
     },
     {

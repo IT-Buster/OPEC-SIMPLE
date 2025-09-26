@@ -1046,7 +1046,7 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "tempObecna",
+        "complete": "obecna",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",

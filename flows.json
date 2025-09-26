@@ -1012,6 +1012,30 @@
         ]
     },
     {
+        "id": "cf8d225c092417f5",
+        "type": "modbus-write",
+        "z": "1e78c2098878e540",
+        "name": "Siłownik",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "4",
+        "quantity": "1",
+        "server": "2a13aec920287264",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 1120,
+        "y": 980,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
         "id": "ed8026417287c70c",
         "type": "modbus-write",
         "z": "85249515dfc449d5",

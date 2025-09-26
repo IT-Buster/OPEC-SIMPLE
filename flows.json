@@ -1186,7 +1186,7 @@
         "id": "8b78f5a8abf76e4d",
         "type": "function",
         "z": "1e78c2098878e540",
-        "name": "function 1",
+        "name": "Krzywa",
         "func": "// Pobieramy temperaturę zewnętrzną z flow\nlet tempzew = Number(flow.get(\"tempzew\")) || 0;\n\n// Tworzymy dwuwymiarową tablicę z przykładowymi wartościami\n// format: [ [temp_zew, temp_nastawa], ... ]\nlet tabelaNastaw = [\n    [-20, 25],\n    [-10, 23],\n    [0, 21],\n    [5, 20],\n    [10, 19],\n    [15, 18],\n    [20, 17],\n    [25, 16],\n    [30, 15]\n];\n\n// Funkcja, która wybiera nastawę na podstawie tempzew\n// tutaj prosta interpolacja liniowa między punktami tabeli\nfunction obliczNastawa(tempzew, tabela) {\n    for (let i = 0; i < tabela.length - 1; i++) {\n        let [t1, n1] = tabela[i];\n        let [t2, n2] = tabela[i + 1];\n        if (tempzew >= t1 && tempzew <= t2) {\n            // interpolacja liniowa\n            let nastawa = n1 + (n2 - n1) * (tempzew - t1) / (t2 - t1);\n            return nastawa;\n        }\n    }\n    // jeśli tempzew poza zakresem, zwracamy krańcową wartość\n    if (tempzew < tabela[0][0]) return tabela[0][1];\n    if (tempzew > tabela[tabela.length - 1][0]) return tabela[tabela.length - 1][1];\n}\n\n// obliczamy temperaturę nastawy\nlet tempNastawa = obliczNastawa(tempzew, tabelaNastaw);\n\n// zapis do flow\nflow.set(\"temperatura_nastawa\", tempNastawa);\n\n// dla debugu wyjście msg\nmsg.payload = { tempzew, tempNastawa, tabelaNastaw };\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
@@ -1194,11 +1194,58 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 1060,
+        "x": 1140,
+        "y": 1040,
         "wires": [
-            []
+            [
+                "8e36994eb6b9f759"
+            ]
         ]
+    },
+    {
+        "id": "622b6b33bc0d8e2d",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 920,
+        "y": 1020,
+        "wires": [
+            [
+                "8b78f5a8abf76e4d"
+            ]
+        ]
+    },
+    {
+        "id": "8e36994eb6b9f759",
+        "type": "debug",
+        "z": "1e78c2098878e540",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 1040,
+        "wires": []
     },
     {
         "id": "ed8026417287c70c",

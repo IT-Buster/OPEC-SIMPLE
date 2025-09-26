@@ -623,7 +623,7 @@
         "payload": "2000",
         "payloadType": "num",
         "x": 110,
-        "y": 1400,
+        "y": 1440,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -723,7 +723,7 @@
         "payload": "3200",
         "payloadType": "num",
         "x": 110,
-        "y": 1480,
+        "y": 1520,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -773,7 +773,7 @@
         "payload": "3600",
         "payloadType": "num",
         "x": 110,
-        "y": 1520,
+        "y": 1560,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -798,7 +798,7 @@
         "payload": "2700",
         "payloadType": "num",
         "x": 110,
-        "y": 1440,
+        "y": 1480,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -1204,6 +1204,31 @@
         "x": 660,
         "y": 1160,
         "wires": []
+    },
+    {
+        "id": "9a326f3691aa0f2c",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 110,
+        "y": 1400,
+        "wires": [
+            [
+                "6f48287671bc7669"
+            ]
+        ]
     },
     {
         "id": "ed8026417287c70c",

@@ -842,7 +842,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 700,
+        "x": 520,
         "y": 800,
         "wires": [
             [
@@ -864,8 +864,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1080,
-        "y": 800,
+        "x": 640,
+        "y": 680,
         "wires": []
     },
     {
@@ -987,8 +987,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 820,
-        "y": 960,
+        "x": 980,
+        "y": 900,
         "wires": [
             [
                 "2a8b443c64393111",
@@ -1014,8 +1014,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 1180,
-        "y": 1080,
+        "x": 1220,
+        "y": 980,
         "wires": [
             [],
             []
@@ -1034,8 +1034,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1170,
-        "y": 960,
+        "x": 1230,
+        "y": 860,
         "wires": []
     },
     {
@@ -1149,8 +1149,8 @@
         "createDir": false,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 1130,
-        "y": 900,
+        "x": 1190,
+        "y": 820,
         "wires": [
             []
         ]

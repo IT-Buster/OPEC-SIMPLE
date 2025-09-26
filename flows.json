@@ -1030,8 +1030,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 1160,
-        "y": 1100,
+        "x": 1180,
+        "y": 1080,
         "wires": [
             [],
             []
@@ -1041,7 +1041,7 @@
         "id": "2a8b443c64393111",
         "type": "debug",
         "z": "1e78c2098878e540",
-        "name": "Grzejemy",
+        "name": "NASTAWA",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -1050,7 +1050,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
+        "x": 1170,
         "y": 960,
         "wires": []
     },

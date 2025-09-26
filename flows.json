@@ -1265,9 +1265,7 @@
         "x": 630,
         "y": 80,
         "wires": [
-            [
-                "2c19ecde5a031fbf"
-            ]
+            []
         ]
     },
     {
@@ -1305,9 +1303,7 @@
         "x": 640,
         "y": 160,
         "wires": [
-            [
-                "2c19ecde5a031fbf"
-            ]
+            []
         ]
     },
     {
@@ -1346,7 +1342,7 @@
         "randomFirst": "1",
         "randomLast": "5",
         "randomUnits": "seconds",
-        "drop": false,
+        "drop": true,
         "allowrate": false,
         "outputs": 1,
         "x": 1040,

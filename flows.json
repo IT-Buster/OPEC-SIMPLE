@@ -245,7 +245,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
+        "x": 340,
         "y": 100,
         "wires": [
             [
@@ -267,7 +267,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
+        "x": 340,
         "y": 160,
         "wires": [
             [
@@ -288,7 +288,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
+        "x": 350,
         "y": 40,
         "wires": [
             [
@@ -476,7 +476,7 @@
         "ioFile": "",
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
-        "x": 150,
+        "x": 110,
         "y": 40,
         "wires": [
             [],
@@ -1262,7 +1262,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
+        "x": 630,
         "y": 80,
         "wires": [
             [
@@ -1282,7 +1282,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
+        "x": 630,
         "y": 120,
         "wires": [
             [
@@ -1302,7 +1302,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 700,
+        "x": 640,
         "y": 160,
         "wires": [
             [

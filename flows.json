@@ -1046,12 +1046,12 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "\"Grzejemy\"",
+        "complete": "payload",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 1160,
-        "y": 920,
+        "y": 960,
         "wires": []
     },
     {
@@ -1078,40 +1078,6 @@
                 "6f48287671bc7669"
             ]
         ]
-    },
-    {
-        "id": "89a65b922ae199c2",
-        "type": "debug",
-        "z": "1e78c2098878e540",
-        "name": "Zostawiamy",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "\"Zostawiamy\"",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1170,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "705b97f5ea11671f",
-        "type": "debug",
-        "z": "1e78c2098878e540",
-        "name": "Chłodzimy",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "\"Chlodzimy\"",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1170,
-        "y": 960,
-        "wires": []
     },
     {
         "id": "ed8026417287c70c",

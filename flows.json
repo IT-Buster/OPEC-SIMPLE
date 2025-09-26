@@ -999,7 +999,7 @@
         "z": "1e78c2098878e540",
         "name": "Termostat",
         "func": "let tempNastawa = Number(flow.get(\"temperatura_nastawa\")) || 0;\nlet tempObecna = Number(msg.payload[0]) || 0;\n\nmsg.topic = \"Regulacja\"\n\nlet delta = tempNastawa - tempObecna;\nmsg.delta = delta.toFixed(1);\n// gdy ujemna to grzejemy \n// gdy dodatnia i duża różnica to chłodzimy\n\n// sprawdzamy jaka duża różnica - ustalamy jak dużo otworzyć\nlet roznica = Math.abs(msg.payload[0] - msg.payload[9])\n\n// regulacja \nif ( delta > 0 )\n\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `DELTA: ${msg.delta} | Time: ${msg.timestamp}`\n});\n\nmsg.nastawa = tempNastawa\nmsg.obecna = tempObecna\n\nreturn msg[null,null,null];",
-        "outputs": 1,
+        "outputs": 3,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -1010,7 +1010,9 @@
         "wires": [
             [
                 "2a8b443c64393111"
-            ]
+            ],
+            [],
+            []
         ]
     },
     {

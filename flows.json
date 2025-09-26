@@ -835,7 +835,7 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "Zapis do tablicy",
-        "func": "// Pobierz tablicę z context\nlet arr = flow.get(\"tablica\") || [];\n\n// Dodaj nowy element na początku\narr.unshift(msg.payload);\n\n// Utrzymuj maksymalnie 10 elementów\nif (arr.length > 10) {\n    arr = arr.slice(0,10);\n}\n\n// Zapisz do flow context\nflow.set(\"tablica\", arr);\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `OBECNA: ${msg.payload} | Time: ${msg.timestamp}`\n});\n\n\n// Wyślij tablicę dalej\nmsg.payload = arr;\nreturn msg;",
+        "func": "// Pobierz tablicę z context\nlet arr = flow.get(\"tablica\") || [];\n\n// Dodaj nowy element na początku\narr.unshift(msg.payload);\n\n// Utrzymuj maksymalnie 10 elementów\nif (arr.length > 10) {\n    arr = arr.slice(0,10);\n}\n\n// Zapisz do flow context\nflow.set(\"tablica\", arr);\n\nnode.status({\n  fill: \"black\",\n  shape: \"ring\",\n  text: `OBECNA: ${msg.payload} | Time: ${msg.timestamp}`\n});\n\n\n// Wyślij tablicę dalej\nmsg.payload = arr;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,

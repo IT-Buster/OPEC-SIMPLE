@@ -901,7 +901,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "20",
+        "payload": "24",
         "payloadType": "num",
         "x": 110,
         "y": 980,

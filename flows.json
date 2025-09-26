@@ -1122,6 +1122,31 @@
         "payload": "25",
         "payloadType": "num",
         "x": 110,
+        "y": 800,
+        "wires": [
+            [
+                "f5a1b2c3d4e5f678"
+            ]
+        ]
+    },
+    {
+        "id": "d237c4be8fc56eb9",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "27",
+        "payloadType": "num",
+        "x": 110,
         "y": 860,
         "wires": [
             [

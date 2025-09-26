@@ -1175,6 +1175,7 @@
         "name": "Oblicz delta",
         "func": "let tempNastawa = Number(flow.get(\"temperatura_nastawa\")) || 0;\nlet tempObecna  = Number(flow.get(\"temperatura_obecna\")) || 0;\n\nlet delta = tempNastawa - tempObecna;\n\nmsg.payload = delta.toFixed(2);\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",

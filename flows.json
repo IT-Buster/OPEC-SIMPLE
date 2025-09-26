@@ -902,7 +902,7 @@
         "topic": "",
         "payload": "43",
         "payloadType": "num",
-        "x": 340,
+        "x": 350,
         "y": 980,
         "wires": [
             [
@@ -924,7 +924,7 @@
                 "tot": "msg"
             }
         ],
-        "x": 670,
+        "x": 690,
         "y": 980,
         "wires": [
             []
@@ -967,7 +967,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
+        "x": 680,
         "y": 1040,
         "wires": [
             [
@@ -988,7 +988,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
+        "x": 950,
         "y": 1040,
         "wires": []
     },

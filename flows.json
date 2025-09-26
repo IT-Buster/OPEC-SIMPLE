@@ -1080,6 +1080,56 @@
         ]
     },
     {
+        "id": "5dae5dcf549808d3",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "33",
+        "payloadType": "num",
+        "x": 110,
+        "y": 920,
+        "wires": [
+            [
+                "f5a1b2c3d4e5f678"
+            ]
+        ]
+    },
+    {
+        "id": "d1f0d5f18d78a9e0",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "25",
+        "payloadType": "num",
+        "x": 110,
+        "y": 860,
+        "wires": [
+            [
+                "f5a1b2c3d4e5f678"
+            ]
+        ]
+    },
+    {
         "id": "ed8026417287c70c",
         "type": "modbus-write",
         "z": "85249515dfc449d5",

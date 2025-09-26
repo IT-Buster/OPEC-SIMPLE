@@ -690,7 +690,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "1000",
+        "payload": "2000",
         "payloadType": "num",
         "x": 190,
         "y": 880,

@@ -889,7 +889,7 @@
         "id": "c1f3a1abf3c1d111",
         "type": "inject",
         "z": "1e78c2098878e540",
-        "name": "Ustaw nastawę 22",
+        "name": "",
         "props": [
             {
                 "p": "payload"
@@ -902,7 +902,7 @@
         "topic": "",
         "payload": "43",
         "payloadType": "num",
-        "x": 380,
+        "x": 340,
         "y": 980,
         "wires": [
             [

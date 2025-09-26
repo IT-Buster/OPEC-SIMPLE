@@ -993,6 +993,24 @@
         "wires": []
     },
     {
+        "id": "0e0c32ae656ae513",
+        "type": "function",
+        "z": "1e78c2098878e540",
+        "name": "Termostat",
+        "func": "let tempNastawa = flow.get(\"temperatura_nastawa\")\nlet tempObecna = msg.payload\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "ed8026417287c70c",
         "type": "modbus-write",
         "z": "85249515dfc449d5",

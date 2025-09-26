@@ -8,13 +8,6 @@
         "env": []
     },
     {
-        "id": "6de31ff16789035c",
-        "type": "tab",
-        "label": "Symulator Siłownika",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "85249515dfc449d5",
         "type": "tab",
         "label": "Termostat",
@@ -29,6 +22,13 @@
         "disabled": false,
         "info": "",
         "env": []
+    },
+    {
+        "id": "6de31ff16789035c",
+        "type": "tab",
+        "label": "Symulator Siłownika",
+        "disabled": true,
+        "info": ""
     },
     {
         "id": "2a13aec920287264",
@@ -621,6 +621,228 @@
         ]
     },
     {
+        "id": "ed8026417287c70c",
+        "type": "modbus-write",
+        "z": "85249515dfc449d5",
+        "name": "Pos-SET",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "4",
+        "quantity": "1",
+        "server": "2a13aec920287264",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 420,
+        "y": 200,
+        "wires": [
+            [],
+            [
+                "243b35468db52ac4"
+            ]
+        ]
+    },
+    {
+        "id": "bf71e8624b4cf66c",
+        "type": "inject",
+        "z": "85249515dfc449d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2000",
+        "payloadType": "num",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            [
+                "ed8026417287c70c"
+            ]
+        ]
+    },
+    {
+        "id": "243b35468db52ac4",
+        "type": "debug",
+        "z": "85249515dfc449d5",
+        "name": "debug poz",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "temp_ext",
+        "type": "inject",
+        "z": "ed392b0a7f59b9ad",
+        "name": "Temperatura zewnętrzna",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "6",
+        "payloadType": "num",
+        "x": 230,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "logic",
+        "type": "function",
+        "z": "ed392b0a7f59b9ad",
+        "name": "Sterowanie siłownikiem",
+        "func": "let tempOut = msg.payload.temp_out;\nlet tempCO = msg.payload.temp_co;\nlet valveActual = msg.payload.valve_feedback || 0;\n\nlet targetTemp;\nlet valveCmd;\nlet pumpState;\n\nif (tempOut >= 12) {\n    targetTemp = 0;\n    valveCmd = 0;\n    pumpState = \"OFF\";\n} else {\n    // krzywa grzewcza\n    if (tempOut <= 0) targetTemp = 50;\n    else if (tempOut <= 5) {\n        targetTemp = 50 - (tempOut / 5) * 3;\n    } else if (tempOut <= 10) {\n        targetTemp = 47 - ((tempOut - 5) / 5) * 5;\n    } else {\n        targetTemp = 42;\n    }\n\n    // regulacja P\n    let errorTemp = targetTemp - tempCO;\n    if (Math.abs(errorTemp) < 0.5) errorTemp = 0;\n\n    let Kp = 300;\n    let deltaCmd = errorTemp * Kp;\n\n    let lastCmd = flow.get(\"last_valve_cmd\") || valveActual;\n\n    let maxDelta = 1000;\n    if (deltaCmd > maxDelta) deltaCmd = maxDelta;\n    if (deltaCmd < -maxDelta) deltaCmd = -maxDelta;\n\n    valveCmd = Math.max(0, Math.min(10000, lastCmd + deltaCmd));\n    pumpState = \"ON\";\n}\n\nflow.set(\"last_valve_cmd\", valveCmd);\n\nlet valveError = Math.abs(valveCmd - valveActual);\nlet warn = \"\";\nif (valveError > 1500 && pumpState === \"ON\") {\n    warn = \"⚠ Siłownik nie osiąga pozycji\";\n}\n\n// ➕ Status w edytorze Node-RED\nnode.status({\n    fill: pumpState === \"ON\" ? \"green\" : \"grey\",\n    shape: warn ? \"ring\" : \"dot\",\n    text: `Tzew: ${tempOut}°C | TCO: ${tempCO}°C → doc: ${targetTemp.toFixed(1)}°C | Sił: ${Math.round(valveCmd)}/${valveActual} | Pompa: ${pumpState}`\n});\n\n// Wyjścia\nreturn [\n    { payload: Math.round(valveCmd) },\n    { payload: pumpState },\n    { payload: targetTemp },\n    { payload: warn }\n];\n",
+        "outputs": 3,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 80,
+        "wires": [
+            [
+                "debug_valve"
+            ],
+            [
+                "debug_pump"
+            ],
+            [
+                "debug_temp"
+            ]
+        ]
+    },
+    {
+        "id": "debug_valve",
+        "type": "debug",
+        "z": "ed392b0a7f59b9ad",
+        "name": "Siłownik (0–10000)",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "debug_pump",
+        "type": "debug",
+        "z": "ed392b0a7f59b9ad",
+        "name": "Pompa (ON/OFF)",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "debug_temp",
+        "type": "debug",
+        "z": "ed392b0a7f59b9ad",
+        "name": "Docelowa temp. CO",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "inject_test",
+        "type": "inject",
+        "z": "ed392b0a7f59b9ad",
+        "name": "Test wejść",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"temp_out\": 3, \"temp_co\": 44, \"valve_feedback\": 3200}",
+        "payloadType": "json",
+        "x": 280,
+        "y": 80,
+        "wires": [
+            [
+                "logic"
+            ]
+        ]
+    },
+    {
+        "id": "inject_cyclic",
+        "type": "inject",
+        "z": "ed392b0a7f59b9ad",
+        "name": "Cykliczne dane (symulacja)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "{\"temp_out\": 3, \"temp_co\": 44, \"valve_feedback\": 3200}",
+        "payloadType": "json",
+        "x": 220,
+        "y": 120,
+        "wires": [
+            [
+                "logic"
+            ]
+        ]
+    },
+    {
         "id": "451c143bbd7fccc9",
         "type": "inject",
         "z": "6de31ff16789035c",
@@ -956,228 +1178,6 @@
         "wires": [
             [
                 "59062f0b0ae01ac1"
-            ]
-        ]
-    },
-    {
-        "id": "ed8026417287c70c",
-        "type": "modbus-write",
-        "z": "85249515dfc449d5",
-        "name": "Pos-SET",
-        "showStatusActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "2",
-        "dataType": "HoldingRegister",
-        "adr": "4",
-        "quantity": "1",
-        "server": "2a13aec920287264",
-        "emptyMsgOnFail": false,
-        "keepMsgProperties": false,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 420,
-        "y": 200,
-        "wires": [
-            [],
-            [
-                "243b35468db52ac4"
-            ]
-        ]
-    },
-    {
-        "id": "bf71e8624b4cf66c",
-        "type": "inject",
-        "z": "85249515dfc449d5",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "2000",
-        "payloadType": "num",
-        "x": 110,
-        "y": 40,
-        "wires": [
-            [
-                "ed8026417287c70c"
-            ]
-        ]
-    },
-    {
-        "id": "243b35468db52ac4",
-        "type": "debug",
-        "z": "85249515dfc449d5",
-        "name": "debug poz",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 750,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "temp_ext",
-        "type": "inject",
-        "z": "ed392b0a7f59b9ad",
-        "name": "Temperatura zewnętrzna",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "6",
-        "payloadType": "num",
-        "x": 230,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "logic",
-        "type": "function",
-        "z": "ed392b0a7f59b9ad",
-        "name": "Sterowanie siłownikiem",
-        "func": "let tempOut = msg.payload.temp_out;\nlet tempCO = msg.payload.temp_co;\nlet valveActual = msg.payload.valve_feedback || 0;\n\nlet targetTemp;\nlet valveCmd;\nlet pumpState;\n\nif (tempOut >= 12) {\n    targetTemp = 0;\n    valveCmd = 0;\n    pumpState = \"OFF\";\n} else {\n    // krzywa grzewcza\n    if (tempOut <= 0) targetTemp = 50;\n    else if (tempOut <= 5) {\n        targetTemp = 50 - (tempOut / 5) * 3;\n    } else if (tempOut <= 10) {\n        targetTemp = 47 - ((tempOut - 5) / 5) * 5;\n    } else {\n        targetTemp = 42;\n    }\n\n    // regulacja P\n    let errorTemp = targetTemp - tempCO;\n    if (Math.abs(errorTemp) < 0.5) errorTemp = 0;\n\n    let Kp = 300;\n    let deltaCmd = errorTemp * Kp;\n\n    let lastCmd = flow.get(\"last_valve_cmd\") || valveActual;\n\n    let maxDelta = 1000;\n    if (deltaCmd > maxDelta) deltaCmd = maxDelta;\n    if (deltaCmd < -maxDelta) deltaCmd = -maxDelta;\n\n    valveCmd = Math.max(0, Math.min(10000, lastCmd + deltaCmd));\n    pumpState = \"ON\";\n}\n\nflow.set(\"last_valve_cmd\", valveCmd);\n\nlet valveError = Math.abs(valveCmd - valveActual);\nlet warn = \"\";\nif (valveError > 1500 && pumpState === \"ON\") {\n    warn = \"⚠ Siłownik nie osiąga pozycji\";\n}\n\n// ➕ Status w edytorze Node-RED\nnode.status({\n    fill: pumpState === \"ON\" ? \"green\" : \"grey\",\n    shape: warn ? \"ring\" : \"dot\",\n    text: `Tzew: ${tempOut}°C | TCO: ${tempCO}°C → doc: ${targetTemp.toFixed(1)}°C | Sił: ${Math.round(valveCmd)}/${valveActual} | Pompa: ${pumpState}`\n});\n\n// Wyjścia\nreturn [\n    { payload: Math.round(valveCmd) },\n    { payload: pumpState },\n    { payload: targetTemp },\n    { payload: warn }\n];\n",
-        "outputs": 3,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 610,
-        "y": 80,
-        "wires": [
-            [
-                "debug_valve"
-            ],
-            [
-                "debug_pump"
-            ],
-            [
-                "debug_temp"
-            ]
-        ]
-    },
-    {
-        "id": "debug_valve",
-        "type": "debug",
-        "z": "ed392b0a7f59b9ad",
-        "name": "Siłownik (0–10000)",
-        "active": true,
-        "tosidebar": false,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1090,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "debug_pump",
-        "type": "debug",
-        "z": "ed392b0a7f59b9ad",
-        "name": "Pompa (ON/OFF)",
-        "active": true,
-        "tosidebar": false,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1090,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "debug_temp",
-        "type": "debug",
-        "z": "ed392b0a7f59b9ad",
-        "name": "Docelowa temp. CO",
-        "active": true,
-        "tosidebar": false,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1100,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "inject_test",
-        "type": "inject",
-        "z": "ed392b0a7f59b9ad",
-        "name": "Test wejść",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"temp_out\": 3, \"temp_co\": 44, \"valve_feedback\": 3200}",
-        "payloadType": "json",
-        "x": 280,
-        "y": 80,
-        "wires": [
-            [
-                "logic"
-            ]
-        ]
-    },
-    {
-        "id": "inject_cyclic",
-        "type": "inject",
-        "z": "ed392b0a7f59b9ad",
-        "name": "Cykliczne dane (symulacja)",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "{\"temp_out\": 3, \"temp_co\": 44, \"valve_feedback\": 3200}",
-        "payloadType": "json",
-        "x": 220,
-        "y": 120,
-        "wires": [
-            [
-                "logic"
             ]
         ]
     }

@@ -663,8 +663,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 440,
+        "x": 180,
+        "y": 420,
         "wires": [
             [
                 "f1e2d3c4abcd9876"
@@ -684,8 +684,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 540,
-        "y": 520,
+        "x": 460,
+        "y": 500,
         "wires": []
     },
     {

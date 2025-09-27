@@ -1025,7 +1025,7 @@
         "id": "568c2ffe47e00ceb",
         "type": "function",
         "z": "1e78c2098878e540",
-        "name": "CO",
+        "name": "Dla Thing Speak",
         "func": "// Pobieramy temperaturę zewnętrzną z flow\nlet tempzew = Number(flow.get(\"tempzew\")) || 0;\nlet tempco = Number(flow.get(\"tempco\")) || 0;\nlet pozycja = Number(flow.get(\"pozycja\")) || 0;\n\n// Tworzymy URL do ThingSpeak\nlet writeAPIKey = \"DR68GTX4J0WJA08J\";\nlet url = `https://api.thingspeak.com/update?api_key=${writeAPIKey}&field1=${tempzew}&field2=${tempco}&field3=${pozycja}`;\n\n// Przekazujemy URL do HTTP request node\nmsg.url = url;\n//msg.method = \"GET\"; // GET dla prostego zapisu\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
@@ -1033,7 +1033,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
+        "x": 480,
         "y": 40,
         "wires": [
             [

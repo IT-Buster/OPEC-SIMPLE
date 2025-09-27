@@ -1344,11 +1344,12 @@
         "name": "Generuj punkt (tempzew, tempCO)",
         "func": "// Symulacja: tempzew od -10 do +15\nlet tempzew = Math.floor(Math.random() * 25) - 10;\n\n// Krzywa grzewcza np. tempCO = 50 - 1.5*tempzew\nlet tempCO = 50 - 1.5 * tempzew;\n\nmsg.payload = [{\n    series: [\"Krzywa\"],\n    data: [ { x: tempzew, y: tempCO } ],\n    labels: [\"Krzywa grzewcza\"]\n}];\n\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
+        "x": 540,
         "y": 100,
         "wires": [
             [
@@ -1366,7 +1367,7 @@
         "width": 12,
         "height": 8,
         "label": "Krzywa grzewcza",
-        "chartType": "scatter",
+        "chartType": "line",
         "legend": "true",
         "xformat": "d",
         "interpolate": "linear",
@@ -1383,11 +1384,18 @@
         "colors": [
             "#1f77b4",
             "#aec7e8",
-            "#ff7f0e"
+            "#ff7f0e",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000"
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 690,
+        "className": "",
+        "x": 910,
         "y": 100,
         "wires": [
             []

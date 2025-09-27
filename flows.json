@@ -273,7 +273,6 @@
         "wires": [
             [
                 "bd09d6777578e0a1",
-                "c95435dbb60939ea",
                 "8b78f5a8abf76e4d"
             ]
         ]
@@ -294,8 +293,7 @@
         "y": 140,
         "wires": [
             [
-                "9d6f3c55beed1de2",
-                "2be4d7297513ac03"
+                "9d6f3c55beed1de2"
             ]
         ]
     },
@@ -1024,29 +1022,11 @@
         "wires": []
     },
     {
-        "id": "2be4d7297513ac03",
-        "type": "function",
-        "z": "1e78c2098878e540",
-        "name": "zew",
-        "func": "// Pobieramy temperaturę zewnętrzną z flow\nlet tempzew = Number(flow.get(\"tempzew\")) || 0;\n\n// Tworzymy URL do ThingSpeak\nlet writeAPIKey = \"DR68GTX4J0WJA08J\";\nlet url = `https://api.thingspeak.com/update?api_key=${writeAPIKey}&field1=${tempzew}`;\n\n// Przekazujemy URL do HTTP request node\nmsg.url = url;\nmsg.method = \"GET\"; // GET dla prostego zapisu\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 310,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "568c2ffe47e00ceb",
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "CO",
-        "func": "// Pobieramy temperaturę zewnętrzną z flow\nlet tempco = Number(flow.get(\"tempco\")) || 0;\n\n// Tworzymy URL do ThingSpeak\nlet writeAPIKey = \"DR68GTX4J0WJA08J\";\nlet url = `https://api.thingspeak.com/update?api_key=${writeAPIKey}&field2=${tempco}`;\n\n// Przekazujemy URL do HTTP request node\nmsg.url = url;\n//msg.method = \"GET\"; // GET dla prostego zapisu\nreturn msg;\n",
+        "func": "// Pobieramy temperaturę zewnętrzną z flow\nlet tempzew = Number(flow.get(\"tempzew\")) || 0;\nlet tempco = Number(flow.get(\"tempco\")) || 0;\nlet pozycja = Number(flow.get(\"pozycja\")) || 0;\n\n// Tworzymy URL do ThingSpeak\nlet writeAPIKey = \"DR68GTX4J0WJA08J\";\nlet url = `https://api.thingspeak.com/update?api_key=${writeAPIKey}&field1=${tempzew}&field2=${tempco}&field3=${pozycja}`;\n\n// Przekazujemy URL do HTTP request node\nmsg.url = url;\n//msg.method = \"GET\"; // GET dla prostego zapisu\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1059,24 +1039,6 @@
             [
                 "2c19ecde5a031fbf"
             ]
-        ]
-    },
-    {
-        "id": "c95435dbb60939ea",
-        "type": "function",
-        "z": "1e78c2098878e540",
-        "name": "pozycja",
-        "func": "// Pobieramy temperaturę zewnętrzną z flow\nlet pozycja = Number(flow.get(\"pozycja\")) || 0;\n\n// Tworzymy URL do ThingSpeak\nlet writeAPIKey = \"DR68GTX4J0WJA08J\";\nlet url = `https://api.thingspeak.com/update?api_key=${writeAPIKey}&field3=${pozycja}`;\n\n// Przekazujemy URL do HTTP request node\nmsg.url = url;\nmsg.method = \"GET\"; // GET dla prostego zapisu\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 60,
-        "wires": [
-            []
         ]
     },
     {

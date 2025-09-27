@@ -997,8 +997,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 380,
+        "x": 400,
+        "y": 280,
         "wires": [
             [
                 "8e36994eb6b9f759"
@@ -1017,7 +1017,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 540,
+        "x": 700,
         "y": 340,
         "wires": []
     },

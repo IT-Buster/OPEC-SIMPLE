@@ -1175,7 +1175,7 @@
         "type": "function",
         "z": "b1f2c9a6c0a12345",
         "name": "Zapisz zmiany do flow",
-        "func": "// Odbieramy tablicę obiektów z ui_table\nlet rows = msg.payload;\nlet tabela = rows.map(r => [Number(r.temp_zew), Number(r.nastawa)]);\nflow.set(\"tabelaNastaw\", tabela);\n\n// podaj dalej do wykresu\nmsg.payload = tabela.map(row => ({ x: row[0], y: row[1] }));\nreturn msg;",
+        "func": "// Zabezpieczenie - czy to tablica czy pojedynczy obiekt\nlet rows = msg.payload;\n\nif (!Array.isArray(rows)) {\n    // jeśli to jeden wiersz (np. {temp_zew: 10, nastawa: 42}),\n    // to weź aktualną tabelę z flow i podmień\n    let tabela = flow.get(\"tabelaNastaw\") || [];\n\n    // znajdź index po temp_zew\n    let idx = tabela.findIndex(r => r[0] === Number(rows.temp_zew));\n    if (idx >= 0) {\n        tabela[idx] = [Number(rows.temp_zew), Number(rows.nastawa)];\n    } else {\n        tabela.push([Number(rows.temp_zew), Number(rows.nastawa)]);\n    }\n\n    flow.set(\"tabelaNastaw\", tabela);\n    msg.payload = tabela.map(r => ({ x: r[0], y: r[1] }));\n    return msg;\n}\n\n// jeśli to jest tablica → normalne przetwarzanie\nlet tabela = rows.map(r => [Number(r.temp_zew), Number(r.nastawa)]);\nflow.set(\"tabelaNastaw\", tabela);\nmsg.payload = tabela.map(r => ({ x: r[0], y: r[1] }));\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,

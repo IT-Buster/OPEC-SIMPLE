@@ -8,13 +8,6 @@
         "env": []
     },
     {
-        "id": "b1f2c9a6c0a12345",
-        "type": "tab",
-        "label": "Krzywa grzewcza",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "85249515dfc449d5",
         "type": "tab",
         "label": "PLN Manual",

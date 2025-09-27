@@ -403,8 +403,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 500,
-        "y": 1100,
+        "x": 480,
+        "y": 740,
         "wires": [
             [],
             []
@@ -427,8 +427,8 @@
         "topic": "",
         "payload": "2000",
         "payloadType": "num",
-        "x": 130,
-        "y": 1140,
+        "x": 110,
+        "y": 780,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -452,8 +452,8 @@
         "topic": "",
         "payload": "1000",
         "payloadType": "num",
-        "x": 270,
-        "y": 1100,
+        "x": 250,
+        "y": 740,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -477,8 +477,8 @@
         "topic": "",
         "payload": "3000",
         "payloadType": "num",
-        "x": 270,
-        "y": 1180,
+        "x": 250,
+        "y": 820,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -502,8 +502,8 @@
         "topic": "",
         "payload": "4000",
         "payloadType": "num",
-        "x": 270,
-        "y": 1260,
+        "x": 250,
+        "y": 900,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -527,8 +527,8 @@
         "topic": "",
         "payload": "3200",
         "payloadType": "num",
-        "x": 130,
-        "y": 1220,
+        "x": 110,
+        "y": 860,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -552,8 +552,8 @@
         "topic": "",
         "payload": "3400",
         "payloadType": "num",
-        "x": 270,
-        "y": 1220,
+        "x": 250,
+        "y": 860,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -577,8 +577,8 @@
         "topic": "",
         "payload": "3600",
         "payloadType": "num",
-        "x": 130,
-        "y": 1260,
+        "x": 110,
+        "y": 900,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -602,8 +602,8 @@
         "topic": "",
         "payload": "2700",
         "payloadType": "num",
-        "x": 130,
-        "y": 1180,
+        "x": 110,
+        "y": 820,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -627,8 +627,8 @@
         "topic": "",
         "payload": "2500",
         "payloadType": "num",
-        "x": 270,
-        "y": 1140,
+        "x": 250,
+        "y": 780,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -690,7 +690,7 @@
         "payload": "43",
         "payloadType": "num",
         "x": 110,
-        "y": 980,
+        "y": 640,
         "wires": [
             [
                 "f5a1b2c3d4e5f678"
@@ -711,8 +711,8 @@
                 "tot": "msg"
             }
         ],
-        "x": 450,
-        "y": 980,
+        "x": 410,
+        "y": 580,
         "wires": [
             []
         ]
@@ -735,7 +735,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 140,
-        "y": 1040,
+        "y": 680,
         "wires": [
             [
                 "b3c4d5e6f7a8b901"
@@ -754,8 +754,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 1040,
+        "x": 400,
+        "y": 680,
         "wires": [
             [
                 "d4e5f6a7b8c9d012"
@@ -775,8 +775,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
-        "y": 1180,
+        "x": 650,
+        "y": 680,
         "wires": []
     },
     {
@@ -861,8 +861,8 @@
         "topic": "",
         "payload": "0",
         "payloadType": "num",
-        "x": 130,
-        "y": 1100,
+        "x": 110,
+        "y": 740,
         "wires": [
             [
                 "6f48287671bc7669"
@@ -887,7 +887,7 @@
         "payload": "33",
         "payloadType": "num",
         "x": 110,
-        "y": 920,
+        "y": 600,
         "wires": [
             [
                 "f5a1b2c3d4e5f678"
@@ -912,7 +912,7 @@
         "payload": "25",
         "payloadType": "num",
         "x": 110,
-        "y": 800,
+        "y": 520,
         "wires": [
             [
                 "f5a1b2c3d4e5f678"
@@ -937,7 +937,7 @@
         "payload": "27",
         "payloadType": "num",
         "x": 110,
-        "y": 860,
+        "y": 560,
         "wires": [
             [
                 "f5a1b2c3d4e5f678"
@@ -979,7 +979,7 @@
         "payload": "20",
         "payloadType": "num",
         "x": 110,
-        "y": 740,
+        "y": 480,
         "wires": [
             [
                 "f5a1b2c3d4e5f678"

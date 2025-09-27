@@ -1112,25 +1112,28 @@
                 "field": "temp_zew",
                 "title": "Temp. zewnętrzna",
                 "width": "200",
-                "editor": "input"
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
             },
             {
                 "field": "nastawa",
                 "title": "Nastawa CO",
                 "width": "200",
-                "editor": "input"
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
             }
         ],
-        "outputs": 1,
+        "outputs": 0,
         "cts": false,
         "x": 750,
         "y": 100,
-        "wires": [
-            [
-                "save-changes",
-                "prep-chart"
-            ]
-        ]
+        "wires": []
     },
     {
         "id": "save-changes",

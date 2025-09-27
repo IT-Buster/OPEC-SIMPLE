@@ -847,7 +847,7 @@
         "id": "2a8b443c64393111",
         "type": "debug",
         "z": "1e78c2098878e540",
-        "name": "NASTAWA",
+        "name": "Pozycja",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -856,7 +856,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 670,
+        "x": 660,
         "y": 180,
         "wires": []
     },

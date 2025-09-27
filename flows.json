@@ -16,6 +16,13 @@
         "env": []
     },
     {
+        "id": "1d9ac07b3b7f4cba",
+        "type": "tab",
+        "label": "Krzywa grzewcza",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "2a13aec920287264",
         "type": "modbus-client",
         "name": "usb-conn",
@@ -227,6 +234,24 @@
         "type": "ui_group",
         "name": "Wykres",
         "tab": "7aa4e2e8d7afc1b6",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "a5e2e47271deecec",
+        "type": "ui_tab",
+        "name": "Ogrzewanie",
+        "icon": "line_style",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "37b7710bb26aab9f",
+        "type": "ui_group",
+        "name": "Wykres",
+        "tab": "a5e2e47271deecec",
         "order": 1,
         "disp": true,
         "width": "12",
@@ -1308,6 +1333,81 @@
             [
                 "b4a5c6b9a8798535"
             ]
+        ]
+    },
+    {
+        "id": "a7c8c9e913a7a6a0",
+        "type": "inject",
+        "z": "1d9ac07b3b7f4cba",
+        "name": "Pokaż krzywą",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "72a3098e607f7088"
+            ]
+        ]
+    },
+    {
+        "id": "72a3098e607f7088",
+        "type": "function",
+        "z": "1d9ac07b3b7f4cba",
+        "name": "Generuj dane krzywej",
+        "func": "// Tabela nastaw [temp_zewn, temp_nastawa]\nlet tabelaNastaw = [\n    [-20, 55],\n    [-10, 50],\n    [0, 50],\n    [5, 45],\n    [10, 42],\n    [11, 40],\n    [12, 39],\n    [13, 38],\n    [14, 20],\n    [15, 20],\n    [20, 20]\n];\n\n// konwersja do formatu scatter (x = tempzew, y = nastawa)\nlet data = tabelaNastaw.map(row => {\n    return { x: row[0], y: row[1] };\n});\n\nmsg.payload = [{\n    series: [\"Krzywa\"],\n    data: [ data ],\n    labels: [\"Krzywa grzewcza\"]\n}];\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 100,
+        "wires": [
+            [
+                "ec44a56e8a2294c4"
+            ]
+        ]
+    },
+    {
+        "id": "ec44a56e8a2294c4",
+        "type": "ui_chart",
+        "z": "1d9ac07b3b7f4cba",
+        "name": "Krzywa grzewcza",
+        "group": "37b7710bb26aab9f",
+        "order": 1,
+        "width": 12,
+        "height": 8,
+        "label": "Krzywa grzewcza",
+        "chartType": "scatter",
+        "legend": "true",
+        "xformat": "d",
+        "interpolate": "linear",
+        "nodata": "Brak danych",
+        "dot": true,
+        "ymin": "20",
+        "ymax": "70",
+        "removeOlder": "0",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 690,
+        "y": 100,
+        "wires": [
+            []
         ]
     }
 ]

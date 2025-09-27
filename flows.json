@@ -1908,7 +1908,11 @@
         "name": "Zapisz zmiany do flow",
         "func": "// Odbieramy tablicę obiektów z ui_table\nlet rows = msg.payload;\nlet tabela = rows.map(r => [Number(r.temp_zew), Number(r.nastawa)]);\nflow.set(\"tabelaNastaw\", tabela);\n\n// podaj dalej do wykresu\nmsg.payload = tabela.map(row => ({ x: row[0], y: row[1] }));\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 1020,
         "y": 100,
         "wires": [
@@ -1956,10 +1960,21 @@
         "removeOlderUnit": "3600",
         "cutout": 0,
         "useOneColor": false,
+        "useUTC": false,
         "colors": [
-            "#1f77b4"
+            "#1f77b4",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000"
         ],
         "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
         "x": 1020,
         "y": 180,
         "wires": [

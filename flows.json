@@ -23,29 +23,6 @@
         "env": []
     },
     {
-        "id": "5d1b98231d54fbcc",
-        "type": "group",
-        "z": "85249515dfc449d5",
-        "name": "PLC AIO ON/OFF",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "0eccd18fcd4a9b44",
-            "a2f8f9231c0240da",
-            "b4a5c6b9a8798535",
-            "daa70b52f74fd2b4",
-            "53fa855dc695dd45",
-            "097df399214566b1",
-            "812524f4bc51b371",
-            "8cf97f8067a9d5a6"
-        ],
-        "x": 34,
-        "y": 19,
-        "w": 532,
-        "h": 322
-    },
-    {
         "id": "2a13aec920287264",
         "type": "modbus-client",
         "name": "usb-conn",
@@ -1239,7 +1216,6 @@
         "id": "0eccd18fcd4a9b44",
         "type": "modbus-write",
         "z": "85249515dfc449d5",
-        "g": "5d1b98231d54fbcc",
         "name": "Off Simple PLC Program 118",
         "showStatusActivities": false,
         "showErrors": false,
@@ -1254,7 +1230,7 @@
         "delayOnStart": false,
         "startDelayTime": "",
         "x": 420,
-        "y": 260,
+        "y": 280,
         "wires": [
             [],
             []
@@ -1264,7 +1240,6 @@
         "id": "a2f8f9231c0240da",
         "type": "inject",
         "z": "85249515dfc449d5",
-        "g": "5d1b98231d54fbcc",
         "name": "",
         "props": [
             {
@@ -1279,7 +1254,7 @@
         "payload": "0",
         "payloadType": "num",
         "x": 170,
-        "y": 240,
+        "y": 260,
         "wires": [
             [
                 "0eccd18fcd4a9b44"
@@ -1290,7 +1265,6 @@
         "id": "b4a5c6b9a8798535",
         "type": "modbus-write",
         "z": "85249515dfc449d5",
-        "g": "5d1b98231d54fbcc",
         "name": "Off Simple PLC Program 100",
         "showStatusActivities": false,
         "showErrors": false,
@@ -1305,7 +1279,7 @@
         "delayOnStart": false,
         "startDelayTime": "",
         "x": 420,
-        "y": 200,
+        "y": 220,
         "wires": [
             [],
             []
@@ -1315,7 +1289,6 @@
         "id": "daa70b52f74fd2b4",
         "type": "inject",
         "z": "85249515dfc449d5",
-        "g": "5d1b98231d54fbcc",
         "name": "",
         "props": [
             {
@@ -1330,7 +1303,7 @@
         "payload": "1",
         "payloadType": "num",
         "x": 170,
-        "y": 300,
+        "y": 320,
         "wires": [
             [
                 "0eccd18fcd4a9b44"
@@ -1341,7 +1314,6 @@
         "id": "53fa855dc695dd45",
         "type": "modbus-read",
         "z": "85249515dfc449d5",
-        "g": "5d1b98231d54fbcc",
         "name": "PLC-Task",
         "topic": "",
         "showStatusActivities": false,
@@ -1362,7 +1334,7 @@
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
         "x": 140,
-        "y": 80,
+        "y": 100,
         "wires": [
             [],
             [
@@ -1375,7 +1347,6 @@
         "id": "097df399214566b1",
         "type": "function",
         "z": "85249515dfc449d5",
-        "g": "5d1b98231d54fbcc",
         "name": "PLC100",
         "func": "msg.timestamp = new Intl.DateTimeFormat('pl-PL', {\n  hour: '2-digit', minute: '2-digit', second: '2-digit',\n  year: 'numeric', month: '2-digit', day: '2-digit',\n  hour12: false\n}).format(new Date()).replace(',', '');\n\nflow.set(\"plc100\", msg.payload.data[0]);\nflow.set(\"plc101\", msg.payload.data[1]);\nflow.set(\"plc118\", msg.payload.data[18]);\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `PLC: ${msg.payload.data[0]} | ${msg.payload.data[1]} | ${msg.payload.data[18]} | Time: ${msg.timestamp}`\n});\n\nreturn msg;",
         "outputs": 1,
@@ -1385,7 +1356,7 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 120,
+        "y": 140,
         "wires": [
             []
         ]
@@ -1394,7 +1365,6 @@
         "id": "812524f4bc51b371",
         "type": "debug",
         "z": "85249515dfc449d5",
-        "g": "5d1b98231d54fbcc",
         "name": "debug 1",
         "active": false,
         "tosidebar": true,
@@ -1405,14 +1375,13 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 360,
-        "y": 60,
+        "y": 80,
         "wires": []
     },
     {
         "id": "8cf97f8067a9d5a6",
         "type": "inject",
         "z": "85249515dfc449d5",
-        "g": "5d1b98231d54fbcc",
         "name": "",
         "props": [
             {
@@ -1427,7 +1396,57 @@
         "payload": "0",
         "payloadType": "num",
         "x": 170,
-        "y": 180,
+        "y": 200,
+        "wires": [
+            [
+                "b4a5c6b9a8798535"
+            ]
+        ]
+    },
+    {
+        "id": "66f04218c4e4b0e7",
+        "type": "inject",
+        "z": "85249515dfc449d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 310,
+        "y": 460,
+        "wires": [
+            [
+                "0eccd18fcd4a9b44"
+            ]
+        ]
+    },
+    {
+        "id": "73f10be44a52ecdb",
+        "type": "inject",
+        "z": "85249515dfc449d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "6",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 150,
+        "y": 460,
         "wires": [
             [
                 "b4a5c6b9a8798535"

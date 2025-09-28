@@ -1191,7 +1191,7 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "function 1",
-        "func": "flow.set(\"temperatura_nastawa\", msg.payload.tabelaNastaw );\n\n// pobranie tabeli z flow\nlet tabela = flow.get(\"tabelaNastaw\") || [];\n// przygotowanie do ui_table (każdy wiersz jako obiekt)\nmsg.payload = tabela.map(r => ({ tempzew: r[0], tempNastawa: r[1] }));\nreturn msg;\n",
+        "func": "flow.set(\"temperatura_nastawa\", msg.payload.tabelaNastaw );\n\n// pobranie tabeli z flow\nlet tabela = flow.get(\"tabelaNastaw\") || [];\n// przygotowanie do ui_table (każdy wiersz jako obiekt)\nmsg.payload = tabela.map(r => ({ tempzew: r[0], tempNastawa: r[1] }));\n\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1201,7 +1201,9 @@
         "x": 480,
         "y": 420,
         "wires": [
-            []
+            [
+                "271974e009acf7ac"
+            ]
         ]
     },
     {

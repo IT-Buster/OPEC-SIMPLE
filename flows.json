@@ -213,9 +213,11 @@
     {
         "id": "1e066f275f81c444",
         "type": "ui_tab",
-        "name": "Tab 1",
+        "name": "Wykresy",
         "icon": "dashboard",
-        "order": 1
+        "order": 1,
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "2c8e29558bef67fc",

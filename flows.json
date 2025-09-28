@@ -939,7 +939,7 @@
                 "2c19ecde5a031fbf"
             ],
             [
-                "16481f1870694748"
+                "00ddd83ad047e45b"
             ]
         ]
     },
@@ -991,14 +991,14 @@
         ]
     },
     {
-        "id": "16481f1870694748",
+        "id": "00ddd83ad047e45b",
         "type": "link out",
         "z": "1e78c2098878e540",
-        "name": "DlaDashboard",
+        "name": "GoToDash",
         "mode": "link",
         "links": [],
-        "x": 575,
-        "y": 60,
+        "x": 585,
+        "y": 40,
         "wires": []
     },
     {
@@ -1243,14 +1243,33 @@
         ]
     },
     {
-        "id": "5ea0af66d6f4f25a",
-        "type": "link out",
+        "id": "0876e49f1e67ae60",
+        "type": "link in",
         "z": "6249a630e13530e8",
-        "name": "link out 1",
-        "mode": "link",
+        "name": "link in 1",
         "links": [],
-        "x": 215,
+        "x": 205,
         "y": 120,
+        "wires": [
+            [
+                "c4eb1eb86d36b2f1"
+            ]
+        ]
+    },
+    {
+        "id": "c4eb1eb86d36b2f1",
+        "type": "debug",
+        "z": "6249a630e13530e8",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 140,
         "wires": []
     }
 ]

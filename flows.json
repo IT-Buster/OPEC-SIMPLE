@@ -926,7 +926,7 @@
         "z": "1e78c2098878e540",
         "name": "Dla Thing Speak",
         "func": "// Pobieramy temperaturę zewnętrzną z flow\nlet tempzew = Number(flow.get(\"tempzew\")) || 0;\nlet tempco = Number(flow.get(\"tempco\")) || 0;\nlet pozycja = Number(flow.get(\"pozycja\")) || 0;\nlet dashdata = 0;\n\n// Tworzymy URL do ThingSpeak\nlet writeAPIKey = \"DR68GTX4J0WJA08J\";\nlet url = `https://api.thingspeak.com/update?api_key=${writeAPIKey}&field1=${tempzew}&field2=${tempco}&field3=${pozycja}`;\n\n// Przekazujemy URL do HTTP request node\nmsg.url = url;\n//msg.method = \"GET\"; // GET dla prostego zapisu\n//return msg;\n\n// --- WYJŚCIE 1 → sterownik ---\nlet out1 = { payload: url };\n\n// --- WYJŚCIE 2 → log do pliku ---\nlet out2 = { payload: dashdata };\n\n// Zwracamy oba wyjścia\nreturn [out1, out2];",
-        "outputs": 1,
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -937,7 +937,8 @@
         "wires": [
             [
                 "2c19ecde5a031fbf"
-            ]
+            ],
+            []
         ]
     },
     {

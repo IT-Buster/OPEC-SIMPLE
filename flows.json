@@ -1241,5 +1241,16 @@
                 "b4a5c6b9a8798535"
             ]
         ]
+    },
+    {
+        "id": "5ea0af66d6f4f25a",
+        "type": "link out",
+        "z": "6249a630e13530e8",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [],
+        "x": 215,
+        "y": 120,
+        "wires": []
     }
 ]

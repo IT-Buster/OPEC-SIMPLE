@@ -1387,8 +1387,8 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "rozdziel",
-        "func": "let out1 = { payload: msg.tempzew };\nlet out2 = { payload: msg.tempco };\nlet out3 = { payload: msg.pozycja };\n\nreturn [out1, out2, out3];",
-        "outputs": 3,
+        "func": "let out1 = { payload: msg.tempzew };\nlet out2 = { payload: msg.tempco };\nlet out3 = { payload: msg.pozycja };\nlet out3 = { payload: msg.temperatura_nastawa };\n\nreturn [out1, out2, out3, out4];",
+        "outputs": 4,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -1405,7 +1405,8 @@
             ],
             [
                 "0878889ccab08040"
-            ]
+            ],
+            []
         ]
     },
     {
@@ -1413,25 +1414,26 @@
         "type": "ui_gauge",
         "z": "6249a630e13530e8",
         "name": "",
-        "order": 0,
+        "group": "358ad3bcb6d33357",
+        "order": 3,
         "width": 0,
         "height": 0,
         "gtype": "gage",
-        "title": "gauge",
-        "label": "units",
+        "title": "TempNastaw",
+        "label": "C",
         "format": "{{value}}",
         "min": 0,
         "max": 10,
         "colors": [
-            "#00B500",
-            "#E6E600",
-            "#CA3838"
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
         ],
         "seg1": "",
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 790,
+        "x": 810,
         "y": 400,
         "wires": []
     }

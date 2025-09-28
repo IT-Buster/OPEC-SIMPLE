@@ -671,7 +671,9 @@
         "x": 540,
         "y": 300,
         "wires": [
-            []
+            [
+                "5fa8e9a784e119d4"
+            ]
         ]
     },
     {
@@ -755,6 +757,19 @@
         ],
         "x": 585,
         "y": 40,
+        "wires": []
+    },
+    {
+        "id": "5fa8e9a784e119d4",
+        "type": "link out",
+        "z": "1e78c2098878e540",
+        "name": "GoToDash",
+        "mode": "link",
+        "links": [
+            "0876e49f1e67ae60"
+        ],
+        "x": 685,
+        "y": 360,
         "wires": []
     },
     {
@@ -1004,7 +1019,8 @@
         "z": "6249a630e13530e8",
         "name": "link in 1",
         "links": [
-            "00ddd83ad047e45b"
+            "00ddd83ad047e45b",
+            "5fa8e9a784e119d4"
         ],
         "x": 145,
         "y": 140,
@@ -1153,6 +1169,70 @@
         "className": "",
         "x": 790,
         "y": 280,
+        "wires": []
+    },
+    {
+        "id": "271974e009acf7ac",
+        "type": "ui_table",
+        "z": "6249a630e13530e8",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 790,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "0928419add0a48a2",
+        "type": "function",
+        "z": "6249a630e13530e8",
+        "name": "function 1",
+        "func": "// pobranie tabeli z flow\nlet tabela = flow.get(\"tabelaNastaw\") || [];\n// przygotowanie do ui_table (każdy wiersz jako obiekt)\nmsg.payload = tabela.map(r => ({ tempzew: r[0], tempNastawa: r[1] }));\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f4542dcb0e25ccd7",
+        "type": "link in",
+        "z": "6249a630e13530e8",
+        "name": "link in 2",
+        "links": [],
+        "x": 205,
+        "y": 400,
+        "wires": [
+            [
+                "0928419add0a48a2",
+                "75d874d8ec2ad3dc"
+            ]
+        ]
+    },
+    {
+        "id": "75d874d8ec2ad3dc",
+        "type": "debug",
+        "z": "6249a630e13530e8",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 560,
         "wires": []
     },
     {

@@ -1,7 +1,7 @@
 {
     "name": "OPEC-SIMPLE",
     "description": "Proste sterowanie siłownikiem ",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "dependencies": {},
     "node-red": {
         "settings": {

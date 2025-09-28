@@ -1338,7 +1338,7 @@
         "gtype": "gage",
         "title": "CO",
         "label": "units",
-        "format": "{{value}}",
+        "format": "{{tempco}}",
         "min": 0,
         "max": 10,
         "colors": [
@@ -1366,7 +1366,7 @@
         "gtype": "gage",
         "title": "Pozycja",
         "label": "units",
-        "format": "{{value}}",
+        "format": "{{pozycja}}",
         "min": 0,
         "max": 10,
         "colors": [

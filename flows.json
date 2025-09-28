@@ -939,7 +939,7 @@
                 "2c19ecde5a031fbf"
             ],
             [
-                "679a65360bbe2724"
+                "16481f1870694748"
             ]
         ]
     },
@@ -991,20 +991,14 @@
         ]
     },
     {
-        "id": "679a65360bbe2724",
-        "type": "debug",
+        "id": "16481f1870694748",
+        "type": "link out",
         "z": "1e78c2098878e540",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 40,
+        "name": "DlaDashboard",
+        "mode": "link",
+        "links": [],
+        "x": 575,
+        "y": 60,
         "wires": []
     },
     {

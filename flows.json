@@ -1307,7 +1307,7 @@
         "width": 0,
         "height": 0,
         "gtype": "gage",
-        "title": "gauge",
+        "title": "Zew",
         "label": "units",
         "format": "{{value}}",
         "min": 0,
@@ -1321,8 +1321,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 610,
-        "y": 60,
+        "x": 770,
+        "y": 100,
         "wires": []
     },
     {
@@ -1335,7 +1335,7 @@
         "width": 0,
         "height": 0,
         "gtype": "gage",
-        "title": "gauge",
+        "title": "CO",
         "label": "units",
         "format": "{{value}}",
         "min": 0,
@@ -1349,8 +1349,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 610,
-        "y": 120,
+        "x": 770,
+        "y": 160,
         "wires": []
     },
     {
@@ -1363,7 +1363,7 @@
         "width": 0,
         "height": 0,
         "gtype": "gage",
-        "title": "gauge",
+        "title": "Pozycja",
         "label": "units",
         "format": "{{value}}",
         "min": 0,
@@ -1377,8 +1377,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 610,
-        "y": 180,
+        "x": 780,
+        "y": 220,
         "wires": []
     }
 ]

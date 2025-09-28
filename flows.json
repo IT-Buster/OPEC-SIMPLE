@@ -54,26 +54,6 @@
         "showLogs": true
     },
     {
-        "id": "aa396a8b9bffcdde",
-        "type": "ui_group",
-        "name": "Main",
-        "tab": "",
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "557c76555cf781ce",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "",
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "858b321a4adff43b",
         "type": "ui_base",
         "theme": {
@@ -169,46 +149,6 @@
                 "py": 0
             }
         }
-    },
-    {
-        "id": "dashboard_group",
-        "type": "ui_group",
-        "name": "Symulacja",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false
-    },
-    {
-        "id": "2d7d2b7a0e2162f1",
-        "type": "ui_group",
-        "name": "Wykres",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "12",
-        "collapse": false
-    },
-    {
-        "id": "37b7710bb26aab9f",
-        "type": "ui_group",
-        "name": "Wykres",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "12",
-        "collapse": false
-    },
-    {
-        "id": "ui-group",
-        "type": "ui_group",
-        "name": "Sterowanie",
-        "tab": "",
-        "order": 1,
-        "disp": true,
-        "width": "12",
-        "collapse": false
     },
     {
         "id": "1e066f275f81c444",
@@ -994,14 +934,14 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "Dla Thing Speak",
-        "func": "// Pobieramy temperaturę zewnętrzną z flow\nlet tempzew = Number(flow.get(\"tempzew\")) || 0;\nlet tempco = Number(flow.get(\"tempco\")) || 0;\nlet pozycja = Number(flow.get(\"pozycja\")) || 0;\n\n// Tworzymy URL do ThingSpeak\nlet writeAPIKey = \"DR68GTX4J0WJA08J\";\nlet url = `https://api.thingspeak.com/update?api_key=${writeAPIKey}&field1=${tempzew}&field2=${tempco}&field3=${pozycja}`;\n\n// Przekazujemy URL do HTTP request node\nmsg.url = url;\n//msg.method = \"GET\"; // GET dla prostego zapisu\nreturn msg;\n",
+        "func": "// Pobieramy temperaturę zewnętrzną z flow\nlet tempzew = Number(flow.get(\"tempzew\")) || 0;\nlet tempco = Number(flow.get(\"tempco\")) || 0;\nlet pozycja = Number(flow.get(\"pozycja\")) || 0;\nlet dashdata = 0;\n\n// Tworzymy URL do ThingSpeak\nlet writeAPIKey = \"DR68GTX4J0WJA08J\";\nlet url = `https://api.thingspeak.com/update?api_key=${writeAPIKey}&field1=${tempzew}&field2=${tempco}&field3=${pozycja}`;\n\n// Przekazujemy URL do HTTP request node\nmsg.url = url;\n//msg.method = \"GET\"; // GET dla prostego zapisu\n//return msg;\n\n// --- WYJŚCIE 1 → sterownik ---\nlet out1 = { payload: url };\n\n// --- WYJŚCIE 2 → log do pliku ---\nlet out2 = { payload: dashdata };\n\n// Zwracamy oba wyjścia\nreturn [out1, out2];",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 560,
+        "x": 400,
         "y": 20,
         "wires": [
             [

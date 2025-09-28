@@ -1180,11 +1180,13 @@
         "width": 0,
         "height": 0,
         "columns": [],
-        "outputs": 0,
-        "cts": false,
-        "x": 790,
+        "outputs": 1,
+        "cts": true,
+        "x": 750,
         "y": 420,
-        "wires": []
+        "wires": [
+            []
+        ]
     },
     {
         "id": "0928419add0a48a2",
@@ -1238,6 +1240,24 @@
         "x": 380,
         "y": 560,
         "wires": []
+    },
+    {
+        "id": "edb77486ae16c09f",
+        "type": "function",
+        "z": "6249a630e13530e8",
+        "name": "function 2",
+        "func": "// msg.payload = [{tempzew: -20, tempNastawa: 55}, ...] po edycji\nlet tabelaNowa = msg.payload.map(r => [Number(r.tempzew), Number(r.tempNastawa)]);\nflow.set(\"tabelaNastaw\", tabelaNowa);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 440,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "6f48287671bc7669",

@@ -66,22 +66,6 @@
         "className": ""
     },
     {
-        "id": "b9294cc7665a6f87",
-        "type": "ui_tab",
-        "name": "Tab 1",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "b6f19b7ee6bab273",
-        "type": "ui_tab",
-        "name": "Tab 2",
-        "icon": "dashboard",
-        "order": 2
-    },
-    {
         "id": "858b321a4adff43b",
         "type": "ui_base",
         "theme": {
@@ -179,72 +163,40 @@
         }
     },
     {
-        "id": "dashboard_tab",
-        "type": "ui_tab",
-        "name": "CO",
-        "icon": "dashboard",
-        "order": 1
-    },
-    {
         "id": "dashboard_group",
         "type": "ui_group",
         "name": "Symulacja",
-        "tab": "dashboard_tab",
+        "tab": "",
         "order": 1,
         "disp": true,
         "width": "6",
         "collapse": false
     },
     {
-        "id": "ui-group",
-        "type": "ui_group",
-        "name": "Sterowanie",
-        "tab": "ui-tab",
-        "order": 1,
-        "disp": true,
-        "width": "12",
-        "collapse": false
-    },
-    {
-        "id": "ui-tab",
-        "type": "ui_tab",
-        "name": "CO Dashboard",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "7aa4e2e8d7afc1b6",
-        "type": "ui_tab",
-        "name": "Ogrzewanie",
-        "icon": "line_style",
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "2d7d2b7a0e2162f1",
         "type": "ui_group",
         "name": "Wykres",
-        "tab": "7aa4e2e8d7afc1b6",
+        "tab": "",
         "order": 1,
         "disp": true,
         "width": "12",
         "collapse": false
-    },
-    {
-        "id": "a5e2e47271deecec",
-        "type": "ui_tab",
-        "name": "Ogrzewanie",
-        "icon": "line_style",
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "37b7710bb26aab9f",
         "type": "ui_group",
         "name": "Wykres",
-        "tab": "a5e2e47271deecec",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "ui-group",
+        "type": "ui_group",
+        "name": "Sterowanie",
+        "tab": "",
         "order": 1,
         "disp": true,
         "width": "12",

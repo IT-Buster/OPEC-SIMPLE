@@ -996,7 +996,9 @@
         "z": "1e78c2098878e540",
         "name": "GoToDash",
         "mode": "link",
-        "links": [],
+        "links": [
+            "0876e49f1e67ae60"
+        ],
         "x": 585,
         "y": 40,
         "wires": []
@@ -1247,7 +1249,9 @@
         "type": "link in",
         "z": "6249a630e13530e8",
         "name": "link in 1",
-        "links": [],
+        "links": [
+            "00ddd83ad047e45b"
+        ],
         "x": 205,
         "y": 120,
         "wires": [

@@ -1310,9 +1310,9 @@
         "gtype": "gage",
         "title": "Zew",
         "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 10,
+        "format": "{{tempzew}}",
+        "min": "-10",
+        "max": "30",
         "colors": [
             "#00b500",
             "#e6e600",

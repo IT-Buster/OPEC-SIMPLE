@@ -763,9 +763,11 @@
         "id": "5fa8e9a784e119d4",
         "type": "link out",
         "z": "1e78c2098878e540",
-        "name": "GoToDash",
+        "name": "GoToTabela",
         "mode": "link",
-        "links": [],
+        "links": [
+            "f4542dcb0e25ccd7"
+        ],
         "x": 685,
         "y": 360,
         "wires": []
@@ -1207,7 +1209,9 @@
         "type": "link in",
         "z": "6249a630e13530e8",
         "name": "Tabela",
-        "links": [],
+        "links": [
+            "5fa8e9a784e119d4"
+        ],
         "x": 205,
         "y": 400,
         "wires": [

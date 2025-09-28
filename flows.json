@@ -342,8 +342,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 280,
-        "y": 400,
+        "x": 240,
+        "y": 380,
         "wires": [
             [
                 "f1e2d3c4abcd9876"

@@ -16,6 +16,14 @@
         "env": []
     },
     {
+        "id": "6249a630e13530e8",
+        "type": "tab",
+        "label": "Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "2a13aec920287264",
         "type": "modbus-client",
         "name": "usb-conn",
@@ -201,6 +209,13 @@
         "disp": true,
         "width": "12",
         "collapse": false
+    },
+    {
+        "id": "1e066f275f81c444",
+        "type": "ui_tab",
+        "name": "Tab 1",
+        "icon": "dashboard",
+        "order": 1
     },
     {
         "id": "2c8e29558bef67fc",

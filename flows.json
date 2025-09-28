@@ -1277,7 +1277,7 @@
         "wires": [
             [
                 "c4eb1eb86d36b2f1",
-                "b522f1eb0cc2ac84"
+                "27e0b1a1685cd8b1"
             ]
         ]
     },
@@ -1381,5 +1381,25 @@
         "x": 780,
         "y": 220,
         "wires": []
+    },
+    {
+        "id": "27e0b1a1685cd8b1",
+        "type": "function",
+        "z": "6249a630e13530e8",
+        "name": "rozdziel",
+        "func": "let out1 = { payload: msg.tempzew };\nlet out2 = { payload: msg.tempco };\nlet out3 = { payload: msg.pozycja };\n\nreturn [out1, out2, out3];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 160,
+        "wires": [
+            [],
+            [],
+            []
+        ]
     }
 ]

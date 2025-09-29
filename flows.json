@@ -1312,7 +1312,7 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "function 1",
-        "func": "let tabela = flow.get(\"tabelaNastaw\") || [];\n\nmsg.payload = tabela.map(r => ({\n    tempzew: r[0],\n    nastawa: r[1]\n}));\n\nreturn msg;\n",
+        "func": "// Pobieramy tabelę z flow lub ustawiamy domyślną jeśli nic nie ma\nlet tabela = flow.get(\"tabelaNastaw\");\nif (!Array.isArray(tabela) || tabela.length === 0) {\n    tabela = [[-20,55],[-10,50],[0,50],[5,47],[10,45],[11,42],[12,40],[13,38],[14,35],[15,20],[20,20]];\n    flow.set(\"tabelaNastaw\", tabela);\n    node.warn(\"Ustawiono domyślną tabelę nastaw.\");\n}\n\n// Tworzymy payload do wykresu\nmsg.payload = tabela.map(r => ({\n    tempzew: r[0],\n    nastawa: r[1]\n}));\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,

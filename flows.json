@@ -252,7 +252,7 @@
         "type": "ui-group",
         "name": "Sterowanie",
         "page": "5b2a90153beb6c37",
-        "width": 6,
+        "width": "4",
         "height": 1,
         "order": 2,
         "showTitle": true,

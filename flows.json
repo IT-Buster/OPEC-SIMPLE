@@ -1150,7 +1150,7 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "rozdziel",
-        "func": "\nmsg.label = \"Temperatura zewnętrzna: \" & flow.get(\"tempzew\") & \" °C\"\n\nlet out1 = { payload: msg.tempzew, label: msg.label };\nlet out2 = { payload: msg.tempco };\nlet out3 = { payload: msg.pozycja };\nlet out4 = { payload: msg.temperatura_nastawa };\n\nreturn [out1, out2, out3, out4];",
+        "func": "\nmsg.label = \"Temperatura zewnętrzna: \" & flow.get(\"tempzew\") & \" °C\";\n\nlet out1 = {\n    payload: {\n        value: msg.tempzew,\n        label: msg.label\n    }\n};\nlet out2 = { payload: msg.tempco };\nlet out3 = { payload: msg.pozycja };\nlet out4 = { payload: msg.temperatura_nastawa };\n\nreturn [out1, out2, out3, out4];",
         "outputs": 4,
         "timeout": 0,
         "noerr": 2,

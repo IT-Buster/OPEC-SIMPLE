@@ -1312,7 +1312,7 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "function 1",
-        "func": "msg.payload = [\n    { tempzew: -20, nastawa: 55 },\n    { tempzew: -10, nastawa: 50 },\n    { tempzew: 0,   nastawa: 50 },\n    { tempzew: 5,   nastawa: 47 }\n];\nreturn msg;\n",
+        "func": "let tabela = flow.get(\"tabelaNastaw\") || [];\n\nmsg.payload = tabela.map(r => ({\n    tempzew: r[0],\n    nastawa: r[1]\n}));\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,

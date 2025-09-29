@@ -1905,6 +1905,7 @@
             }
         ],
         "repeat": "5",
+        "crontab": "",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
@@ -2052,6 +2053,46 @@
         "wires": [
             [
                 "ui_text_nastawa"
+            ]
+        ]
+    },
+    {
+        "id": "639d573ee7677431",
+        "type": "inject",
+        "z": "5ee177e2d5f4523d",
+        "name": "Przykładowe dane",
+        "props": [
+            {
+                "p": "tempzew",
+                "v": "12",
+                "vt": "num"
+            },
+            {
+                "p": "tempco",
+                "v": "38",
+                "vt": "num"
+            },
+            {
+                "p": "pozycja",
+                "v": "1400",
+                "vt": "num"
+            },
+            {
+                "p": "temperatura_nastawa",
+                "v": "38.6",
+                "vt": "num"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 420,
+        "wires": [
+            [
+                "3eb989631e04f6c7"
             ]
         ]
     }

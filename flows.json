@@ -1312,7 +1312,7 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "function 1",
-        "func": "flow.set(\"temperatura_nastawa\", msg.payload.tabelaNastaw );\n\n// pobranie tabeli z flow\nlet tabela = flow.get(\"tabelaNastaw\") || [];\n// przygotowanie do ui_table (każdy wiersz jako obiekt)\nmsg.payload = tabela.map(r => ({ tempzew: r[0], tempNastawa: r[1] }));\n\nreturn msg;\n\n",
+        "func": "// pobranie tabeli z flow\nlet tabela = flow.get(\"tabelaNastaw\") || [];\n\n// konwersja na format dla ui-table\nmsg.payload = tabela.map(r => ({\n    tempzew: r[0],\n    nastawa: r[1]\n}));\n\n// konfiguracja kolumn (opcjonalnie, można też ustawić w edytorze)\nmsg.ui_update = {\n    columns: [\n        { headerName: \"Temp. zewnętrzna [°C]\", field: \"tempzew\", width: 180 },\n        { headerName: \"Temp. nastawa [°C]\", field: \"nastawa\", width: 180 }\n    ]\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,

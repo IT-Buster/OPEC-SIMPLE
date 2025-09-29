@@ -846,7 +846,7 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "function 3",
-        "func": "let pozycja = flow.get(\"pozycja\") || 0;\npozycja += 1;   // zwiększamy o 1 przy każdym wywołaniu\nflow.set(\"pozycja\", pozycja);\n\nmsg.payload = { pozycja };\nreturn msg;",
+        "func": "let pozycja = flow.get(\"pozycja\") || 0;\npozycja -= 1;   // zwiększamy o 1 przy każdym wywołaniu\nflow.set(\"pozycja\", pozycja);\n\nmsg.payload = { pozycja };\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -874,7 +874,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 760,
-        "y": 940,
+        "y": 900,
         "wires": []
     },
     {

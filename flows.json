@@ -32,14 +32,6 @@
         "env": []
     },
     {
-        "id": "5ee177e2d5f4523d",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "2a13aec920287264",
         "type": "modbus-client",
         "name": "usb-conn",
@@ -306,20 +298,6 @@
         "groupType": "default"
     },
     {
-        "id": "e376b59f571b9c26",
-        "type": "ui-group",
-        "name": "Tabela",
-        "page": "7a12120f48b7d954",
-        "width": 6,
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
         "id": "7a12120f48b7d954",
         "type": "ui-page",
         "name": "Krzywa Temperatur",
@@ -378,6 +356,20 @@
         "height": 1,
         "order": 2,
         "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "e376b59f571b9c26",
+        "type": "ui-group",
+        "name": "Tabela",
+        "page": "7a12120f48b7d954",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
         "className": "",
         "visible": "true",
         "disabled": "false",
@@ -2042,66 +2034,5 @@
         "x": 570,
         "y": 200,
         "wires": []
-    },
-    {
-        "id": "inject_data",
-        "type": "inject",
-        "z": "5ee177e2d5f4523d",
-        "name": "Przykładowe dane",
-        "props": [
-            {
-                "p": "tempzew",
-                "v": "12",
-                "vt": "num"
-            },
-            {
-                "p": "tempco",
-                "v": "38",
-                "vt": "num"
-            },
-            {
-                "p": "pozycja",
-                "v": "1400",
-                "vt": "num"
-            },
-            {
-                "p": "temperatura_nastawa",
-                "v": "38.6",
-                "vt": "num"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 210,
-        "y": 200,
-        "wires": [
-            [
-                "prepare_msg"
-            ]
-        ]
-    },
-    {
-        "id": "prepare_msg",
-        "type": "function",
-        "z": "5ee177e2d5f4523d",
-        "name": "Przygotuj msg dla Dashboard 2.0",
-        "func": "let tempzew = msg.tempzew;\nlet tempco = msg.tempco;\nlet pozycja = msg.pozycja;\nlet tempNastawa = msg.temperatura_nastawa;\n\nlet out1 = { \n    payload: tempzew, \n    ui_update: { label: \"🌡️ Temperatura Zewnętrzna\" } \n};\n\nlet out2 = { \n    payload: tempco, \n    ui_update: { label: \"🔥 Temperatura CO\" } \n};\n\nlet out3 = { \n    payload: pozycja, \n    ui_update: { label: \"⚙️ Pozycja Siłownika\" } \n};\n\nlet out4 = { \n    payload: tempNastawa, \n    ui_update: { label: \"🎛️ Temperatura Nastawa\" } \n};\n\nreturn [out1, out2, out3, out4];\n",
-        "outputs": 4,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 460,
-        "y": 200,
-        "wires": [
-            [],
-            [],
-            [],
-            []
-        ]
     }
 ]

@@ -320,17 +320,6 @@
         "groupType": "default"
     },
     {
-        "id": "c1b49614e67165bd",
-        "type": "ui-link",
-        "name": "Link 1",
-        "ui": "17e53577a75fc993",
-        "path": "/",
-        "icon": "home",
-        "order": 2,
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
         "id": "7a12120f48b7d954",
         "type": "ui-page",
         "name": "Krzywa Temperatur",
@@ -361,7 +350,7 @@
                 "cols": "12"
             }
         ],
-        "order": 3,
+        "order": 2,
         "className": "",
         "visible": "true",
         "disabled": "false"

@@ -220,8 +220,8 @@
             "density": "default",
             "pagePadding": "5px",
             "groupGap": "5px",
-            "groupBorderRadius": "45px",
-            "widgetGap": "6px"
+            "groupBorderRadius": "5px",
+            "widgetGap": "20px"
         }
     },
     {

@@ -1358,7 +1358,7 @@
         "id": "1c1bf1ce3d62e63d",
         "type": "ui-gauge",
         "z": "6249a630e13530e8",
-        "name": "",
+        "name": "TempZEW",
         "group": "b0f2b445a7d98676",
         "order": 1,
         "value": "payload",
@@ -1402,8 +1402,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 950,
-        "y": 100,
+        "x": 970,
+        "y": 80,
         "wires": [
             []
         ]
@@ -1412,7 +1412,7 @@
         "id": "3109ae9db63a3e45",
         "type": "ui-gauge",
         "z": "6249a630e13530e8",
-        "name": "",
+        "name": "TempCO",
         "group": "b0f2b445a7d98676",
         "order": 4,
         "value": "payload",
@@ -1430,16 +1430,22 @@
         "suffix": "",
         "segments": [
             {
-                "color": "#5CD65C",
-                "from": 0
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
             },
             {
-                "color": "#FFC800",
-                "from": 4
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
             },
             {
-                "color": "#EA5353",
-                "from": 7
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
             }
         ],
         "min": 0,
@@ -1450,8 +1456,8 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 950,
-        "y": 160,
+        "x": 980,
+        "y": 140,
         "wires": [
             []
         ]

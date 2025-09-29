@@ -583,8 +583,8 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 620,
-        "y": 160,
+        "x": 640,
+        "y": 140,
         "wires": [
             [],
             []
@@ -676,7 +676,7 @@
         "createDir": false,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 630,
+        "x": 650,
         "y": 240,
         "wires": [
             []

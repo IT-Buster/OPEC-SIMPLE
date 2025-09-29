@@ -1384,7 +1384,7 @@
         "z": "6249a630e13530e8",
         "group": "402b61187877985c",
         "name": "Temp ZEW",
-        "label": "Temperatura Zewnętrzna",
+        "label": "",
         "order": 2,
         "chartType": "line",
         "category": "",

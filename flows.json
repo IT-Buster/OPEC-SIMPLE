@@ -159,15 +159,6 @@
         }
     },
     {
-        "id": "7fba38f0e17105af",
-        "type": "ui_tab",
-        "name": "OPEC",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
         "id": "17e53577a75fc993",
         "type": "ui-base",
         "name": "My Dashboard",

@@ -276,7 +276,7 @@
             "density": "default",
             "pagePadding": "5px",
             "groupGap": "5px",
-            "groupBorderRadius": "60px",
+            "groupBorderRadius": "10px",
             "widgetGap": "10px"
         }
     },

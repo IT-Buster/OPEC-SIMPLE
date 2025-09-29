@@ -1304,7 +1304,7 @@
         "bins": 10,
         "action": "append",
         "stackSeries": false,
-        "pointShape": "circle",
+        "pointShape": "star",
         "pointRadius": 4,
         "showLegend": true,
         "removeOlder": "4",

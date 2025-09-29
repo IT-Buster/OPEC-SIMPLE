@@ -1478,6 +1478,37 @@
         ]
     },
     {
+        "id": "15a25145bee0f186",
+        "type": "ui-text-input",
+        "z": "6249a630e13530e8",
+        "group": "b0f2b445a7d98676",
+        "name": "Test1",
+        "label": "text",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "text",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 810,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "6f48287671bc7669",
         "type": "modbus-write",
         "z": "867cb1db5f09b847",

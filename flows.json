@@ -1505,7 +1505,7 @@
         "width": "2",
         "height": "1",
         "name": "TempZewTXT",
-        "label": "Temperatura Zewnętrzna",
+        "label": "msg.label",
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "style": true,

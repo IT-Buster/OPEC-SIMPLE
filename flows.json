@@ -277,7 +277,7 @@
             "pagePadding": "4px",
             "groupGap": "2px",
             "groupBorderRadius": "20px",
-            "widgetGap": "2px"
+            "widgetGap": "20px"
         }
     },
     {

@@ -274,7 +274,7 @@
         },
         "sizes": {
             "density": "comfortable",
-            "pagePadding": "12px",
+            "pagePadding": "4px",
             "groupGap": "2px",
             "groupBorderRadius": "12px",
             "widgetGap": "12px"

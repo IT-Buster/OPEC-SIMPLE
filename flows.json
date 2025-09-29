@@ -248,25 +248,6 @@
         "groupType": "default"
     },
     {
-        "id": "8288a6d54d6d4eaa",
-        "type": "ui-theme",
-        "name": "ui-base.label.theme 2",
-        "colors": {
-            "surface": "#ffffff",
-            "primary": "#0094ce",
-            "bgPage": "#eeeeee",
-            "groupBg": "#ffffff",
-            "groupOutline": "#cccccc"
-        },
-        "sizes": {
-            "density": "compact",
-            "pagePadding": "12px",
-            "groupGap": "12px",
-            "groupBorderRadius": "4px",
-            "widgetGap": "12px"
-        }
-    },
-    {
         "id": "2c8e29558bef67fc",
         "type": "function",
         "z": "1e78c2098878e540",

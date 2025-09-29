@@ -248,7 +248,7 @@
         "ui": "17e53577a75fc993",
         "path": "/chart",
         "icon": "home",
-        "layout": "grid",
+        "layout": "flex",
         "theme": "d961ff1262703135",
         "breakpoints": [
             {
@@ -274,8 +274,8 @@
         ],
         "order": 1,
         "className": "",
-        "visible": true,
-        "disabled": false
+        "visible": "true",
+        "disabled": "false"
     },
     {
         "id": "402b61187877985c",

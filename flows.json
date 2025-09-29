@@ -1737,7 +1737,7 @@
         "autocols": true,
         "showSearch": true,
         "deselect": true,
-        "selectionType": "none",
+        "selectionType": "click",
         "columns": [],
         "mobileBreakpoint": "sm",
         "mobileBreakpointType": "defaults",

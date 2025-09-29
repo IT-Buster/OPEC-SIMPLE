@@ -219,7 +219,7 @@
         "sizes": {
             "density": "default",
             "pagePadding": "5px",
-            "groupGap": "5px",
+            "groupGap": "25px",
             "groupBorderRadius": "10px",
             "widgetGap": "6px"
         }

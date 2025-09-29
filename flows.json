@@ -184,7 +184,7 @@
         "name": "Default Theme",
         "colors": {
             "surface": "#ffffff",
-            "primary": "#0094CE",
+            "primary": "#0094ce",
             "bgPage": "#eeeeee",
             "groupBg": "#ffffff",
             "groupOutline": "#cccccc"
@@ -260,6 +260,25 @@
         "visible": "true",
         "disabled": "false",
         "groupType": "dialog"
+    },
+    {
+        "id": "d961ff1262703135",
+        "type": "ui-theme",
+        "name": "Konsolidacja",
+        "colors": {
+            "surface": "#adadad",
+            "primary": "#728992",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "comfortable",
+            "pagePadding": "5px",
+            "groupGap": "5px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "5px"
+        }
     },
     {
         "id": "2c8e29558bef67fc",

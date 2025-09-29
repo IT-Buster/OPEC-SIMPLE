@@ -206,6 +206,42 @@
         }
     },
     {
+        "id": "d961ff1262703135",
+        "type": "ui-theme",
+        "name": "Konsolidacja",
+        "colors": {
+            "surface": "#adadad",
+            "primary": "#728992",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "5px",
+            "groupGap": "5px",
+            "groupBorderRadius": "10px",
+            "widgetGap": "6px"
+        }
+    },
+    {
+        "id": "dashboard_tab",
+        "type": "ui_tab",
+        "name": "Sterowanie",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "dashboard_group",
+        "type": "ui_group",
+        "name": "OPEC-STER",
+        "tab": "dashboard_tab",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
         "id": "5b2a90153beb6c37",
         "type": "ui-page",
         "name": "Wykresy",
@@ -270,25 +306,6 @@
         "groupType": "default"
     },
     {
-        "id": "d961ff1262703135",
-        "type": "ui-theme",
-        "name": "Konsolidacja",
-        "colors": {
-            "surface": "#adadad",
-            "primary": "#728992",
-            "bgPage": "#eeeeee",
-            "groupBg": "#ffffff",
-            "groupOutline": "#cccccc"
-        },
-        "sizes": {
-            "density": "default",
-            "pagePadding": "5px",
-            "groupGap": "5px",
-            "groupBorderRadius": "10px",
-            "widgetGap": "6px"
-        }
-    },
-    {
         "id": "098f4224cba1d31e",
         "type": "ui-spacer",
         "group": "402b61187877985c",
@@ -300,21 +317,65 @@
         "className": ""
     },
     {
-        "id": "dashboard_tab",
-        "type": "ui_tab",
-        "name": "Sterowanie",
-        "icon": "dashboard",
-        "order": 1
+        "id": "e376b59f571b9c26",
+        "type": "ui-group",
+        "name": "Pompy",
+        "page": "5b2a90153beb6c37",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
     },
     {
-        "id": "dashboard_group",
-        "type": "ui_group",
-        "name": "OPEC-STER",
-        "tab": "dashboard_tab",
-        "order": 1,
-        "disp": true,
-        "width": "12",
-        "collapse": false
+        "id": "c1b49614e67165bd",
+        "type": "ui-link",
+        "name": "Link 1",
+        "ui": "17e53577a75fc993",
+        "path": "/",
+        "icon": "home",
+        "order": 2,
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "7a12120f48b7d954",
+        "type": "ui-page",
+        "name": "Pompy",
+        "ui": "17e53577a75fc993",
+        "path": "/pumps",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "27d1e4a55863a4fe",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
     },
     {
         "id": "2c8e29558bef67fc",

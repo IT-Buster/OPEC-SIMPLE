@@ -275,7 +275,7 @@
         "sizes": {
             "density": "comfortable",
             "pagePadding": "4px",
-            "groupGap": "2px",
+            "groupGap": "50px",
             "groupBorderRadius": "20px",
             "widgetGap": "50px"
         }

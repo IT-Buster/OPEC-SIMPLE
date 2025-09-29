@@ -1182,13 +1182,13 @@
                 "29303f6b47338634"
             ],
             [
-                "fc25a599d9f96f15"
+                "7bab3e7370cace8d"
             ],
             [
-                "91d134ef24463489"
+                "8e93df1fe23a3b9b"
             ],
             [
-                "50a240fb0023dec2"
+                "7713b4ecfc3a32b3"
             ]
         ]
     },
@@ -1266,9 +1266,9 @@
         "type": "ui-chart",
         "z": "6249a630e13530e8",
         "group": "402b61187877985c",
-        "name": "AS",
+        "name": "Temp ZEW",
         "label": "chart",
-        "order": 9007199254740991,
+        "order": 1,
         "chartType": "line",
         "category": "topic",
         "categoryType": "msg",
@@ -1317,24 +1317,25 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 770,
+        "x": 790,
         "y": 100,
         "wires": [
             []
         ]
     },
     {
-        "id": "fc25a599d9f96f15",
+        "id": "7bab3e7370cace8d",
         "type": "ui-chart",
         "z": "6249a630e13530e8",
-        "name": "",
+        "group": "402b61187877985c",
+        "name": "Temp ZEW",
         "label": "chart",
-        "order": 9007199254740991,
+        "order": 2,
         "chartType": "line",
         "category": "topic",
         "categoryType": "msg",
         "xAxisLabel": "",
-        "xAxisProperty": null,
+        "xAxisProperty": "",
         "xAxisPropertyType": "timestamp",
         "xAxisType": "time",
         "xAxisFormat": "",
@@ -1356,15 +1357,15 @@
         "removeOlderUnit": "3600",
         "removeOlderPoints": "",
         "colors": [
-            "#0095FF",
-            "#FF0000",
-            "#FF7F0E",
-            "#2CA02C",
-            "#A347E1",
-            "#D62728",
-            "#FF9896",
-            "#9467BD",
-            "#C5B0D5"
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
         ],
         "textColor": [
             "#666666"
@@ -1378,24 +1379,25 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 770,
+        "x": 790,
         "y": 140,
         "wires": [
             []
         ]
     },
     {
-        "id": "91d134ef24463489",
+        "id": "8e93df1fe23a3b9b",
         "type": "ui-chart",
         "z": "6249a630e13530e8",
-        "name": "",
+        "group": "402b61187877985c",
+        "name": "Temp ZEW",
         "label": "chart",
-        "order": 9007199254740991,
+        "order": 3,
         "chartType": "line",
         "category": "topic",
         "categoryType": "msg",
         "xAxisLabel": "",
-        "xAxisProperty": null,
+        "xAxisProperty": "",
         "xAxisPropertyType": "timestamp",
         "xAxisType": "time",
         "xAxisFormat": "",
@@ -1417,15 +1419,15 @@
         "removeOlderUnit": "3600",
         "removeOlderPoints": "",
         "colors": [
-            "#0095FF",
-            "#FF0000",
-            "#FF7F0E",
-            "#2CA02C",
-            "#A347E1",
-            "#D62728",
-            "#FF9896",
-            "#9467BD",
-            "#C5B0D5"
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
         ],
         "textColor": [
             "#666666"
@@ -1439,24 +1441,25 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 770,
+        "x": 790,
         "y": 180,
         "wires": [
             []
         ]
     },
     {
-        "id": "50a240fb0023dec2",
+        "id": "7713b4ecfc3a32b3",
         "type": "ui-chart",
         "z": "6249a630e13530e8",
-        "name": "",
+        "group": "402b61187877985c",
+        "name": "Temp ZEW",
         "label": "chart",
-        "order": 9007199254740991,
+        "order": 4,
         "chartType": "line",
         "category": "topic",
         "categoryType": "msg",
         "xAxisLabel": "",
-        "xAxisProperty": null,
+        "xAxisProperty": "",
         "xAxisPropertyType": "timestamp",
         "xAxisType": "time",
         "xAxisFormat": "",
@@ -1478,15 +1481,15 @@
         "removeOlderUnit": "3600",
         "removeOlderPoints": "",
         "colors": [
-            "#0095FF",
-            "#FF0000",
-            "#FF7F0E",
-            "#2CA02C",
-            "#A347E1",
-            "#D62728",
-            "#FF9896",
-            "#9467BD",
-            "#C5B0D5"
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
         ],
         "textColor": [
             "#666666"
@@ -1500,7 +1503,7 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 770,
+        "x": 790,
         "y": 220,
         "wires": [
             []

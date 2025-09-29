@@ -1535,7 +1535,7 @@
         "style": true,
         "font": "Trebuchet MS,Helvetica,sans-serif",
         "fontSize": "12",
-        "color": "#717171",
+        "color": "#000000",
         "wrapText": false,
         "className": "",
         "value": "payload",

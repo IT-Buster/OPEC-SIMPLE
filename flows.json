@@ -842,6 +842,71 @@
         "wires": []
     },
     {
+        "id": "70159b0273d77375",
+        "type": "function",
+        "z": "1e78c2098878e540",
+        "name": "function 3",
+        "func": "let pozycja = flow.get(\"pozycja\") || 0;\npozycja += 1;   // zwiększamy o 1 przy każdym wywołaniu\nflow.set(\"pozycja\", pozycja);\n\nmsg.payload = { pozycja };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 940,
+        "wires": [
+            [
+                "7e1eb6a0a35642e1"
+            ]
+        ]
+    },
+    {
+        "id": "7e1eb6a0a35642e1",
+        "type": "debug",
+        "z": "1e78c2098878e540",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "f80c3dbaff71aac8",
+        "type": "inject",
+        "z": "1e78c2098878e540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 940,
+        "wires": [
+            [
+                "70159b0273d77375"
+            ]
+        ]
+    },
+    {
         "id": "0eccd18fcd4a9b44",
         "type": "modbus-write",
         "z": "85249515dfc449d5",

@@ -1530,7 +1530,7 @@
         "type": "ui-switch",
         "z": "6249a630e13530e8",
         "name": "Pompa",
-        "label": "Włącz/Wyłącz",
+        "label": "Pompa",
         "group": "aa57b43bfff6a1ad",
         "order": 1,
         "width": 0,

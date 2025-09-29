@@ -230,8 +230,8 @@
         ],
         "order": 1,
         "className": "",
-        "visible": "true",
-        "disabled": "false"
+        "visible": true,
+        "disabled": false
     },
     {
         "id": "402b61187877985c",
@@ -274,10 +274,10 @@
         },
         "sizes": {
             "density": "comfortable",
-            "pagePadding": "10px",
-            "groupGap": "10px",
-            "groupBorderRadius": "10px",
-            "widgetGap": "10px"
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "12px",
+            "widgetGap": "12px"
         }
     },
     {

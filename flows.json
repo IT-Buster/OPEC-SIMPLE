@@ -1328,7 +1328,7 @@
         "type": "ui-chart",
         "z": "6249a630e13530e8",
         "group": "402b61187877985c",
-        "name": "Temp ZEW",
+        "name": "Temp CO",
         "label": "chart",
         "order": 2,
         "chartType": "line",
@@ -1379,7 +1379,7 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 790,
+        "x": 780,
         "y": 140,
         "wires": [
             []
@@ -1390,7 +1390,7 @@
         "type": "ui-chart",
         "z": "6249a630e13530e8",
         "group": "402b61187877985c",
-        "name": "Temp ZEW",
+        "name": "Pozycja",
         "label": "chart",
         "order": 3,
         "chartType": "line",
@@ -1441,7 +1441,7 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 790,
+        "x": 780,
         "y": 180,
         "wires": [
             []
@@ -1452,7 +1452,7 @@
         "type": "ui-chart",
         "z": "6249a630e13530e8",
         "group": "402b61187877985c",
-        "name": "Temp ZEW",
+        "name": "Temp Nastawa",
         "label": "chart",
         "order": 4,
         "chartType": "line",
@@ -1503,7 +1503,7 @@
         "height": 8,
         "className": "",
         "interpolation": "linear",
-        "x": 790,
+        "x": 800,
         "y": 220,
         "wires": [
             []

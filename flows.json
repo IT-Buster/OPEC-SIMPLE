@@ -274,10 +274,10 @@
         },
         "sizes": {
             "density": "compact",
-            "pagePadding": "5px",
-            "groupGap": "5px",
-            "groupBorderRadius": "4px",
-            "widgetGap": "5px"
+            "pagePadding": "10px",
+            "groupGap": "10px",
+            "groupBorderRadius": "10px",
+            "widgetGap": "10px"
         }
     },
     {

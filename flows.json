@@ -1262,6 +1262,19 @@
         ]
     },
     {
+        "id": "1d17a16d098486ca",
+        "type": "ui_digital_clock",
+        "z": "6249a630e13530e8",
+        "name": "",
+        "group": "358ad3bcb6d33357",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "x": 770,
+        "y": 560,
+        "wires": []
+    },
+    {
         "id": "6f48287671bc7669",
         "type": "modbus-write",
         "z": "867cb1db5f09b847",

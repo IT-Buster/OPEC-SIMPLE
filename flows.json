@@ -217,11 +217,11 @@
             "groupOutline": "#cccccc"
         },
         "sizes": {
-            "density": "default",
+            "density": "compact",
             "pagePadding": "5px",
             "groupGap": "5px",
             "groupBorderRadius": "5px",
-            "widgetGap": "20px"
+            "widgetGap": "5px"
         }
     },
     {

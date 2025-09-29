@@ -1230,17 +1230,21 @@
         "y": 40,
         "wires": [
             [
-                "29303f6b47338634"
+                "29303f6b47338634",
+                "ui_text_tempzew"
             ],
             [
-                "7bab3e7370cace8d"
+                "7bab3e7370cace8d",
+                "ui_text_tempco"
             ],
             [
                 "8e93df1fe23a3b9b",
-                "75d874d8ec2ad3dc"
+                "75d874d8ec2ad3dc",
+                "ui_text_pozycja"
             ],
             [
-                "7713b4ecfc3a32b3"
+                "7713b4ecfc3a32b3",
+                "ui_text_nastawa"
             ]
         ]
     },
@@ -1594,6 +1598,102 @@
         ]
     },
     {
+        "id": "ui_text_tempzew",
+        "type": "ui-text",
+        "z": "6249a630e13530e8",
+        "group": "aa57b43bfff6a1ad",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "name": "Temp Zew",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 830,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ui_text_tempco",
+        "type": "ui-text",
+        "z": "6249a630e13530e8",
+        "group": "aa57b43bfff6a1ad",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "name": "Temp CO",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 840,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "ui_text_pozycja",
+        "type": "ui-text",
+        "z": "6249a630e13530e8",
+        "group": "aa57b43bfff6a1ad",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "name": "Pozycja",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 840,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ui_text_nastawa",
+        "type": "ui-text",
+        "z": "6249a630e13530e8",
+        "group": "aa57b43bfff6a1ad",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "name": "Temp Nastawa",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 860,
+        "y": 500,
+        "wires": []
+    },
+    {
         "id": "6f48287671bc7669",
         "type": "modbus-write",
         "z": "867cb1db5f09b847",
@@ -1932,114 +2032,10 @@
         "x": 460,
         "y": 200,
         "wires": [
-            [
-                "ui_text_tempzew"
-            ],
-            [
-                "ui_text_tempco"
-            ],
-            [
-                "ui_text_pozycja"
-            ],
-            [
-                "ui_text_nastawa"
-            ]
+            [],
+            [],
+            [],
+            []
         ]
-    },
-    {
-        "id": "ui_text_tempzew",
-        "type": "ui-text",
-        "z": "5ee177e2d5f4523d",
-        "group": "aa57b43bfff6a1ad",
-        "order": 2,
-        "width": 6,
-        "height": 1,
-        "name": "Temp Zew",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "wrapText": false,
-        "className": "",
-        "value": "payload",
-        "valueType": "msg",
-        "x": 890,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "ui_text_tempco",
-        "type": "ui-text",
-        "z": "5ee177e2d5f4523d",
-        "group": "aa57b43bfff6a1ad",
-        "order": 3,
-        "width": 6,
-        "height": 1,
-        "name": "Temp CO",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "wrapText": false,
-        "className": "",
-        "value": "payload",
-        "valueType": "msg",
-        "x": 920,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "ui_text_pozycja",
-        "type": "ui-text",
-        "z": "5ee177e2d5f4523d",
-        "group": "aa57b43bfff6a1ad",
-        "order": 4,
-        "width": 6,
-        "height": 1,
-        "name": "Pozycja",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "wrapText": false,
-        "className": "",
-        "value": "payload",
-        "valueType": "msg",
-        "x": 960,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "ui_text_nastawa",
-        "type": "ui-text",
-        "z": "5ee177e2d5f4523d",
-        "group": "aa57b43bfff6a1ad",
-        "order": 5,
-        "width": 6,
-        "height": 1,
-        "name": "Temp Nastawa",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "wrapText": false,
-        "className": "",
-        "value": "payload",
-        "valueType": "msg",
-        "x": 1000,
-        "y": 440,
-        "wires": []
     }
 ]

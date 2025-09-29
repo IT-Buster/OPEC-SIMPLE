@@ -1466,7 +1466,7 @@
         "id": "a485e0ff91ff0b72",
         "type": "ui-gauge",
         "z": "6249a630e13530e8",
-        "name": "",
+        "name": "Pozycja",
         "group": "b0f2b445a7d98676",
         "order": 3,
         "value": "payload",
@@ -1484,16 +1484,22 @@
         "suffix": "",
         "segments": [
             {
-                "color": "#5CD65C",
-                "from": 0
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
             },
             {
-                "color": "#FFC800",
-                "from": 4
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
             },
             {
-                "color": "#EA5353",
-                "from": 7
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
             }
         ],
         "min": 0,
@@ -1504,7 +1510,7 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 950,
+        "x": 1000,
         "y": 220,
         "wires": [
             []
@@ -1514,7 +1520,7 @@
         "id": "499a8d54a8788b99",
         "type": "ui-gauge",
         "z": "6249a630e13530e8",
-        "name": "",
+        "name": "TempNastaw",
         "group": "b0f2b445a7d98676",
         "order": 2,
         "value": "payload",
@@ -1532,16 +1538,22 @@
         "suffix": "",
         "segments": [
             {
-                "color": "#5CD65C",
-                "from": 0
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
             },
             {
-                "color": "#FFC800",
-                "from": 4
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
             },
             {
-                "color": "#EA5353",
-                "from": 7
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
             }
         ],
         "min": 0,
@@ -1552,7 +1564,7 @@
         "styleRounded": true,
         "styleGlow": false,
         "className": "",
-        "x": 950,
+        "x": 1030,
         "y": 280,
         "wires": [
             []

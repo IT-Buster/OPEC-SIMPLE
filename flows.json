@@ -285,7 +285,7 @@
             "pagePadding": "5px",
             "groupGap": "5px",
             "groupBorderRadius": "10px",
-            "widgetGap": "15px"
+            "widgetGap": "6px"
         }
     },
     {

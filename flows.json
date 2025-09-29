@@ -1273,7 +1273,7 @@
         "chartType": "line",
         "category": "topic",
         "categoryType": "msg",
-        "xAxisLabel": "msg.payload",
+        "xAxisLabel": "",
         "xAxisProperty": "",
         "xAxisPropertyType": "timestamp",
         "xAxisType": "time",

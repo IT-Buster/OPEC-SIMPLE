@@ -1119,90 +1119,6 @@
         ]
     },
     {
-        "id": "b522f1eb0cc2ac84",
-        "type": "ui_gauge",
-        "z": "6249a630e13530e8",
-        "name": "",
-        "group": "358ad3bcb6d33357",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Zew",
-        "label": "C",
-        "format": "{{value}}",
-        "min": "-10",
-        "max": "30",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 750,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "6937ced6dacc524e",
-        "type": "ui_gauge",
-        "z": "6249a630e13530e8",
-        "name": "",
-        "group": "358ad3bcb6d33357",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "CO",
-        "label": "C",
-        "format": "{{value}}",
-        "min": "10",
-        "max": "70",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 770,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "0878889ccab08040",
-        "type": "ui_gauge",
-        "z": "6249a630e13530e8",
-        "name": "",
-        "group": "358ad3bcb6d33357",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Pozycja",
-        "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "6000",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 780,
-        "y": 220,
-        "wires": []
-    },
-    {
         "id": "27e0b1a1685cd8b1",
         "type": "function",
         "z": "6249a630e13530e8",
@@ -1218,68 +1134,16 @@
         "y": 140,
         "wires": [
             [
-                "b522f1eb0cc2ac84",
                 "1c1bf1ce3d62e63d"
             ],
             [
-                "6937ced6dacc524e",
                 "3109ae9db63a3e45"
             ],
             [
-                "0878889ccab08040",
                 "a485e0ff91ff0b72"
             ],
             [
-                "c7c7aaad5edc91ca",
                 "499a8d54a8788b99"
-            ]
-        ]
-    },
-    {
-        "id": "c7c7aaad5edc91ca",
-        "type": "ui_gauge",
-        "z": "6249a630e13530e8",
-        "name": "",
-        "group": "358ad3bcb6d33357",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "TempNastaw",
-        "label": "C",
-        "format": "{{value}}",
-        "min": "10",
-        "max": "70",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 790,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "271974e009acf7ac",
-        "type": "ui_table",
-        "z": "6249a630e13530e8",
-        "group": "358ad3bcb6d33357",
-        "name": "",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "columns": [],
-        "outputs": 1,
-        "cts": true,
-        "x": 750,
-        "y": 420,
-        "wires": [
-            [
-                "edb77486ae16c09f"
             ]
         ]
     },
@@ -1298,9 +1162,7 @@
         "x": 480,
         "y": 420,
         "wires": [
-            [
-                "271974e009acf7ac"
-            ]
+            []
         ]
     },
     {

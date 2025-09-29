@@ -1607,6 +1607,38 @@
         "wires": []
     },
     {
+        "id": "7da5a0dde54710f9",
+        "type": "ui-switch",
+        "z": "6249a630e13530e8",
+        "name": "Sterowanie",
+        "label": "switch",
+        "group": "aa57b43bfff6a1ad",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 830,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "6f48287671bc7669",
         "type": "modbus-write",
         "z": "867cb1db5f09b847",

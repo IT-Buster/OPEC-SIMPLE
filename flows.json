@@ -1312,15 +1312,15 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "function 1",
-        "func": "// pobranie tabeli z flow\nlet tabela = flow.get(\"tabelaNastaw\") || [];\n\n// konwersja na format dla ui-table\nmsg.payload = tabela.map(r => ({\n    tempzew: r[0],\n    nastawa: r[1]\n}));\n\n// konfiguracja kolumn (opcjonalnie, można też ustawić w edytorze)\nmsg.ui_update = {\n    columns: [\n        { headerName: \"Temp. zewnętrzna [°C]\", field: \"tempzew\", width: 180 },\n        { headerName: \"Temp. nastawa [°C]\", field: \"nastawa\", width: 180 }\n    ]\n};\n\nreturn msg;\n",
+        "func": "// pobranie tabeli z flow\nlet tabela = flow.get(\"tabelaNastaw\") || [];\n\n// konwersja na format dla ui-table\nlet rows = tabela.map(r => ({ tempzew: r[0], nastawa: r[1] }));\n\nnode.warn(\"ui-table rows: \" + JSON.stringify(rows)); // wyświetli w logu Node-RED\nmsg.payload = rows;\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 220,
-        "y": 300,
+        "x": 160,
+        "y": 420,
         "wires": [
             [
                 "72e0b7094174cae2"
@@ -1372,8 +1372,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
-        "y": 400,
+        "x": 540,
+        "y": 540,
         "wires": [
             []
         ]
@@ -1743,8 +1743,8 @@
         "mobileBreakpointType": "defaults",
         "action": "append",
         "className": "",
-        "x": 190,
-        "y": 400,
+        "x": 310,
+        "y": 540,
         "wires": [
             [
                 "edb77486ae16c09f"

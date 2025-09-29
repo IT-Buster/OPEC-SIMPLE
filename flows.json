@@ -273,7 +273,7 @@
             "groupOutline": "#cccccc"
         },
         "sizes": {
-            "density": "compact",
+            "density": "comfortable",
             "pagePadding": "10px",
             "groupGap": "10px",
             "groupBorderRadius": "10px",

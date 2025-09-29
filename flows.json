@@ -200,9 +200,9 @@
     {
         "id": "5b2a90153beb6c37",
         "type": "ui-page",
-        "name": "Page 1",
+        "name": "Wykresy",
         "ui": "17e53577a75fc993",
-        "path": "/page1",
+        "path": "/chart",
         "icon": "home",
         "layout": "grid",
         "theme": "27d1e4a55863a4fe",
@@ -236,7 +236,7 @@
     {
         "id": "402b61187877985c",
         "type": "ui-group",
-        "name": "Group Name",
+        "name": "OPEC-STER",
         "page": "5b2a90153beb6c37",
         "width": 6,
         "height": 1,

@@ -1338,10 +1338,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 220,
+        "x": 220,
+        "y": 300,
         "wires": [
-            []
+            [
+                "72e0b7094174cae2"
+            ]
         ]
     },
     {
@@ -1352,8 +1354,8 @@
         "links": [
             "5fa8e9a784e119d4"
         ],
-        "x": 175,
-        "y": 220,
+        "x": 185,
+        "y": 200,
         "wires": [
             [
                 "0928419add0a48a2"
@@ -1389,8 +1391,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
-        "y": 220,
+        "x": 400,
+        "y": 400,
         "wires": [
             []
         ]
@@ -1770,6 +1772,34 @@
         "x": 860,
         "y": 500,
         "wires": []
+    },
+    {
+        "id": "72e0b7094174cae2",
+        "type": "ui-table",
+        "z": "6249a630e13530e8",
+        "name": "",
+        "label": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": true,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "none",
+        "columns": null,
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "append",
+        "className": "",
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "edb77486ae16c09f"
+            ]
+        ]
     },
     {
         "id": "6f48287671bc7669",

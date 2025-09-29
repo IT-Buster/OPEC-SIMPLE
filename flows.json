@@ -1251,6 +1251,7 @@
         "id": "29303f6b47338634",
         "type": "ui-chart",
         "z": "6249a630e13530e8",
+        "group": "",
         "name": "",
         "label": "chart",
         "order": 9007199254740991,
@@ -1258,7 +1259,7 @@
         "category": "topic",
         "categoryType": "msg",
         "xAxisLabel": "",
-        "xAxisProperty": null,
+        "xAxisProperty": "",
         "xAxisPropertyType": "timestamp",
         "xAxisType": "time",
         "xAxisFormat": "",
@@ -1280,15 +1281,15 @@
         "removeOlderUnit": "3600",
         "removeOlderPoints": "",
         "colors": [
-            "#0095FF",
-            "#FF0000",
-            "#FF7F0E",
-            "#2CA02C",
-            "#A347E1",
-            "#D62728",
-            "#FF9896",
-            "#9467BD",
-            "#C5B0D5"
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
         ],
         "textColor": [
             "#666666"

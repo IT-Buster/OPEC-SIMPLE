@@ -306,17 +306,6 @@
         "groupType": "default"
     },
     {
-        "id": "098f4224cba1d31e",
-        "type": "ui-spacer",
-        "group": "402b61187877985c",
-        "name": "spacer",
-        "tooltip": "",
-        "order": 3,
-        "width": 6,
-        "height": 1,
-        "className": ""
-    },
-    {
         "id": "e376b59f571b9c26",
         "type": "ui-group",
         "name": "Pompy",

@@ -1934,15 +1934,9 @@
             [
                 "ui_text_tempzew"
             ],
-            [
-                "ui_text_tempco"
-            ],
-            [
-                "ui_text_pozycja"
-            ],
-            [
-                "ui_text_nastawa"
-            ]
+            [],
+            [],
+            []
         ]
     },
     {
@@ -1965,8 +1959,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 710,
-        "y": 160,
+        "x": 890,
+        "y": 120,
         "wires": []
     },
     {
@@ -1989,8 +1983,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 710,
-        "y": 200,
+        "x": 920,
+        "y": 240,
         "wires": []
     },
     {
@@ -2013,8 +2007,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 710,
-        "y": 240,
+        "x": 960,
+        "y": 300,
         "wires": []
     },
     {
@@ -2037,8 +2031,29 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 710,
-        "y": 280,
+        "x": 1000,
+        "y": 440,
         "wires": []
+    },
+    {
+        "id": "3eb989631e04f6c7",
+        "type": "function",
+        "z": "5ee177e2d5f4523d",
+        "name": "TEST",
+        "func": "let tempzew = 10;\nlet title = `Temperatura Zewnętrzna: ${tempzew} °C`;\nlet payload = \"10\";\n\nreturn msg;",
+        "outputs": 4,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 460,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ]
     }
 ]

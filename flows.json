@@ -1469,7 +1469,7 @@
         "stackSeries": false,
         "pointShape": "circle",
         "pointRadius": 4,
-        "showLegend": true,
+        "showLegend": false,
         "removeOlder": "4",
         "removeOlderUnit": "3600",
         "removeOlderPoints": "",

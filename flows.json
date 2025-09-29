@@ -1180,7 +1180,8 @@
         "wires": [
             [
                 "29303f6b47338634",
-                "75d874d8ec2ad3dc"
+                "75d874d8ec2ad3dc",
+                "988d4157b7663689"
             ],
             [
                 "7bab3e7370cace8d",
@@ -1272,7 +1273,7 @@
         "group": "402b61187877985c",
         "name": "Temp ZEW",
         "label": "Temperatura Zewnętrzna",
-        "order": 2,
+        "order": 1,
         "chartType": "line",
         "category": "",
         "categoryType": "none",
@@ -1334,7 +1335,7 @@
         "group": "402b61187877985c",
         "name": "Temp CO",
         "label": "Temperatura CO",
-        "order": 3,
+        "order": 2,
         "chartType": "line",
         "category": "",
         "categoryType": "none",
@@ -1396,7 +1397,7 @@
         "group": "402b61187877985c",
         "name": "Pozycja",
         "label": "Pozycja Siłownika",
-        "order": 4,
+        "order": 3,
         "chartType": "line",
         "category": "",
         "categoryType": "none",
@@ -1458,7 +1459,7 @@
         "group": "402b61187877985c",
         "name": "Temp Nastawa",
         "label": "Nastawiona Temperatura",
-        "order": 5,
+        "order": 4,
         "chartType": "line",
         "category": "",
         "categoryType": "none",
@@ -1512,6 +1513,30 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "988d4157b7663689",
+        "type": "ui-text",
+        "z": "6249a630e13530e8",
+        "group": "402b61187877985c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "TempZewTXT",
+        "label": "Temperatura Zewnętrzna",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payloads",
+        "valueType": "msg",
+        "x": 800,
+        "y": 60,
+        "wires": []
     },
     {
         "id": "6f48287671bc7669",

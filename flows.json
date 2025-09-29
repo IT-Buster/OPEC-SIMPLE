@@ -1179,17 +1179,20 @@
         "y": 140,
         "wires": [
             [
-                "29303f6b47338634"
+                "29303f6b47338634",
+                "75d874d8ec2ad3dc"
             ],
             [
                 "7bab3e7370cace8d",
                 "75d874d8ec2ad3dc"
             ],
             [
-                "8e93df1fe23a3b9b"
+                "8e93df1fe23a3b9b",
+                "75d874d8ec2ad3dc"
             ],
             [
-                "7713b4ecfc3a32b3"
+                "7713b4ecfc3a32b3",
+                "75d874d8ec2ad3dc"
             ]
         ]
     },
@@ -1240,8 +1243,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 380,
-        "y": 560,
+        "x": 800,
+        "y": 300,
         "wires": []
     },
     {

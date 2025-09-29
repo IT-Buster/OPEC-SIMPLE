@@ -1319,8 +1319,8 @@
             "#e5e5e5"
         ],
         "gridColorDefault": true,
-        "width": "4",
-        "height": "3",
+        "width": "0",
+        "height": "0",
         "className": "",
         "interpolation": "linear",
         "x": 790,

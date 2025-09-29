@@ -555,7 +555,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
+        "x": 400,
         "y": 180,
         "wires": [
             [
@@ -583,7 +583,7 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 640,
+        "x": 600,
         "y": 140,
         "wires": [
             [],
@@ -676,7 +676,7 @@
         "createDir": false,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 650,
+        "x": 610,
         "y": 240,
         "wires": [
             []
@@ -719,8 +719,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
-        "y": 300,
+        "x": 400,
+        "y": 280,
         "wires": [
             [
                 "5fa8e9a784e119d4"
@@ -739,8 +739,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
-        "y": 40,
+        "x": 380,
+        "y": 60,
         "wires": [
             [
                 "2c19ecde5a031fbf"
@@ -807,7 +807,7 @@
             "0876e49f1e67ae60"
         ],
         "x": 585,
-        "y": 40,
+        "y": 60,
         "wires": []
     },
     {

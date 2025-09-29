@@ -250,7 +250,7 @@
     {
         "id": "aa57b43bfff6a1ad",
         "type": "ui-group",
-        "name": "Group 2",
+        "name": "Sterowanie",
         "page": "5b2a90153beb6c37",
         "width": 6,
         "height": 1,
@@ -259,7 +259,7 @@
         "className": "",
         "visible": "true",
         "disabled": "false",
-        "groupType": "dialog"
+        "groupType": "default"
     },
     {
         "id": "d961ff1262703135",

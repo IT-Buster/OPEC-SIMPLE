@@ -1362,8 +1362,8 @@
             "#e5e5e5"
         ],
         "gridColorDefault": true,
-        "width": 6,
-        "height": 8,
+        "width": "3",
+        "height": "3",
         "className": "",
         "interpolation": "linear",
         "x": 780,
@@ -1424,8 +1424,8 @@
             "#e5e5e5"
         ],
         "gridColorDefault": true,
-        "width": 6,
-        "height": 8,
+        "width": "3",
+        "height": "3",
         "className": "",
         "interpolation": "linear",
         "x": 780,
@@ -1486,8 +1486,8 @@
             "#e5e5e5"
         ],
         "gridColorDefault": true,
-        "width": 6,
-        "height": 8,
+        "width": "3",
+        "height": "3",
         "className": "",
         "interpolation": "linear",
         "x": 800,

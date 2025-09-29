@@ -32,6 +32,14 @@
         "env": []
     },
     {
+        "id": "5ee177e2d5f4523d",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "2a13aec920287264",
         "type": "modbus-client",
         "name": "usb-conn",
@@ -290,6 +298,23 @@
         "width": 1,
         "height": 1,
         "className": ""
+    },
+    {
+        "id": "dashboard_tab",
+        "type": "ui_tab",
+        "name": "Sterowanie",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "dashboard_group",
+        "type": "ui_group",
+        "name": "OPEC-STER",
+        "tab": "dashboard_tab",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
     },
     {
         "id": "2c8e29558bef67fc",
@@ -1850,6 +1875,134 @@
         "info": "",
         "x": 570,
         "y": 200,
+        "wires": []
+    },
+    {
+        "id": "inject_data",
+        "type": "inject",
+        "z": "5ee177e2d5f4523d",
+        "name": "Przykładowe dane",
+        "props": [
+            {
+                "p": "tempzew",
+                "v": "12",
+                "vt": "num"
+            },
+            {
+                "p": "tempco",
+                "v": "38",
+                "vt": "num"
+            },
+            {
+                "p": "pozycja",
+                "v": "1400",
+                "vt": "num"
+            },
+            {
+                "p": "temperatura_nastawa",
+                "v": "38.6",
+                "vt": "num"
+            }
+        ],
+        "repeat": "5",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "prepare_msg"
+            ]
+        ]
+    },
+    {
+        "id": "prepare_msg",
+        "type": "function",
+        "z": "5ee177e2d5f4523d",
+        "name": "Przygotuj msg dla Dashboard 2.0",
+        "func": "// Pobieramy wartości z msg\nlet tempzew = msg.tempzew;\nlet tempco = msg.tempco;\nlet pozycja = msg.pozycja;\nlet tempNastawa = msg.temperatura_nastawa;\n\n// Tworzymy osobne wiadomości dla każdego widżetu\nlet out1 = { payload: tempzew, ui_control: { title: 'Temperatura Zewnętrzna: ' + tempzew + ' °C' } };\nlet out2 = { payload: tempco, ui_control: { title: 'Temperatura CO: ' + tempco + ' °C' } };\nlet out3 = { payload: pozycja, ui_control: { title: 'Pozycja Siłownika: ' + pozycja } };\nlet out4 = { payload: tempNastawa, ui_control: { title: 'Temperatura Nastawa: ' + tempNastawa + ' °C' } };\n\nreturn [out1, out2, out3, out4];",
+        "outputs": 4,
+        "noerr": 0,
+        "x": 460,
+        "y": 200,
+        "wires": [
+            [
+                "ui_text_tempzew"
+            ],
+            [
+                "ui_text_tempco"
+            ],
+            [
+                "ui_text_pozycja"
+            ],
+            [
+                "ui_text_nastawa"
+            ]
+        ]
+    },
+    {
+        "id": "ui_text_tempzew",
+        "type": "ui-text",
+        "z": "5ee177e2d5f4523d",
+        "group": "dashboard_group",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "Temp Zew",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 710,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "ui_text_tempco",
+        "type": "ui-text",
+        "z": "5ee177e2d5f4523d",
+        "group": "dashboard_group",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "name": "Temp CO",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 710,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ui_text_pozycja",
+        "type": "ui-text",
+        "z": "5ee177e2d5f4523d",
+        "group": "dashboard_group",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "name": "Pozycja",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 710,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "ui_text_nastawa",
+        "type": "ui-text",
+        "z": "5ee177e2d5f4523d",
+        "group": "dashboard_group",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "name": "Temp Nastawa",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 710,
+        "y": 280,
         "wires": []
     }
 ]

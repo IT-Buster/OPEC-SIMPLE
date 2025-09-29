@@ -234,6 +234,20 @@
         "disabled": "false"
     },
     {
+        "id": "402b61187877985c",
+        "type": "ui-group",
+        "name": "Group Name",
+        "page": "5b2a90153beb6c37",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
         "id": "2c8e29558bef67fc",
         "type": "function",
         "z": "1e78c2098878e540",
@@ -1251,8 +1265,8 @@
         "id": "29303f6b47338634",
         "type": "ui-chart",
         "z": "6249a630e13530e8",
-        "group": "",
-        "name": "",
+        "group": "402b61187877985c",
+        "name": "AS",
         "label": "chart",
         "order": 9007199254740991,
         "chartType": "line",

@@ -295,7 +295,7 @@
         "name": "spacer",
         "tooltip": "",
         "order": 5,
-        "width": 1,
+        "width": 6,
         "height": 1,
         "className": ""
     },

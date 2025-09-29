@@ -1741,7 +1741,7 @@
         "columns": [],
         "mobileBreakpoint": "sm",
         "mobileBreakpointType": "defaults",
-        "action": "append",
+        "action": "replace",
         "className": "",
         "x": 310,
         "y": 540,

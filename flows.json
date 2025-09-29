@@ -248,7 +248,7 @@
         "ui": "17e53577a75fc993",
         "path": "/chart",
         "icon": "home",
-        "layout": "flex",
+        "layout": "grid",
         "theme": "d961ff1262703135",
         "breakpoints": [
             {

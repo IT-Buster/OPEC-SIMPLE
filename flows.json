@@ -1935,9 +1935,15 @@
             [
                 "ui_text_tempzew"
             ],
-            [],
-            [],
-            []
+            [
+                "ui_text_tempco"
+            ],
+            [
+                "ui_text_pozycja"
+            ],
+            [
+                "ui_text_nastawa"
+            ]
         ]
     },
     {

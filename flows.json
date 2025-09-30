@@ -217,23 +217,6 @@
         }
     },
     {
-        "id": "dashboard_tab",
-        "type": "ui_tab",
-        "name": "Sterowanie",
-        "icon": "dashboard",
-        "order": 1
-    },
-    {
-        "id": "dashboard_group",
-        "type": "ui_group",
-        "name": "OPEC-STER",
-        "tab": "dashboard_tab",
-        "order": 1,
-        "disp": true,
-        "width": "12",
-        "collapse": false
-    },
-    {
         "id": "5b2a90153beb6c37",
         "type": "ui-page",
         "name": "Wykresy",
@@ -374,6 +357,22 @@
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
+    },
+    {
+        "id": "dashboard_group",
+        "type": "ui_group",
+        "name": "Harmonogram",
+        "tab": "dashboard_tab",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "dashboard_tab",
+        "type": "ui_tab",
+        "name": "Termostat",
+        "icon": "dashboard",
+        "order": 1
     },
     {
         "id": "2c8e29558bef67fc",
@@ -1750,6 +1749,76 @@
                 "edb77486ae16c09f"
             ]
         ]
+    },
+    {
+        "id": "ui_start",
+        "type": "ui_text_input",
+        "z": "6249a630e13530e8",
+        "name": "Godzina start",
+        "label": "Start",
+        "tooltip": "Ustaw godzinę start (HH:MM)",
+        "group": "dashboard_group",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "start",
+        "x": 790,
+        "y": 600,
+        "wires": [
+            [
+                "set_start"
+            ]
+        ]
+    },
+    {
+        "id": "ui_stop",
+        "type": "ui_text_input",
+        "z": "6249a630e13530e8",
+        "name": "Godzina stop",
+        "label": "Stop",
+        "tooltip": "Ustaw godzinę stop (HH:MM)",
+        "group": "dashboard_group",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "mode": "time",
+        "delay": 300,
+        "topic": "stop",
+        "x": 790,
+        "y": 660,
+        "wires": [
+            [
+                "set_stop"
+            ]
+        ]
+    },
+    {
+        "id": "set_start",
+        "type": "function",
+        "z": "6249a630e13530e8",
+        "name": "Zapisz start",
+        "func": "flow.set(\"start\", msg.payload);\nreturn null;",
+        "outputs": 0,
+        "noerr": 0,
+        "x": 1010,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "set_stop",
+        "type": "function",
+        "z": "6249a630e13530e8",
+        "name": "Zapisz stop",
+        "func": "flow.set(\"stop\", msg.payload);\nreturn null;",
+        "outputs": 0,
+        "noerr": 0,
+        "x": 1010,
+        "y": 660,
+        "wires": []
     },
     {
         "id": "6f48287671bc7669",

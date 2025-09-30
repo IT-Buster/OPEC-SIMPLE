@@ -1765,6 +1765,9 @@
         "mode": "time",
         "delay": 300,
         "topic": "start",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
         "x": 790,
         "y": 600,
         "wires": [

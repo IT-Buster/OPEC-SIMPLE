@@ -1806,7 +1806,11 @@
         "name": "Zapisz start",
         "func": "flow.set(\"start\", msg.payload);\nreturn null;",
         "outputs": 0,
+        "timeout": "",
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 1010,
         "y": 600,
         "wires": []

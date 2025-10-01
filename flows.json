@@ -835,7 +835,8 @@
         "y": 420,
         "wires": [
             [
-                "72e0b7094174cae2"
+                "72e0b7094174cae2",
+                "cb79a3bce9313723"
             ]
         ]
     },
@@ -884,8 +885,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
-        "y": 540,
+        "x": 520,
+        "y": 420,
         "wires": [
             []
         ]
@@ -1255,8 +1256,8 @@
         "mobileBreakpointType": "defaults",
         "action": "replace",
         "className": "",
-        "x": 310,
-        "y": 540,
+        "x": 350,
+        "y": 420,
         "wires": [
             [
                 "edb77486ae16c09f"
@@ -1434,6 +1435,55 @@
         "iconInnerPosition": "inside",
         "x": 1150,
         "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "52c3b39ee0f9fdd9",
+        "type": "ui-text",
+        "z": "6249a630e13530e8",
+        "group": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payloads",
+        "valueType": "global",
+        "x": 470,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "cb79a3bce9313723",
+        "type": "change",
+        "z": "6249a630e13530e8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 340,
         "wires": [
             []
         ]

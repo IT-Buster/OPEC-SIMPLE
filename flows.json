@@ -1542,7 +1542,7 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "function 3",
-        "func": "msg.temperatura_nastawa = msg.temperatura_nastawa + \" C\";\nreturn msg;",
+        "func": "msg.temperatura_nastawa = msg.temperatura_nastawa + \" &deg;C\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,

@@ -1541,7 +1541,7 @@
         "id": "19027639cd1c84f9",
         "type": "function",
         "z": "6249a630e13530e8",
-        "name": "function 3",
+        "name": "add degree",
         "func": "msg.temperatura_nastawa = msg.temperatura_nastawa + \" &deg;C\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -1549,7 +1549,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 180,
+        "x": 190,
         "y": 260,
         "wires": [
             [
@@ -1561,7 +1561,7 @@
         "id": "8a16b396e782a607",
         "type": "function",
         "z": "6249a630e13530e8",
-        "name": "function 4",
+        "name": "Change Value",
         "func": "msg.aktywny = msg.aktywny + \" &deg;C\";\n\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -1569,7 +1569,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 220,
+        "x": 240,
         "y": 200,
         "wires": [
             [

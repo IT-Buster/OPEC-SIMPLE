@@ -804,8 +804,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 960,
-        "y": 80,
+        "x": 820,
+        "y": 200,
         "wires": []
     },
     {
@@ -1094,7 +1094,7 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 830,
+        "x": 850,
         "y": 380,
         "wires": []
     },

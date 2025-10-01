@@ -429,7 +429,7 @@
         "type": "ui-group",
         "name": "Harmonogram",
         "page": "83a09bf0e993f5a5",
-        "width": 6,
+        "width": "3",
         "height": 1,
         "order": 2,
         "showTitle": true,

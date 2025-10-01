@@ -1384,7 +1384,7 @@
         "y": 160,
         "wires": [
             [
-                "c0f94d8d82f8cfc3"
+                "3a1e9bf47621a913"
             ]
         ]
     },
@@ -1576,7 +1576,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1300,
+        "x": 1460,
         "y": 160,
         "wires": []
     },
@@ -1595,6 +1595,26 @@
         "x": 400,
         "y": 320,
         "wires": []
+    },
+    {
+        "id": "3a1e9bf47621a913",
+        "type": "function",
+        "z": "6249a630e13530e8",
+        "name": "function 3",
+        "func": "// msg.payload = \"HH:MM\"\nlet timeStr = msg.payload || \"00:00\";\nlet parts = timeStr.split(\":\");\n\nlet hours = parseInt(parts[0], 10) || 0;\nlet minutes = parseInt(parts[1], 10) || 0;\n\nmsg.payload = hours * 60 + minutes;\n\nglobal.set(\"startMinutes\", msg.payload);\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 160,
+        "wires": [
+            [
+                "c0f94d8d82f8cfc3"
+            ]
+        ]
     },
     {
         "id": "6f48287671bc7669",

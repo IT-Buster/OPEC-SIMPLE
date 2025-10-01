@@ -1639,7 +1639,7 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "function 5",
-        "func": "let start = flow.get(\"startMinutes\");\nlet stop = flow.get(\"stopMinutes\");\n\n\nmsg.payload = true;\n\nmsg.payload = false;\n\nreturn msg;",
+        "func": "let start = flow.get(\"startMinutes\");\nlet stop = flow.get(\"stopMinutes\");\n\n// teraz tNow:\nlet now = new Date();\nlet tNow = now.getHours()*60 + now.getMinutes();\n\nmsg.payload = true;\nmsg.payload = false;\n\n// --- status node ---\nnode.status({\n    fill: \"red\",\n    shape: \"ring\",\n    text: `teraz: ${tNow}`\n});\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,

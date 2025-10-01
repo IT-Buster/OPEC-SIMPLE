@@ -816,8 +816,8 @@
         "wires": [
             [
                 "27e0b1a1685cd8b1",
-                "52c3b39ee0f9fdd9",
-                "19027639cd1c84f9"
+                "19027639cd1c84f9",
+                "8a16b396e782a607"
             ]
         ]
     },
@@ -883,8 +883,8 @@
         "links": [
             "5fa8e9a784e119d4"
         ],
-        "x": 185,
-        "y": 200,
+        "x": 175,
+        "y": 340,
         "wires": [
             [
                 "0928419add0a48a2"
@@ -1496,8 +1496,8 @@
         "className": "",
         "value": "aktywny",
         "valueType": "msg",
-        "x": 380,
-        "y": 120,
+        "x": 440,
+        "y": 200,
         "wires": []
     },
     {
@@ -1533,7 +1533,7 @@
         "className": "",
         "value": "temperatura_nastawa",
         "valueType": "msg",
-        "x": 430,
+        "x": 450,
         "y": 260,
         "wires": []
     },
@@ -1549,11 +1549,31 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 280,
-        "y": 180,
+        "x": 180,
+        "y": 260,
         "wires": [
             [
                 "d283e712b7285721"
+            ]
+        ]
+    },
+    {
+        "id": "8a16b396e782a607",
+        "type": "function",
+        "z": "6249a630e13530e8",
+        "name": "function 4",
+        "func": "msg.aktywny = msg.aktywny + \" &deg;C\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 200,
+        "wires": [
+            [
+                "52c3b39ee0f9fdd9"
             ]
         ]
     },

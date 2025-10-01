@@ -512,14 +512,6 @@
         "disabled": "false"
     },
     {
-        "id": "card1",
-        "type": "ui-card",
-        "name": "Harmonogram",
-        "page": "page1",
-        "order": 1,
-        "width": 6
-    },
-    {
         "id": "2c8e29558bef67fc",
         "type": "function",
         "z": "1e78c2098878e540",

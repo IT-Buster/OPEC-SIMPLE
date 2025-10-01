@@ -1313,7 +1313,7 @@
         "order": 2,
         "width": 0,
         "height": 0,
-        "passthru": false,
+        "passthru": true,
         "decouple": false,
         "topic": "topic",
         "topicType": "msg",

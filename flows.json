@@ -816,7 +816,8 @@
         "wires": [
             [
                 "27e0b1a1685cd8b1",
-                "52c3b39ee0f9fdd9"
+                "52c3b39ee0f9fdd9",
+                "d283e712b7285721"
             ]
         ]
     },
@@ -1386,7 +1387,7 @@
         "name": "Włacznik Główny",
         "label": "Włącznik Ogrzewania",
         "group": "484d649bdd92edf9",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -1480,7 +1481,7 @@
         "type": "ui-text",
         "z": "6249a630e13530e8",
         "group": "484d649bdd92edf9",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
@@ -1510,6 +1511,30 @@
         ],
         "x": 1215,
         "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d283e712b7285721",
+        "type": "ui-text",
+        "z": "6249a630e13530e8",
+        "group": "484d649bdd92edf9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Nastawa",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "temperatura_nastawa",
+        "valueType": "msg",
+        "x": 380,
+        "y": 220,
         "wires": []
     },
     {

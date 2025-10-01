@@ -415,7 +415,7 @@
         "type": "ui-group",
         "name": "Włącznik Główny",
         "page": "83a09bf0e993f5a5",
-        "width": "2",
+        "width": "3",
         "height": 1,
         "order": 1,
         "showTitle": true,

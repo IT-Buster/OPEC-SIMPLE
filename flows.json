@@ -8,14 +8,6 @@
         "env": []
     },
     {
-        "id": "85249515dfc449d5",
-        "type": "tab",
-        "label": "PLN Manual",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "6249a630e13530e8",
         "type": "tab",
         "label": "Dashboard",
@@ -27,6 +19,14 @@
         "id": "867cb1db5f09b847",
         "type": "tab",
         "label": "Silownik Nastawa Manual",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "85249515dfc449d5",
+        "type": "tab",
+        "label": "PLN Manual",
         "disabled": false,
         "info": "",
         "env": []
@@ -788,247 +788,6 @@
         "wires": [
             [
                 "70159b0273d77375"
-            ]
-        ]
-    },
-    {
-        "id": "0eccd18fcd4a9b44",
-        "type": "modbus-write",
-        "z": "85249515dfc449d5",
-        "name": "Off Simple PLC Program 118",
-        "showStatusActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "2",
-        "dataType": "HoldingRegister",
-        "adr": "118",
-        "quantity": "1",
-        "server": "2a13aec920287264",
-        "emptyMsgOnFail": false,
-        "keepMsgProperties": false,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 420,
-        "y": 280,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "a2f8f9231c0240da",
-        "type": "inject",
-        "z": "85249515dfc449d5",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "0",
-        "payloadType": "num",
-        "x": 170,
-        "y": 260,
-        "wires": [
-            [
-                "0eccd18fcd4a9b44"
-            ]
-        ]
-    },
-    {
-        "id": "b4a5c6b9a8798535",
-        "type": "modbus-write",
-        "z": "85249515dfc449d5",
-        "name": "Off Simple PLC Program 100",
-        "showStatusActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "2",
-        "dataType": "HoldingRegister",
-        "adr": "100",
-        "quantity": "1",
-        "server": "2a13aec920287264",
-        "emptyMsgOnFail": false,
-        "keepMsgProperties": false,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 420,
-        "y": 220,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "daa70b52f74fd2b4",
-        "type": "inject",
-        "z": "85249515dfc449d5",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "num",
-        "x": 170,
-        "y": 320,
-        "wires": [
-            [
-                "0eccd18fcd4a9b44"
-            ]
-        ]
-    },
-    {
-        "id": "53fa855dc695dd45",
-        "type": "modbus-read",
-        "z": "85249515dfc449d5",
-        "name": "PLC-Task",
-        "topic": "",
-        "showStatusActivities": false,
-        "logIOActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "2",
-        "dataType": "HoldingRegister",
-        "adr": "100",
-        "quantity": "19",
-        "rate": "15",
-        "rateUnit": "s",
-        "delayOnStart": true,
-        "startDelayTime": "1",
-        "server": "2a13aec920287264",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": false,
-        "x": 140,
-        "y": 100,
-        "wires": [
-            [],
-            [
-                "097df399214566b1",
-                "812524f4bc51b371"
-            ]
-        ]
-    },
-    {
-        "id": "097df399214566b1",
-        "type": "function",
-        "z": "85249515dfc449d5",
-        "name": "PLC100",
-        "func": "msg.timestamp = new Intl.DateTimeFormat('pl-PL', {\n  hour: '2-digit', minute: '2-digit', second: '2-digit',\n  year: 'numeric', month: '2-digit', day: '2-digit',\n  hour12: false\n}).format(new Date()).replace(',', '');\n\nflow.set(\"plc100\", msg.payload.data[0]);\nflow.set(\"plc101\", msg.payload.data[1]);\nflow.set(\"plc118\", msg.payload.data[18]);\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `PLC: ${msg.payload.data[0]} | ${msg.payload.data[1]} | ${msg.payload.data[18]} | Time: ${msg.timestamp}`\n});\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 360,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "812524f4bc51b371",
-        "type": "debug",
-        "z": "85249515dfc449d5",
-        "name": "debug 1",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "8cf97f8067a9d5a6",
-        "type": "inject",
-        "z": "85249515dfc449d5",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "0",
-        "payloadType": "num",
-        "x": 170,
-        "y": 200,
-        "wires": [
-            [
-                "b4a5c6b9a8798535"
-            ]
-        ]
-    },
-    {
-        "id": "66f04218c4e4b0e7",
-        "type": "inject",
-        "z": "85249515dfc449d5",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "2",
-        "topic": "",
-        "payload": "0",
-        "payloadType": "num",
-        "x": 310,
-        "y": 460,
-        "wires": [
-            [
-                "0eccd18fcd4a9b44"
-            ]
-        ]
-    },
-    {
-        "id": "73f10be44a52ecdb",
-        "type": "inject",
-        "z": "85249515dfc449d5",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "6",
-        "topic": "",
-        "payload": "0",
-        "payloadType": "num",
-        "x": 150,
-        "y": 460,
-        "wires": [
-            [
-                "b4a5c6b9a8798535"
             ]
         ]
     },
@@ -2095,6 +1854,247 @@
         "wires": [
             [
                 "f5a1b2c3d4e5f678"
+            ]
+        ]
+    },
+    {
+        "id": "0eccd18fcd4a9b44",
+        "type": "modbus-write",
+        "z": "85249515dfc449d5",
+        "name": "Off Simple PLC Program 118",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "118",
+        "quantity": "1",
+        "server": "2a13aec920287264",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 420,
+        "y": 280,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a2f8f9231c0240da",
+        "type": "inject",
+        "z": "85249515dfc449d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "0eccd18fcd4a9b44"
+            ]
+        ]
+    },
+    {
+        "id": "b4a5c6b9a8798535",
+        "type": "modbus-write",
+        "z": "85249515dfc449d5",
+        "name": "Off Simple PLC Program 100",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "100",
+        "quantity": "1",
+        "server": "2a13aec920287264",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 420,
+        "y": 220,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "daa70b52f74fd2b4",
+        "type": "inject",
+        "z": "85249515dfc449d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 170,
+        "y": 320,
+        "wires": [
+            [
+                "0eccd18fcd4a9b44"
+            ]
+        ]
+    },
+    {
+        "id": "53fa855dc695dd45",
+        "type": "modbus-read",
+        "z": "85249515dfc449d5",
+        "name": "PLC-Task",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "100",
+        "quantity": "19",
+        "rate": "15",
+        "rateUnit": "s",
+        "delayOnStart": true,
+        "startDelayTime": "1",
+        "server": "2a13aec920287264",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [],
+            [
+                "097df399214566b1",
+                "812524f4bc51b371"
+            ]
+        ]
+    },
+    {
+        "id": "097df399214566b1",
+        "type": "function",
+        "z": "85249515dfc449d5",
+        "name": "PLC100",
+        "func": "msg.timestamp = new Intl.DateTimeFormat('pl-PL', {\n  hour: '2-digit', minute: '2-digit', second: '2-digit',\n  year: 'numeric', month: '2-digit', day: '2-digit',\n  hour12: false\n}).format(new Date()).replace(',', '');\n\nflow.set(\"plc100\", msg.payload.data[0]);\nflow.set(\"plc101\", msg.payload.data[1]);\nflow.set(\"plc118\", msg.payload.data[18]);\n\nnode.status({\n  fill: \"blue\",\n  shape: \"ring\",\n  text: `PLC: ${msg.payload.data[0]} | ${msg.payload.data[1]} | ${msg.payload.data[18]} | Time: ${msg.timestamp}`\n});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "812524f4bc51b371",
+        "type": "debug",
+        "z": "85249515dfc449d5",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "8cf97f8067a9d5a6",
+        "type": "inject",
+        "z": "85249515dfc449d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "b4a5c6b9a8798535"
+            ]
+        ]
+    },
+    {
+        "id": "66f04218c4e4b0e7",
+        "type": "inject",
+        "z": "85249515dfc449d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 310,
+        "y": 460,
+        "wires": [
+            [
+                "0eccd18fcd4a9b44"
+            ]
+        ]
+    },
+    {
+        "id": "73f10be44a52ecdb",
+        "type": "inject",
+        "z": "85249515dfc449d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "6",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "b4a5c6b9a8798535"
             ]
         ]
     }

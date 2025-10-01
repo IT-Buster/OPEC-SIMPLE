@@ -817,7 +817,7 @@
             [
                 "27e0b1a1685cd8b1",
                 "52c3b39ee0f9fdd9",
-                "d283e712b7285721"
+                "19027639cd1c84f9"
             ]
         ]
     },
@@ -1533,9 +1533,29 @@
         "className": "",
         "value": "temperatura_nastawa",
         "valueType": "msg",
-        "x": 380,
-        "y": 220,
+        "x": 400,
+        "y": 260,
         "wires": []
+    },
+    {
+        "id": "19027639cd1c84f9",
+        "type": "function",
+        "z": "6249a630e13530e8",
+        "name": "function 3",
+        "func": "msg.payload = msg.payload  + \" C\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 180,
+        "wires": [
+            [
+                "d283e712b7285721"
+            ]
+        ]
     },
     {
         "id": "6f48287671bc7669",

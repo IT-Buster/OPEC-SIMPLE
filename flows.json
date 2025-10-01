@@ -1562,7 +1562,7 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "function 4",
-        "func": "msg.aktywny = msg.aktywny + \" &deg;C\";\nreturn msg;",
+        "func": "msg.aktywny = msg.aktywny + \" &deg;C\";\n\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1573,9 +1573,26 @@
         "y": 200,
         "wires": [
             [
-                "52c3b39ee0f9fdd9"
+                "52c3b39ee0f9fdd9",
+                "dc65b2214a6a4654"
             ]
         ]
+    },
+    {
+        "id": "dc65b2214a6a4654",
+        "type": "debug",
+        "z": "6249a630e13530e8",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 140,
+        "wires": []
     },
     {
         "id": "6f48287671bc7669",

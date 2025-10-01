@@ -1384,7 +1384,7 @@
         "type": "ui-switch",
         "z": "6249a630e13530e8",
         "name": "Włacznik Główny",
-        "label": "switch",
+        "label": "Włącznik Ogrzewania",
         "group": "484d649bdd92edf9",
         "order": 1,
         "width": 0,

@@ -955,7 +955,7 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "function 3",
-        "func": "let aktywny = flow.get(\"aktywny\") || true;\nflow.set(\"aktywny\", aktywny);\nmsg.payload = { aktywny };\nreturn msg;",
+        "func": "let aktywny = flow.get(\"aktywny\") || true;\n\nif (msg.payload) flow.set(\"aktywny\", aktywny);\nelse flow.set(\"aktywny\", false);\n\naktywny = flow.get(\"aktywny\") || true;\n\nmsg.payload = { aktywny };\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,

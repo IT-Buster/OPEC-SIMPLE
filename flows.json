@@ -1355,7 +1355,7 @@
         "className": "",
         "topicType": "str",
         "x": 970,
-        "y": 340,
+        "y": 280,
         "wires": [
             [
                 "set_start"
@@ -1378,7 +1378,7 @@
         "delay": 300,
         "topic": "stop",
         "x": 970,
-        "y": 400,
+        "y": 320,
         "wires": [
             [
                 "set_stop"
@@ -1397,8 +1397,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1190,
-        "y": 340,
+        "x": 1210,
+        "y": 280,
         "wires": []
     },
     {
@@ -1413,8 +1413,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1190,
-        "y": 400,
+        "x": 1210,
+        "y": 320,
         "wires": []
     },
     {
@@ -1444,7 +1444,7 @@
         "officon": "",
         "offcolor": "",
         "x": 990,
-        "y": 280,
+        "y": 240,
         "wires": [
             [
                 "3242a61540e3a11f"
@@ -1508,7 +1508,7 @@
         "iconPosition": "left",
         "iconInnerPosition": "inside",
         "x": 990,
-        "y": 220,
+        "y": 200,
         "wires": [
             []
         ]
@@ -1546,8 +1546,8 @@
         "links": [
             "7bb76db9a3963f1c"
         ],
-        "x": 1195,
-        "y": 280,
+        "x": 1155,
+        "y": 240,
         "wires": []
     },
     {

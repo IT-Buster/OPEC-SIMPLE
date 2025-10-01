@@ -1329,8 +1329,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 1150,
-        "y": 420,
+        "x": 710,
+        "y": 380,
         "wires": [
             [
                 "3242a61540e3a11f"
@@ -1436,8 +1436,8 @@
         "links": [
             "7bb76db9a3963f1c"
         ],
-        "x": 1315,
-        "y": 420,
+        "x": 875,
+        "y": 380,
         "wires": []
     },
     {
@@ -1585,56 +1585,6 @@
         ]
     },
     {
-        "id": "df2bfe63bbb10c4d",
-        "type": "inject",
-        "z": "6249a630e13530e8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 930,
-        "y": 360,
-        "wires": [
-            [
-                "b4b9cb347c2373ed"
-            ]
-        ]
-    },
-    {
-        "id": "bd78cb7b960f1279",
-        "type": "inject",
-        "z": "6249a630e13530e8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 930,
-        "y": 500,
-        "wires": [
-            [
-                "b4b9cb347c2373ed"
-            ]
-        ]
-    },
-    {
         "id": "5e78e32796a9a1f9",
         "type": "function",
         "z": "6249a630e13530e8",
@@ -1646,30 +1596,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
+        "x": 440,
         "y": 380,
         "wires": [
             [
-                "5b58024fcf145e50",
                 "b4b9cb347c2373ed"
             ]
         ]
-    },
-    {
-        "id": "5b58024fcf145e50",
-        "type": "debug",
-        "z": "6249a630e13530e8",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 840,
-        "y": 460,
-        "wires": []
     },
     {
         "id": "6f48287671bc7669",

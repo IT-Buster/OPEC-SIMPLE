@@ -622,7 +622,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 60,
+        "y": 40,
         "wires": [
             [
                 "2c19ecde5a031fbf"

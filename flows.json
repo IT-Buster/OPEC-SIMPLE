@@ -1554,7 +1554,7 @@
         "z": "6249a630e13530e8",
         "name": "Start SET",
         "func": "// msg.payload = \"HH:MM\"\nlet timeStr = msg.payload || \"00:00\";\nlet parts = timeStr.split(\":\");\n\nlet hours = parseInt(parts[0], 10) || 0;\nlet minutes = parseInt(parts[1], 10) || 0;\n\nmsg.payload = hours * 60 + minutes;\n\nflow.set(\"startMinutes\", msg.payload);\n\n// --- status node ---\nnode.status({\n    fill: \"red\",\n    shape: \"ring\",\n    text: `start: ${msg.payload}`\n});\n",
-        "outputs": 1,
+        "outputs": 0,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -1562,9 +1562,7 @@
         "libs": [],
         "x": 680,
         "y": 460,
-        "wires": [
-            []
-        ]
+        "wires": []
     },
     {
         "id": "2ba3a254dbe32d80",
@@ -1572,7 +1570,7 @@
         "z": "6249a630e13530e8",
         "name": "Stop SET",
         "func": "// msg.payload = \"HH:MM\"\nlet timeStr = msg.payload || \"00:00\";\nlet parts = timeStr.split(\":\");\n\nlet hours = parseInt(parts[0], 10) || 0;\nlet minutes = parseInt(parts[1], 10) || 0;\n\nmsg.payload = hours * 60 + minutes;\n\nflow.set(\"stopMinutes\", msg.payload);\n\n// --- status node ---\nnode.status({\n    fill: \"red\",\n    shape: \"ring\",\n    text: `stop: ${msg.payload}`\n});\n\n",
-        "outputs": 1,
+        "outputs": 0,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
@@ -1580,9 +1578,7 @@
         "libs": [],
         "x": 680,
         "y": 540,
-        "wires": [
-            []
-        ]
+        "wires": []
     },
     {
         "id": "5e78e32796a9a1f9",

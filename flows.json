@@ -1549,39 +1549,21 @@
         ]
     },
     {
-        "id": "c0f94d8d82f8cfc3",
-        "type": "debug",
-        "z": "6249a630e13530e8",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1460,
-        "y": 160,
-        "wires": []
-    },
-    {
         "id": "3a1e9bf47621a913",
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "function 3",
-        "func": "// msg.payload = \"HH:MM\"\nlet timeStr = msg.payload || \"00:00\";\nlet parts = timeStr.split(\":\");\n\nlet hours = parseInt(parts[0], 10) || 0;\nlet minutes = parseInt(parts[1], 10) || 0;\n\nmsg.payload = hours * 60 + minutes;\n\nflow.set(\"startMinutes\", msg.payload);\n\n\n",
+        "func": "// msg.payload = \"HH:MM\"\nlet timeStr = msg.payload || \"00:00\";\nlet parts = timeStr.split(\":\");\n\nlet hours = parseInt(parts[0], 10) || 0;\nlet minutes = parseInt(parts[1], 10) || 0;\n\nmsg.payload = hours * 60 + minutes;\n\nflow.set(\"startMinutes\", msg.payload);\n\n// --- status node ---\nnode.status({\n    fill: \"red\",\n    shape: \"ring\",\n    text: `start: ${payload}`\n});\n",
         "outputs": 1,
         "timeout": 0,
-        "noerr": 0,
+        "noerr": 1,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1240,
-        "y": 160,
+        "x": 1260,
+        "y": 140,
         "wires": [
-            [
-                "c0f94d8d82f8cfc3"
-            ]
+            []
         ]
     },
     {
@@ -1596,12 +1578,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1240,
-        "y": 200,
+        "x": 1260,
+        "y": 240,
         "wires": [
-            [
-                "c0f94d8d82f8cfc3"
-            ]
+            []
         ]
     },
     {

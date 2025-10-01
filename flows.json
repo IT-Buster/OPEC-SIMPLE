@@ -390,7 +390,6 @@
         "y": 200,
         "wires": [
             [
-                "a1b2c3d4abcd5678",
                 "568c2ffe47e00ceb",
                 "c03008d7c7b1400a",
                 "0e0c32ae656ae513"
@@ -527,150 +526,6 @@
         ]
     },
     {
-        "id": "a1b2c3d4abcd5678",
-        "type": "function",
-        "z": "1e78c2098878e540",
-        "name": "Zapis do tablicy",
-        "func": "// Pobierz tablicę z context\nlet arr = flow.get(\"tablica\") || [];\n\n// Dodaj nowy element na początku\narr.unshift(msg.payload);\n\n// Utrzymuj maksymalnie 10 elementów\nif (arr.length > 10) {\n    arr = arr.slice(0,10);\n}\n\n// Zapisz do flow context\nflow.set(\"tablica\", arr);\n\nnode.status({\n  fill: \"black\",\n  shape: \"ring\",\n  text: `OBECNA: ${msg.payload} | Time: ${msg.timestamp}`\n});\n\n\n// Wyślij tablicę dalej\nmsg.payload = arr;\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 240,
-        "y": 380,
-        "wires": [
-            [
-                "f1e2d3c4abcd9876"
-            ]
-        ]
-    },
-    {
-        "id": "f1e2d3c4abcd9876",
-        "type": "debug",
-        "z": "1e78c2098878e540",
-        "name": "Podgląd tablicy",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 460,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "c1f3a1abf3c1d111",
-        "type": "inject",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "43",
-        "payloadType": "num",
-        "x": 110,
-        "y": 640,
-        "wires": [
-            [
-                "f5a1b2c3d4e5f678"
-            ]
-        ]
-    },
-    {
-        "id": "f5a1b2c3d4e5f678",
-        "type": "change",
-        "z": "1e78c2098878e540",
-        "name": "Zapisz do flow.temperatura_nastawa",
-        "rules": [
-            {
-                "t": "set",
-                "p": "temperatura_nastawa",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "x": 410,
-        "y": 580,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a2b3c4d5e6f7a890",
-        "type": "inject",
-        "z": "1e78c2098878e540",
-        "name": "Odczytaj nastawę",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 680,
-        "wires": [
-            [
-                "b3c4d5e6f7a8b901"
-            ]
-        ]
-    },
-    {
-        "id": "b3c4d5e6f7a8b901",
-        "type": "function",
-        "z": "1e78c2098878e540",
-        "name": "Pobierz flow.temperatura_nastawa",
-        "func": "let nastawa = flow.get(\"temperatura_nastawa\") || 0;\nmsg.payload = \"Aktualna nastawa: \" + nastawa + \" °C\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 400,
-        "y": 680,
-        "wires": [
-            [
-                "d4e5f6a7b8c9d012"
-            ]
-        ]
-    },
-    {
-        "id": "d4e5f6a7b8c9d012",
-        "type": "debug",
-        "z": "1e78c2098878e540",
-        "name": "Podgląd nastawy",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 670,
-        "y": 620,
-        "wires": []
-    },
-    {
         "id": "0e0c32ae656ae513",
         "type": "function",
         "z": "1e78c2098878e540",
@@ -718,81 +573,6 @@
         ]
     },
     {
-        "id": "5dae5dcf549808d3",
-        "type": "inject",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "33",
-        "payloadType": "num",
-        "x": 110,
-        "y": 600,
-        "wires": [
-            [
-                "f5a1b2c3d4e5f678"
-            ]
-        ]
-    },
-    {
-        "id": "d1f0d5f18d78a9e0",
-        "type": "inject",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "25",
-        "payloadType": "num",
-        "x": 110,
-        "y": 520,
-        "wires": [
-            [
-                "f5a1b2c3d4e5f678"
-            ]
-        ]
-    },
-    {
-        "id": "d237c4be8fc56eb9",
-        "type": "inject",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "27",
-        "payloadType": "num",
-        "x": 110,
-        "y": 560,
-        "wires": [
-            [
-                "f5a1b2c3d4e5f678"
-            ]
-        ]
-    },
-    {
         "id": "a181afc9dcf4f025",
         "type": "file",
         "z": "1e78c2098878e540",
@@ -807,31 +587,6 @@
         "y": 240,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "878f10a53dd86c8c",
-        "type": "inject",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "20",
-        "payloadType": "num",
-        "x": 110,
-        "y": 480,
-        "wires": [
-            [
-                "f5a1b2c3d4e5f678"
-            ]
         ]
     },
     {
@@ -2135,5 +1890,212 @@
         "x": 570,
         "y": 200,
         "wires": []
+    },
+    {
+        "id": "c1f3a1abf3c1d111",
+        "type": "inject",
+        "z": "867cb1db5f09b847",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "43",
+        "payloadType": "num",
+        "x": 130,
+        "y": 500,
+        "wires": [
+            [
+                "f5a1b2c3d4e5f678"
+            ]
+        ]
+    },
+    {
+        "id": "f5a1b2c3d4e5f678",
+        "type": "change",
+        "z": "867cb1db5f09b847",
+        "name": "Zapisz do flow.temperatura_nastawa",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temperatura_nastawa",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "x": 430,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a2b3c4d5e6f7a890",
+        "type": "inject",
+        "z": "867cb1db5f09b847",
+        "name": "Odczytaj nastawę",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 540,
+        "wires": [
+            [
+                "b3c4d5e6f7a8b901"
+            ]
+        ]
+    },
+    {
+        "id": "b3c4d5e6f7a8b901",
+        "type": "function",
+        "z": "867cb1db5f09b847",
+        "name": "Pobierz flow.temperatura_nastawa",
+        "func": "let nastawa = flow.get(\"temperatura_nastawa\") || 0;\nmsg.payload = \"Aktualna nastawa: \" + nastawa + \" °C\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 540,
+        "wires": [
+            [
+                "d4e5f6a7b8c9d012"
+            ]
+        ]
+    },
+    {
+        "id": "d4e5f6a7b8c9d012",
+        "type": "debug",
+        "z": "867cb1db5f09b847",
+        "name": "Podgląd nastawy",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "5dae5dcf549808d3",
+        "type": "inject",
+        "z": "867cb1db5f09b847",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "33",
+        "payloadType": "num",
+        "x": 130,
+        "y": 460,
+        "wires": [
+            [
+                "f5a1b2c3d4e5f678"
+            ]
+        ]
+    },
+    {
+        "id": "d1f0d5f18d78a9e0",
+        "type": "inject",
+        "z": "867cb1db5f09b847",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "25",
+        "payloadType": "num",
+        "x": 130,
+        "y": 380,
+        "wires": [
+            [
+                "f5a1b2c3d4e5f678"
+            ]
+        ]
+    },
+    {
+        "id": "d237c4be8fc56eb9",
+        "type": "inject",
+        "z": "867cb1db5f09b847",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "27",
+        "payloadType": "num",
+        "x": 130,
+        "y": 420,
+        "wires": [
+            [
+                "f5a1b2c3d4e5f678"
+            ]
+        ]
+    },
+    {
+        "id": "878f10a53dd86c8c",
+        "type": "inject",
+        "z": "867cb1db5f09b847",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "f5a1b2c3d4e5f678"
+            ]
+        ]
     }
 ]

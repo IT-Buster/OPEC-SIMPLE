@@ -1522,7 +1522,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Nastawa",
+        "label": "Nastawa z krzywej",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "style": false,
@@ -1533,7 +1533,7 @@
         "className": "",
         "value": "temperatura_nastawa",
         "valueType": "msg",
-        "x": 400,
+        "x": 430,
         "y": 260,
         "wires": []
     },

@@ -878,7 +878,8 @@
             ],
             [
                 "7bab3e7370cace8d",
-                "ui_text_tempco"
+                "ui_text_tempco",
+                "36418cb08ab2119c"
             ],
             [
                 "8e93df1fe23a3b9b",
@@ -1630,6 +1631,50 @@
         "x": 380,
         "y": 140,
         "wires": []
+    },
+    {
+        "id": "e7ae46dcbf10ff6f",
+        "type": "ui-text",
+        "z": "6249a630e13530e8",
+        "group": "484d649bdd92edf9",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temp CO",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1200,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "36418cb08ab2119c",
+        "type": "function",
+        "z": "6249a630e13530e8",
+        "name": "add degree",
+        "func": "msg.payload= msg.payload + \" &deg;C\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 80,
+        "wires": [
+            [
+                "e7ae46dcbf10ff6f"
+            ]
+        ]
     },
     {
         "id": "6f48287671bc7669",

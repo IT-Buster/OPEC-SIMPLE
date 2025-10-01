@@ -4,8 +4,7 @@
     "version": "0.0.2",
     "dependencies": {
         "@flowfuse/node-red-dashboard": "1.28.0",
-        "node-red-contrib-modbus": "5.43.0",
-        "node-red-contrib-data-view": "0.0.3"
+        "node-red-contrib-modbus": "5.43.0"
     },
     "node-red": {
         "settings": {

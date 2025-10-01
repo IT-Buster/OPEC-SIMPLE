@@ -941,8 +941,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 360,
+        "x": 680,
+        "y": 420,
         "wires": [
             []
         ]
@@ -1312,8 +1312,8 @@
         "mobileBreakpointType": "defaults",
         "action": "replace",
         "className": "",
-        "x": 330,
-        "y": 300,
+        "x": 390,
+        "y": 400,
         "wires": [
             [
                 "edb77486ae16c09f"

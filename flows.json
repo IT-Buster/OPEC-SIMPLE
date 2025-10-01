@@ -1639,18 +1639,16 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "Harmonogram sprawdzenie",
-        "func": "let start = flow.get(\"startMinutes\");\nlet stop = flow.get(\"stopMinutes\");\n\n// teraz tNow:\nlet now = new Date();\nlet tNow = now.getHours()*60 + now.getMinutes();\n\nmsg.payload = true;\nmsg.payload = false;\n\n// --- status node ---\nnode.status({\n    fill: \"red\",\n    shape: \"ring\",\n    text: `teraz: ${tNow}`\n});\n\n\nreturn msg;",
-        "outputs": 1,
+        "func": "let start = flow.get(\"startMinutes\");\nlet stop = flow.get(\"stopMinutes\");\n\n// teraz tNow:\nlet now = new Date();\nlet tNow = now.getHours()*60 + now.getMinutes();\n\n\nif (start <= stop) {\n    aktywny = (tNow >= start && tNow < stop);\n} else {\n    aktywny = (tNow >= start || tNow < stop);\n}\n\n\n// --- status node ---\nnode.status({\n    fill: \"red\",\n    shape: \"ring\",\n    text: `teraz: ${tNow}`\n});\n\nmsg.payload = true;\nmsg.payload = false;\n\n",
+        "outputs": 0,
         "timeout": 0,
-        "noerr": 0,
+        "noerr": 2,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 540,
         "y": 380,
-        "wires": [
-            []
-        ]
+        "wires": []
     },
     {
         "id": "6f48287671bc7669",

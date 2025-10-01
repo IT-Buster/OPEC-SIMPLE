@@ -359,13 +359,6 @@
         "groupType": "default"
     },
     {
-        "id": "dashboard_tab",
-        "type": "ui_tab",
-        "name": "Termostat",
-        "icon": "dashboard",
-        "order": 1
-    },
-    {
         "id": "83a09bf0e993f5a5",
         "type": "ui-page",
         "name": "Panel Sterowania",

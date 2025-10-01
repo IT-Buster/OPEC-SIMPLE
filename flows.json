@@ -1443,8 +1443,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 1010,
-        "y": 300,
+        "x": 990,
+        "y": 280,
         "wires": [
             [
                 "3242a61540e3a11f"
@@ -1546,8 +1546,8 @@
         "links": [
             "7bb76db9a3963f1c"
         ],
-        "x": 1215,
-        "y": 300,
+        "x": 1195,
+        "y": 280,
         "wires": []
     },
     {
@@ -1653,7 +1653,7 @@
         "value": "payload",
         "valueType": "msg",
         "x": 1200,
-        "y": 80,
+        "y": 60,
         "wires": []
     },
     {
@@ -1669,7 +1669,7 @@
         "finalize": "",
         "libs": [],
         "x": 1010,
-        "y": 80,
+        "y": 60,
         "wires": [
             [
                 "e7ae46dcbf10ff6f"

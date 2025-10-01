@@ -219,7 +219,7 @@
     {
         "id": "5b2a90153beb6c37",
         "type": "ui-page",
-        "name": "Wykresy",
+        "name": "Monitor Temperatur",
         "ui": "17e53577a75fc993",
         "path": "/chart",
         "icon": "home",
@@ -283,7 +283,7 @@
     {
         "id": "7a12120f48b7d954",
         "type": "ui-page",
-        "name": "Krzywa Temperatur",
+        "name": "Krzywa Grzewcza",
         "ui": "17e53577a75fc993",
         "path": "/temps",
         "icon": "home",
@@ -377,7 +377,7 @@
     {
         "id": "83a09bf0e993f5a5",
         "type": "ui-page",
-        "name": "Sterowanie",
+        "name": "Panel Sterowania",
         "ui": "17e53577a75fc993",
         "path": "/sterowanie",
         "icon": "home",

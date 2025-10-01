@@ -905,7 +905,7 @@
         "finalize": "",
         "libs": [],
         "x": 160,
-        "y": 420,
+        "y": 360,
         "wires": [
             [
                 "72e0b7094174cae2"
@@ -920,8 +920,8 @@
         "links": [
             "5fa8e9a784e119d4"
         ],
-        "x": 175,
-        "y": 340,
+        "x": 165,
+        "y": 300,
         "wires": [
             [
                 "0928419add0a48a2"
@@ -957,8 +957,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 420,
+        "x": 440,
+        "y": 360,
         "wires": [
             []
         ]
@@ -1231,8 +1231,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 850,
-        "y": 380,
+        "x": 750,
+        "y": 260,
         "wires": []
     },
     {
@@ -1255,8 +1255,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 840,
-        "y": 420,
+        "x": 740,
+        "y": 300,
         "wires": []
     },
     {
@@ -1279,8 +1279,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 840,
-        "y": 460,
+        "x": 740,
+        "y": 340,
         "wires": []
     },
     {
@@ -1303,8 +1303,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 860,
-        "y": 500,
+        "x": 760,
+        "y": 380,
         "wires": []
     },
     {
@@ -1328,8 +1328,8 @@
         "mobileBreakpointType": "defaults",
         "action": "replace",
         "className": "",
-        "x": 350,
-        "y": 420,
+        "x": 330,
+        "y": 300,
         "wires": [
             [
                 "edb77486ae16c09f"

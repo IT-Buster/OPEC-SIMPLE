@@ -1562,7 +1562,7 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "Change Value",
-        "func": "msg.aktywny = msg.aktywny + \" &deg;C\";\n\n\n\nreturn msg;",
+        "func": "\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,

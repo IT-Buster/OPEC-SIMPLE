@@ -1646,6 +1646,31 @@
         ]
     },
     {
+        "id": "bd78cb7b960f1279",
+        "type": "inject",
+        "z": "6249a630e13530e8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 930,
+        "y": 500,
+        "wires": [
+            [
+                "b4b9cb347c2373ed"
+            ]
+        ]
+    },
+    {
         "id": "6f48287671bc7669",
         "type": "modbus-write",
         "z": "867cb1db5f09b847",

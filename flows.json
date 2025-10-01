@@ -475,6 +475,24 @@
         "groupType": "default"
     },
     {
+        "id": "page1",
+        "type": "ui-page",
+        "name": "Sterowanie",
+        "ui": "17e53577a75fc993",
+        "path": "/sterowanie",
+        "icon": "schedule",
+        "layout": "grid",
+        "theme": "light"
+    },
+    {
+        "id": "card1",
+        "type": "ui-card",
+        "name": "Harmonogram",
+        "page": "page1",
+        "order": 1,
+        "width": 6
+    },
+    {
         "id": "2c8e29558bef67fc",
         "type": "function",
         "z": "1e78c2098878e540",

@@ -1484,7 +1484,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "text",
+        "label": "Status ON OFF",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "style": false,
@@ -1495,7 +1495,7 @@
         "className": "",
         "value": "aktywny",
         "valueType": "msg",
-        "x": 350,
+        "x": 380,
         "y": 120,
         "wires": []
     },

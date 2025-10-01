@@ -898,7 +898,7 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "function 1",
-        "func": "//let tabela = flow.get(\"tabelaNastaw\");\n// node.warn(\"FLOW.TABELA: \" + JSON.stringify(tabela));\n\n// if (!Array.isArray(tabela) || tabela.length === 0) {\n//     node.warn(\"Tabela jest pusta, ustawiam domyślną\");\n//     tabela = [[-20,55],[-10,50],[0,50],[5,47],[10,45],[11,42],[12,40],[13,38],[14,35],[15,20],[20,20]];\n//     flow.set(\"tabelaNastaw\", tabela);\n// }\n\nlet tabela = msg.tabelaNastaw;\n\nmsg.payload = tabela.map(r => ({\n    tempzew: r[0],\n    nastawa: r[1]\n}));\n\nreturn msg;\n",
+        "func": "//let tabela = flow.get(\"tabelaNastaw\");\n// node.warn(\"FLOW.TABELA: \" + JSON.stringify(tabela));\n\n// if (!Array.isArray(tabela) || tabela.length === 0) {\n//     node.warn(\"Tabela jest pusta, ustawiam domyślną\");\n//     tabela = [[-20,55],[-10,50],[0,50],[5,47],[10,45],[11,42],[12,40],[13,38],[14,35],[15,20],[20,20]];\n//     flow.set(\"tabelaNastaw\", tabela);\n// }\n\n//let tabela = msg.tabelaNastaw;\n\nmsg.payload = msg.payload.tabelaNastaw.map(r => ({\n    tempzew: r[0],\n    nastawa: r[1]\n}));\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,

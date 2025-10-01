@@ -1494,7 +1494,7 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "value": "aktywny",
+        "value": "payload",
         "valueType": "msg",
         "x": 440,
         "y": 200,

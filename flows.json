@@ -425,20 +425,6 @@
         "groupType": "default"
     },
     {
-        "id": "980757773314ad13",
-        "type": "ui-group",
-        "name": "Harmonogram",
-        "page": "c8f2dcfd596c5a5b",
-        "width": "2",
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
         "id": "c8f2dcfd596c5a5b",
         "type": "ui-page",
         "name": "Harmonogram",
@@ -473,6 +459,20 @@
         "className": "",
         "visible": "true",
         "disabled": "false"
+    },
+    {
+        "id": "980757773314ad13",
+        "type": "ui-group",
+        "name": "Harmonogram",
+        "page": "c8f2dcfd596c5a5b",
+        "width": "2",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
     },
     {
         "id": "2c8e29558bef67fc",
@@ -1354,8 +1354,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "str",
-        "x": 790,
-        "y": 600,
+        "x": 1050,
+        "y": 380,
         "wires": [
             [
                 "set_start"
@@ -1377,8 +1377,8 @@
         "mode": "time",
         "delay": 300,
         "topic": "stop",
-        "x": 790,
-        "y": 660,
+        "x": 1050,
+        "y": 440,
         "wires": [
             [
                 "set_stop"
@@ -1397,8 +1397,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 600,
+        "x": 1270,
+        "y": 380,
         "wires": []
     },
     {
@@ -1413,8 +1413,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 660,
+        "x": 1270,
+        "y": 440,
         "wires": []
     },
     {

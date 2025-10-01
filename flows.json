@@ -955,7 +955,7 @@
         "type": "function",
         "z": "1e78c2098878e540",
         "name": "function 3",
-        "func": "let pozycja = flow.get(\"pozycja\", \"default\") || 0;\n//pozycja += 1;   // zwiększamy o 1 przy każdym wywołaniu\nflow.set(\"pozycja\", pozycja);\n\n\n\nmsg.payload = { pozycja };\nreturn msg;",
+        "func": "let aktywny = flow.get(\"aktywny\") || true;\nflow.set(\"aktywny\", aktywny);\nmsg.payload = { aktywny };\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,

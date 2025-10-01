@@ -787,7 +787,7 @@
         "id": "4d48bd97950573eb",
         "type": "function",
         "z": "1e78c2098878e540",
-        "name": "function 3",
+        "name": "Set ON OFF Flow",
         "func": "\nflow.set(\"aktywny\",msg.payload)\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -795,7 +795,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
+        "x": 450,
         "y": 600,
         "wires": [
             []

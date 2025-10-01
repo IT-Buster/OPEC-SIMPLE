@@ -781,7 +781,8 @@
         "y": 40,
         "wires": [
             [
-                "27e0b1a1685cd8b1"
+                "27e0b1a1685cd8b1",
+                "52c3b39ee0f9fdd9"
             ]
         ]
     },
@@ -1443,7 +1444,7 @@
         "id": "52c3b39ee0f9fdd9",
         "type": "ui-text",
         "z": "6249a630e13530e8",
-        "group": "",
+        "group": "484d649bdd92edf9",
         "order": 0,
         "width": 0,
         "height": 0,

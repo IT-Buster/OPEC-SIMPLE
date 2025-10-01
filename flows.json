@@ -1371,7 +1371,7 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 1170,
+        "x": 1150,
         "y": 280,
         "wires": [
             []

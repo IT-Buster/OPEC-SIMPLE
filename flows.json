@@ -1476,8 +1476,8 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 1150,
-        "y": 140,
+        "x": 990,
+        "y": 160,
         "wires": [
             []
         ]
@@ -1507,7 +1507,7 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 1150,
+        "x": 990,
         "y": 220,
         "wires": [
             []
@@ -1652,7 +1652,7 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1200,
+        "x": 1160,
         "y": 60,
         "wires": []
     },
@@ -1668,7 +1668,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
+        "x": 970,
         "y": 60,
         "wires": [
             [

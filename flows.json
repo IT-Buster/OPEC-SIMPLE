@@ -770,6 +770,38 @@
         "wires": []
     },
     {
+        "id": "7bb76db9a3963f1c",
+        "type": "link in",
+        "z": "1e78c2098878e540",
+        "name": "Włącznik flow aktywny",
+        "links": [
+            "3242a61540e3a11f"
+        ],
+        "x": 265,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4d48bd97950573eb",
+        "type": "function",
+        "z": "1e78c2098878e540",
+        "name": "function 3",
+        "func": "\nflow.set(\"aktywny\",msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "0876e49f1e67ae60",
         "type": "link in",
         "z": "6249a630e13530e8",
@@ -1371,10 +1403,12 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 1150,
-        "y": 280,
+        "x": 1010,
+        "y": 300,
         "wires": [
-            []
+            [
+                "3242a61540e3a11f"
+            ]
         ]
     },
     {
@@ -1461,6 +1495,19 @@
         "valueType": "msg",
         "x": 350,
         "y": 120,
+        "wires": []
+    },
+    {
+        "id": "3242a61540e3a11f",
+        "type": "link out",
+        "z": "6249a630e13530e8",
+        "name": "Dashboard Switch ON OFF",
+        "mode": "link",
+        "links": [
+            "7bb76db9a3963f1c"
+        ],
+        "x": 1215,
+        "y": 300,
         "wires": []
     },
     {

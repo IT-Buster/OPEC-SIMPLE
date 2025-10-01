@@ -887,8 +887,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 420,
+        "x": 340,
+        "y": 520,
         "wires": [
             [
                 "72e0b7094174cae2"
@@ -908,7 +908,7 @@
         "wires": [
             [
                 "0928419add0a48a2",
-                "37872d01ede6d0ce"
+                "5e78e32796a9a1f9"
             ]
         ]
     },
@@ -924,8 +924,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 820,
-        "y": 420,
+        "x": 740,
+        "y": 520,
         "wires": [
             []
         ]
@@ -1295,8 +1295,8 @@
         "mobileBreakpointType": "defaults",
         "action": "replace",
         "className": "",
-        "x": 590,
-        "y": 420,
+        "x": 550,
+        "y": 520,
         "wires": [
             [
                 "edb77486ae16c09f"
@@ -1565,22 +1565,6 @@
         "wires": []
     },
     {
-        "id": "37872d01ede6d0ce",
-        "type": "debug",
-        "z": "6249a630e13530e8",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 400,
-        "y": 320,
-        "wires": []
-    },
-    {
         "id": "3a1e9bf47621a913",
         "type": "function",
         "z": "6249a630e13530e8",
@@ -1668,6 +1652,24 @@
             [
                 "b4b9cb347c2373ed"
             ]
+        ]
+    },
+    {
+        "id": "5e78e32796a9a1f9",
+        "type": "function",
+        "z": "6249a630e13530e8",
+        "name": "function 5",
+        "func": "let start = flow.get(\"startMinutes\");\nlet stop = flow.get(\"stopMinutes\");\n\n\nmsg.payload = true;\n\nmsg.payload = false;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 380,
+        "wires": [
+            []
         ]
     },
     {

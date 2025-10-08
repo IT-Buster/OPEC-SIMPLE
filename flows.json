@@ -2403,5 +2403,79 @@
                 "92e54087507e4bf8"
             ]
         ]
+    },
+    {
+        "id": "9ead1bd2f7553f3a",
+        "type": "modbus-write",
+        "z": "85249515dfc449d5",
+        "name": "Single coil",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "Coil",
+        "adr": "3",
+        "quantity": "1",
+        "server": "2a13aec920287264",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 810,
+        "y": 520,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6c0cb35de86b9fab",
+        "type": "inject",
+        "z": "85249515dfc449d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 532,
+        "y": 561,
+        "wires": [
+            [
+                "9ead1bd2f7553f3a"
+            ]
+        ]
+    },
+    {
+        "id": "56cacbfcab37382d",
+        "type": "inject",
+        "z": "85249515dfc449d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 530,
+        "y": 620,
+        "wires": [
+            [
+                "9ead1bd2f7553f3a"
+            ]
+        ]
     }
 ]

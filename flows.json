@@ -2334,7 +2334,7 @@
         "id": "92e54087507e4bf8",
         "type": "modbus-write",
         "z": "85249515dfc449d5",
-        "name": "Off Simple PLC Program 100",
+        "name": "Single coil",
         "showStatusActivities": false,
         "showErrors": false,
         "showWarnings": true,
@@ -2347,7 +2347,7 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 840,
+        "x": 790,
         "y": 360,
         "wires": [
             [],

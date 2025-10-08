@@ -2329,5 +2329,79 @@
                 "b4a5c6b9a8798535"
             ]
         ]
+    },
+    {
+        "id": "92e54087507e4bf8",
+        "type": "modbus-write",
+        "z": "85249515dfc449d5",
+        "name": "Off Simple PLC Program 100",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "100",
+        "quantity": "1",
+        "server": "2a13aec920287264",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 840,
+        "y": 360,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "feee1690fb5d8997",
+        "type": "inject",
+        "z": "85249515dfc449d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 512,
+        "y": 401,
+        "wires": [
+            [
+                "92e54087507e4bf8"
+            ]
+        ]
+    },
+    {
+        "id": "34ec598cb5dc0e34",
+        "type": "inject",
+        "z": "85249515dfc449d5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 510,
+        "y": 460,
+        "wires": [
+            [
+                "92e54087507e4bf8"
+            ]
+        ]
     }
 ]

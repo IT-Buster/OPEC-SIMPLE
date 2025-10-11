@@ -1939,7 +1939,7 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "function 2",
-        "func": "\nreturn msg;",
+        "func": "// Wczytaj wartości z globalnych zmiennych (trwałych)\nlet startMinutes = global.get(\"startMinutes\", \"file\") ?? 0;\nlet stopMinutes  = global.get(\"stopMinutes\", \"file\") ?? 1350;\n\n// Pomocnicza funkcja: minuty -> \"HH:MM\"\nfunction toTimeStr(mins) {\n    let h = Math.floor(mins / 60);\n    let m = mins % 60;\n    return `${String(h).padStart(2, \"0\")}:${String(m).padStart(2, \"0\")}`;\n}\n\nlet startStr = toTimeStr(startMinutes);\nlet stopStr  = toTimeStr(stopMinutes);\n\n// wyjście 1 -> START, wyjście 2 -> STOP\nreturn [\n    { payload: startStr },\n    { payload: stopStr }\n];\n",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,

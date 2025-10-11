@@ -425,15 +425,6 @@
         "order": 3
     },
     {
-        "id": "group-table",
-        "type": "ui-group",
-        "name": "Tabela",
-        "page": "page-main",
-        "width": 6,
-        "height": 1,
-        "order": 1
-    },
-    {
         "id": "2c8e29558bef67fc",
         "type": "function",
         "z": "1e78c2098878e540",

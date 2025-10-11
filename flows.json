@@ -466,6 +466,56 @@
         "groupType": "default"
     },
     {
+        "id": "2dd1ca68c4388bef",
+        "type": "ui-page",
+        "name": "Krzywa 2",
+        "ui": "17e53577a75fc993",
+        "path": "/krzywa",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "27d1e4a55863a4fe",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 5,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "b783ed59fd65e2d1",
+        "type": "ui-group",
+        "name": "Krzywa",
+        "page": "2dd1ca68c4388bef",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
         "id": "2c8e29558bef67fc",
         "type": "function",
         "z": "1e78c2098878e540",
@@ -1290,7 +1340,7 @@
         "group": "e376b59f571b9c26",
         "name": "Coto",
         "label": "",
-        "order": 3,
+        "order": 2,
         "width": "6",
         "height": "1",
         "maxrows": 0,
@@ -2669,7 +2719,7 @@
         "id": "5d253f9baba04236",
         "type": "ui-table",
         "z": "a1b0b12345678900",
-        "group": "e376b59f571b9c26",
+        "group": "b783ed59fd65e2d1",
         "name": "Tabela krzywej grzewczej",
         "label": "Krzywa grzewcza",
         "order": 1,
@@ -2718,7 +2768,7 @@
         "group": "e376b59f571b9c26",
         "name": "Odśwież tabelę",
         "label": "🔄 Odśwież tabelę",
-        "order": 2,
+        "order": 1,
         "width": 3,
         "height": 1,
         "emulateClick": false,

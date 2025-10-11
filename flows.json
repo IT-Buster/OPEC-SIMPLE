@@ -1286,6 +1286,7 @@
         "id": "72e0b7094174cae2",
         "type": "ui-table",
         "z": "6249a630e13530e8",
+        "d": true,
         "group": "e376b59f571b9c26",
         "name": "",
         "label": "",

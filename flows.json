@@ -1915,7 +1915,7 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "function 1",
-        "func": "\nreturn msg;",
+        "func": "// Odczytujemy wartość z przycisku radiowego\nlet tryb = msg.payload;\n\n// Zapis do zmiennej globalnej\nglobal.set(\"trybPracy\", tryb);\n\n// (opcjonalnie) komunikat debugowy\nnode.status({fill:\"green\", shape:\"dot\", text:\"trybPracy = \" + tryb});\n\n// Zwracamy wiadomość dalej (jeśli potrzebne)\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,

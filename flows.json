@@ -2675,11 +2675,11 @@
         "order": 0,
         "width": 6,
         "height": "12",
-        "maxrows": "10",
+        "maxrows": "",
         "passthru": false,
         "autocols": true,
         "showSearch": false,
-        "deselect": false,
+        "deselect": true,
         "selectionType": "none",
         "columns": [
             {

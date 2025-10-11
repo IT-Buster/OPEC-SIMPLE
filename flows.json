@@ -1667,7 +1667,7 @@
         "z": "6249a630e13530e8",
         "group": "484d649bdd92edf9",
         "name": "Tryb Pracy",
-        "label": "Select Option:",
+        "label": "Tryb Pracy:",
         "order": 0,
         "width": 0,
         "height": 0,
@@ -1675,8 +1675,18 @@
         "passthru": false,
         "options": [
             {
-                "label": "",
-                "value": "",
+                "label": "Krzywa Grzewcza",
+                "value": "0",
+                "type": "str"
+            },
+            {
+                "label": "Harmonogram i Krzywa Grzewcza",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "Ręcznie",
+                "value": "2",
                 "type": "str"
             }
         ],

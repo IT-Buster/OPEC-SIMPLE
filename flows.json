@@ -294,7 +294,7 @@
         "ui": "17e53577a75fc993",
         "path": "/temps",
         "icon": "home",
-        "layout": "grid",
+        "layout": "flex",
         "theme": "27d1e4a55863a4fe",
         "breakpoints": [
             {
@@ -320,8 +320,8 @@
         ],
         "order": 2,
         "className": "",
-        "visible": true,
-        "disabled": false
+        "visible": "true",
+        "disabled": "false"
     },
     {
         "id": "03b8f32c681918ed",

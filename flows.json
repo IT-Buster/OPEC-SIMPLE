@@ -409,11 +409,6 @@
         "groupType": "default"
     },
     {
-        "id": "theme-default",
-        "type": "ui-theme",
-        "name": "Default Theme"
-    },
-    {
         "id": "2c8e29558bef67fc",
         "type": "function",
         "z": "1e78c2098878e540",

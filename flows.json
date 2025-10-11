@@ -414,17 +414,6 @@
         "name": "Default Theme"
     },
     {
-        "id": "page-main",
-        "type": "ui-page",
-        "name": "Krzywa Grzewcza",
-        "ui": "17e53577a75fc993",
-        "path": "/temps",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "theme-default",
-        "order": 3
-    },
-    {
         "id": "2c8e29558bef67fc",
         "type": "function",
         "z": "1e78c2098878e540",

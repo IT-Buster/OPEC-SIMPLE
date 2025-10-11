@@ -1694,8 +1694,8 @@
         "iconPosition": "left",
         "iconInnerPosition": "outside",
         "spinner": "default",
-        "x": 540,
-        "y": 800,
+        "x": 460,
+        "y": 760,
         "wires": [
             [
                 "d0a695e367539055",
@@ -1728,8 +1728,8 @@
         "iconPosition": "left",
         "iconInnerPosition": "outside",
         "spinner": "default",
-        "x": 540,
-        "y": 840,
+        "x": 460,
+        "y": 800,
         "wires": [
             [
                 "d0a695e367539055",
@@ -1762,8 +1762,8 @@
         "iconPosition": "left",
         "iconInnerPosition": "outside",
         "spinner": "default",
-        "x": 540,
-        "y": 880,
+        "x": 460,
+        "y": 840,
         "wires": [
             [
                 "d0a695e367539055",
@@ -1796,8 +1796,8 @@
         "iconPosition": "left",
         "iconInnerPosition": "outside",
         "spinner": "default",
-        "x": 540,
-        "y": 920,
+        "x": 460,
+        "y": 880,
         "wires": [
             [
                 "d0a695e367539055",
@@ -1830,8 +1830,8 @@
         "iconPosition": "left",
         "iconInnerPosition": "outside",
         "spinner": "default",
-        "x": 540,
-        "y": 960,
+        "x": 460,
+        "y": 920,
         "wires": [
             [
                 "d0a695e367539055",
@@ -1864,8 +1864,8 @@
         "iconPosition": "left",
         "iconInnerPosition": "outside",
         "spinner": "default",
-        "x": 540,
-        "y": 1000,
+        "x": 460,
+        "y": 960,
         "wires": [
             [
                 "d0a695e367539055",
@@ -1885,8 +1885,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 900,
-        "y": 980,
+        "x": 820,
+        "y": 940,
         "wires": []
     },
     {
@@ -1906,8 +1906,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 210,
-        "y": 780,
+        "x": 130,
+        "y": 740,
         "wires": [
             [
                 "3dc3578340081ba4"
@@ -1926,8 +1926,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 240,
-        "y": 900,
+        "x": 160,
+        "y": 860,
         "wires": [
             [
                 "c6679dc4daf2da70"
@@ -1961,8 +1961,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 900,
-        "y": 840,
+        "x": 820,
+        "y": 800,
         "wires": [
             []
         ]

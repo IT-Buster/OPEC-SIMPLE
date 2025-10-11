@@ -2682,23 +2682,23 @@
         "selectionType": "none",
         "columns": [
             {
-                "field": "temp_zew",
                 "title": "Temp. zewnętrzna (°C)",
-                "align": "center",
-                "editor": "input",
-                "width": "50%"
+                "key": "",
+                "keyType": "key",
+                "width": "50%",
+                "align": "center"
             },
             {
-                "field": "temp_nastawa",
                 "title": "Temp. zasilania (°C)",
-                "align": "center",
-                "editor": "input",
-                "width": "50%"
+                "key": "",
+                "keyType": "key",
+                "width": "50%",
+                "align": "center"
             }
         ],
         "mobileBreakpoint": "sm",
         "mobileBreakpointType": "defaults",
-        "action": "append",
+        "action": "replace",
         "className": "",
         "x": 750,
         "y": 220,

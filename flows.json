@@ -1617,6 +1617,11 @@
                 "type": "str"
             },
             {
+                "label": "Harmonogram i Stała Temp CO",
+                "value": "harmstalatemp",
+                "type": "str"
+            },
+            {
                 "label": "Ręcznie",
                 "value": "recznie",
                 "type": "str"

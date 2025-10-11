@@ -2633,7 +2633,7 @@
         "type": "function",
         "z": "a1b0b12345678900",
         "name": "Przygotuj dane do tabeli",
-        "func": "// Pobierz tablicę z flow\nlet tabela = flow.get(\"tabelaNastaw\") || [];\n\n// Przekształć na obiekty\nlet dane = tabela.map(([temp_zew, temp_nastawa]) => ({\n    \"temp_zew\": temp_zew,\n    \"temp_nastawa\": temp_nastawa\n}));\n\n// Dashboard 2 wymaga formatu msg.payload = { data: [...] }\nmsg.payload = { data: dane };\n\nreturn msg;\n",
+        "func": "let tabela = flow.get(\"tabelaNastaw\") || [];\nlet dane = tabela.map(el => ({ temp_zew: el[0], temp_nastawa: el[1] }));\nmsg.payload = dane;\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -2685,6 +2685,7 @@
                 "title": "Temp. zewnętrzna (°C)",
                 "key": "",
                 "keyType": "key",
+                "type": "row",
                 "width": "50%",
                 "align": "center"
             },
@@ -2692,6 +2693,7 @@
                 "title": "Temp. zasilania (°C)",
                 "key": "",
                 "keyType": "key",
+                "type": "row",
                 "width": "50%",
                 "align": "center"
             }

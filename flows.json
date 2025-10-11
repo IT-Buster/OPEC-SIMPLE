@@ -1608,17 +1608,17 @@
         "options": [
             {
                 "label": "Krzywa Grzewcza",
-                "value": "0",
+                "value": "krzywa",
                 "type": "str"
             },
             {
                 "label": "Harmonogram i Krzywa Grzewcza",
-                "value": "1",
+                "value": "harm",
                 "type": "str"
             },
             {
                 "label": "Ręcznie",
-                "value": "2",
+                "value": "recznie",
                 "type": "str"
             }
         ],

@@ -1723,7 +1723,7 @@
         "sendOnEnter": true,
         "className": "",
         "clearable": false,
-        "icon": "",
+        "icon": "fa-temperature-high",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
         "spinner": "default",

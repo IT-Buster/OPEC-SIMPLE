@@ -1295,7 +1295,7 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 410,
+        "x": 590,
         "y": 480,
         "wires": [
             [
@@ -1328,7 +1328,7 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 410,
+        "x": 590,
         "y": 520,
         "wires": [
             [
@@ -1493,7 +1493,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
+        "x": 860,
         "y": 460,
         "wires": []
     },
@@ -1509,7 +1509,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
+        "x": 860,
         "y": 540,
         "wires": []
     },
@@ -1858,7 +1858,8 @@
         "y": 520,
         "wires": [
             [
-                "3dc3578340081ba4"
+                "3dc3578340081ba4",
+                "93a9b1e2fdf71f7a"
             ]
         ]
     },
@@ -1931,6 +1932,29 @@
         "y": 980,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "93a9b1e2fdf71f7a",
+        "type": "function",
+        "z": "6249a630e13530e8",
+        "name": "function 2",
+        "func": "\nreturn msg;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 480,
+        "wires": [
+            [
+                "04815bd0b7795a85"
+            ],
+            [
+                "d17de3c53b4cc6c3"
+            ]
         ]
     },
     {

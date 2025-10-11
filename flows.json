@@ -1901,7 +1901,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 110,
-        "y": 740,
+        "y": 700,
         "wires": [
             [
                 "3dc3578340081ba4"
@@ -1914,16 +1914,33 @@
         "z": "6249a630e13530e8",
         "name": "function 3",
         "func": "\nreturn msg;",
-        "outputs": 1,
+        "outputs": 6,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 140,
-        "y": 880,
+        "x": 240,
+        "y": 900,
         "wires": [
-            []
+            [
+                "c6679dc4daf2da70"
+            ],
+            [
+                "ee36af66cac61335"
+            ],
+            [
+                "27f7a1cdd0b073ec"
+            ],
+            [
+                "d92ac544ee08221d"
+            ],
+            [
+                "511aafddfc70b9f2"
+            ],
+            [
+                "204708da7ce7cbc6"
+            ]
         ]
     },
     {

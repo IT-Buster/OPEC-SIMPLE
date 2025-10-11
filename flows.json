@@ -1612,12 +1612,12 @@
                 "type": "str"
             },
             {
-                "label": "Harmonogram i Krzywa Grzewcza",
+                "label": "Harm. i Krzywa Grzewcza",
                 "value": "harm",
                 "type": "str"
             },
             {
-                "label": "Harmonogram i Stała Temp CO",
+                "label": "Harm. i Ręczna Temp CO",
                 "value": "harmstalatemp",
                 "type": "str"
             },

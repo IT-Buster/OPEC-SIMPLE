@@ -247,7 +247,7 @@
                 "cols": "12"
             }
         ],
-        "order": 1,
+        "order": 2,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -339,7 +339,7 @@
                 "cols": "12"
             }
         ],
-        "order": 4,
+        "order": 3,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -389,7 +389,7 @@
                 "cols": "12"
             }
         ],
-        "order": 5,
+        "order": 4,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -400,6 +400,56 @@
         "name": "Harmonogram",
         "page": "c8f2dcfd596c5a5b",
         "width": "2",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "0536708e693e94b1",
+        "type": "ui-page",
+        "name": "krzywa",
+        "ui": "17e53577a75fc993",
+        "path": "/krzywa",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "d961ff1262703135",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "6c5b1f1ebc002deb",
+        "type": "ui-group",
+        "name": "gr-krzywa",
+        "page": "0536708e693e94b1",
+        "width": 6,
         "height": 1,
         "order": 1,
         "showTitle": true,
@@ -1614,7 +1664,38 @@
         "topicType": "msg",
         "className": "",
         "x": 710,
-        "y": 720,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c6679dc4daf2da70",
+        "type": "ui-number-input",
+        "z": "6249a630e13530e8",
+        "group": "6c5b1f1ebc002deb",
+        "name": "krzywa dane",
+        "label": "number",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "tooltip": "",
+        "passthru": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "spinner": "default",
+        "x": 710,
+        "y": 780,
         "wires": [
             []
         ]

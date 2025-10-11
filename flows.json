@@ -1561,7 +1561,7 @@
         "pointShape": "circle",
         "pointRadius": 4,
         "showLegend": false,
-        "removeOlder": "15",
+        "removeOlder": "24",
         "removeOlderUnit": "3600",
         "removeOlderPoints": "",
         "colors": [

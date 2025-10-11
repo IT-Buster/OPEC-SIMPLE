@@ -32,6 +32,13 @@
         "env": []
     },
     {
+        "id": "a1b0b12345678900",
+        "type": "tab",
+        "label": "Krzywa grzewcza",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "2a13aec920287264",
         "type": "modbus-client",
         "name": "usb-conn",
@@ -2577,6 +2584,150 @@
         "wires": [
             [
                 "9ead1bd2f7553f3a"
+            ]
+        ]
+    },
+    {
+        "id": "flow-setup",
+        "type": "inject",
+        "z": "a1b0b12345678900",
+        "name": "Ustaw domyślną tabelę",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.2,
+        "topic": "",
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "set-default"
+            ]
+        ]
+    },
+    {
+        "id": "set-default",
+        "type": "change",
+        "z": "a1b0b12345678900",
+        "name": "flow.tabelaNastaw",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tabelaNastaw",
+                "pt": "flow",
+                "to": "[[-20,55],[-10,50],[0,50],[5,45],[10,42],[11,41],[12,40],[13,15],[14,15],[15,15],[20,15]]",
+                "tot": "json"
+            }
+        ],
+        "x": 490,
+        "y": 80,
+        "wires": [
+            [
+                "make-table"
+            ]
+        ]
+    },
+    {
+        "id": "make-table",
+        "type": "function",
+        "z": "a1b0b12345678900",
+        "name": "Przygotuj dane do tabeli",
+        "func": "// Pobierz tablicę z flow\nlet tabela = flow.get(\"tabelaNastaw\") || [];\n\n// Przekształć do formatu tablicy obiektów dla ui-table\nmsg.payload = tabela.map(([temp_zew, temp_nastawa], i) => ({\n    id: i + 1,\n    temp_zew,\n    temp_nastawa\n}));\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "2cac7ee08e8bb995"
+            ]
+        ]
+    },
+    {
+        "id": "save-edited",
+        "type": "function",
+        "z": "a1b0b12345678900",
+        "name": "Zapisz zmiany do flow",
+        "func": "// Dane po edycji w ui-table\nlet tabela = msg.payload.map(row => [Number(row.temp_zew), Number(row.temp_nastawa)]);\nflow.set(\"tabelaNastaw\", tabela);\n\nnode.status({text: \"Zapisano \" + tabela.length + \" pozycji\"});\nreturn null;",
+        "outputs": 0,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "2cac7ee08e8bb995",
+        "type": "ui-table",
+        "z": "a1b0b12345678900",
+        "group": "e376b59f571b9c26",
+        "name": "",
+        "label": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "maxrows": 0,
+        "passthru": false,
+        "autocols": true,
+        "showSearch": true,
+        "deselect": true,
+        "selectionType": "none",
+        "columns": [],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "append",
+        "className": "",
+        "x": 710,
+        "y": 240,
+        "wires": [
+            [
+                "save-edited"
+            ]
+        ]
+    },
+    {
+        "id": "03e3d91bbf37e7fd",
+        "type": "ui-button",
+        "z": "a1b0b12345678900",
+        "group": "e376b59f571b9c26",
+        "name": "",
+        "label": "button",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 190,
+        "y": 340,
+        "wires": [
+            [
+                "make-table"
             ]
         ]
     }

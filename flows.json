@@ -1691,7 +1691,7 @@
         "className": "",
         "clearable": false,
         "icon": "thermometer-plus",
-        "iconPosition": "right",
+        "iconPosition": "left",
         "iconInnerPosition": "outside",
         "spinner": "default",
         "x": 540,

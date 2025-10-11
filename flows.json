@@ -1958,6 +1958,35 @@
         ]
     },
     {
+        "id": "4e294de02e280b82",
+        "type": "inject",
+        "z": "6249a630e13530e8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 510,
+        "y": 980,
+        "wires": [
+            [
+                "648cb9a23ae31e28"
+            ]
+        ]
+    },
+    {
         "id": "6f48287671bc7669",
         "type": "modbus-write",
         "z": "867cb1db5f09b847",

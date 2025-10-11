@@ -1965,10 +1965,6 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
             }
         ],
         "repeat": "",
@@ -1976,9 +1972,9 @@
         "once": true,
         "onceDelay": "0.5",
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 510,
+        "payload": "krzywa",
+        "payloadType": "str",
+        "x": 500,
         "y": 980,
         "wires": [
             [

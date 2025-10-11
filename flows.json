@@ -2659,8 +2659,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1020,
-        "y": 160,
+        "x": 1060,
+        "y": 220,
         "wires": []
     },
     {
@@ -2699,8 +2699,8 @@
         "mobileBreakpointType": "defaults",
         "action": "append",
         "className": "",
-        "x": 710,
-        "y": 180,
+        "x": 750,
+        "y": 220,
         "wires": [
             [
                 "save-edited"

@@ -466,56 +466,6 @@
         "groupType": "default"
     },
     {
-        "id": "2dd1ca68c4388bef",
-        "type": "ui-page",
-        "name": "Krzywa 2",
-        "ui": "17e53577a75fc993",
-        "path": "/krzywa",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "27d1e4a55863a4fe",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "order": 5,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "b783ed59fd65e2d1",
-        "type": "ui-group",
-        "name": "Krzywa",
-        "page": "2dd1ca68c4388bef",
-        "width": 6,
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
         "id": "2c8e29558bef67fc",
         "type": "function",
         "z": "1e78c2098878e540",

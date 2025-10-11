@@ -898,9 +898,7 @@
         "x": 320,
         "y": 620,
         "wires": [
-            [
-                "72e0b7094174cae2"
-            ]
+            []
         ]
     },
     {
@@ -1281,36 +1279,6 @@
         "x": 760,
         "y": 320,
         "wires": []
-    },
-    {
-        "id": "72e0b7094174cae2",
-        "type": "ui-table",
-        "z": "6249a630e13530e8",
-        "d": true,
-        "group": "e376b59f571b9c26",
-        "name": "Coto",
-        "label": "",
-        "order": 3,
-        "width": "6",
-        "height": "1",
-        "maxrows": 0,
-        "passthru": false,
-        "autocols": true,
-        "showSearch": true,
-        "deselect": true,
-        "selectionType": "click",
-        "columns": [],
-        "mobileBreakpoint": "sm",
-        "mobileBreakpointType": "defaults",
-        "action": "replace",
-        "className": "",
-        "x": 530,
-        "y": 620,
-        "wires": [
-            [
-                "edb77486ae16c09f"
-            ]
-        ]
     },
     {
         "id": "b4b9cb347c2373ed",

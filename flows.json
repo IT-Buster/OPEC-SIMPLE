@@ -2669,7 +2669,7 @@
         "id": "5d253f9baba04236",
         "type": "ui-table",
         "z": "a1b0b12345678900",
-        "group": "e376b59f571b9c26",
+        "group": "",
         "name": "Tabela krzywej grzewczej",
         "label": "Krzywa grzewcza",
         "order": 0,

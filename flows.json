@@ -877,24 +877,6 @@
         ]
     },
     {
-        "id": "0928419add0a48a2",
-        "type": "function",
-        "z": "6249a630e13530e8",
-        "name": "function 1",
-        "func": "//let tabela = flow.get(\"tabelaNastaw\");\n// node.warn(\"FLOW.TABELA: \" + JSON.stringify(tabela));\n\n// if (!Array.isArray(tabela) || tabela.length === 0) {\n//     node.warn(\"Tabela jest pusta, ustawiam domyślną\");\n//     tabela = [[-20,55],[-10,50],[0,50],[5,47],[10,45],[11,42],[12,40],[13,38],[14,35],[15,20],[20,20]];\n//     flow.set(\"tabelaNastaw\", tabela);\n// }\n\n//let tabela = msg.tabelaNastaw;\n\nmsg.payload = msg.payload.tabelaNastaw.map(r => ({\n    tempzew: r[0],\n    nastawa: r[1]\n}));\n\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 320,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "f4542dcb0e25ccd7",
         "type": "link in",
         "z": "6249a630e13530e8",
@@ -906,27 +888,8 @@
         "y": 300,
         "wires": [
             [
-                "0928419add0a48a2",
                 "5e78e32796a9a1f9"
             ]
-        ]
-    },
-    {
-        "id": "edb77486ae16c09f",
-        "type": "function",
-        "z": "6249a630e13530e8",
-        "name": "function 2",
-        "func": "// msg.payload = [{tempzew: -20, tempNastawa: 55}, ...] po edycji\nlet tabelaNowa = msg.payload.map(r => [Number(r.tempzew), Number(r.tempNastawa)]);\nflow.set(\"tabelaNastaw\", tabelaNowa);\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 720,
-        "y": 620,
-        "wires": [
-            []
         ]
     },
     {
@@ -1663,8 +1626,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 710,
-        "y": 680,
+        "x": 730,
+        "y": 600,
         "wires": [
             []
         ]
@@ -1694,8 +1657,8 @@
         "iconPosition": "left",
         "iconInnerPosition": "outside",
         "spinner": "default",
-        "x": 460,
-        "y": 760,
+        "x": 400,
+        "y": 600,
         "wires": [
             [
                 "d0a695e367539055",
@@ -1728,8 +1691,8 @@
         "iconPosition": "left",
         "iconInnerPosition": "outside",
         "spinner": "default",
-        "x": 460,
-        "y": 800,
+        "x": 400,
+        "y": 640,
         "wires": [
             [
                 "d0a695e367539055",
@@ -1762,8 +1725,8 @@
         "iconPosition": "left",
         "iconInnerPosition": "outside",
         "spinner": "default",
-        "x": 460,
-        "y": 840,
+        "x": 400,
+        "y": 680,
         "wires": [
             [
                 "d0a695e367539055",
@@ -1796,8 +1759,8 @@
         "iconPosition": "left",
         "iconInnerPosition": "outside",
         "spinner": "default",
-        "x": 460,
-        "y": 880,
+        "x": 400,
+        "y": 720,
         "wires": [
             [
                 "d0a695e367539055",
@@ -1830,8 +1793,8 @@
         "iconPosition": "left",
         "iconInnerPosition": "outside",
         "spinner": "default",
-        "x": 460,
-        "y": 920,
+        "x": 400,
+        "y": 760,
         "wires": [
             [
                 "d0a695e367539055",
@@ -1864,8 +1827,8 @@
         "iconPosition": "left",
         "iconInnerPosition": "outside",
         "spinner": "default",
-        "x": 460,
-        "y": 960,
+        "x": 400,
+        "y": 800,
         "wires": [
             [
                 "d0a695e367539055",
@@ -1886,8 +1849,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 940,
+        "x": 720,
+        "y": 760,
         "wires": []
     },
     {
@@ -1907,8 +1870,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 740,
+        "x": 150,
+        "y": 520,
         "wires": [
             [
                 "3dc3578340081ba4"
@@ -1928,7 +1891,7 @@
         "finalize": "",
         "libs": [],
         "x": 160,
-        "y": 860,
+        "y": 660,
         "wires": [
             [
                 "c6679dc4daf2da70"
@@ -1962,8 +1925,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 820,
-        "y": 800,
+        "x": 720,
+        "y": 680,
         "wires": [
             []
         ]

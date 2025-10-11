@@ -1913,7 +1913,7 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "function 3",
-        "func": "\nreturn msg;",
+        "func": "let tableTempNastaw = global.get(\"tabelaNastaw\")\nreturn msg;",
         "outputs": 6,
         "timeout": 0,
         "noerr": 0,

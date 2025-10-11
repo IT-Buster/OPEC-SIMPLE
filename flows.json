@@ -1693,7 +1693,7 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "outside",
-        "spinner": "default",
+        "spinner": "stacked",
         "x": 260,
         "y": 740,
         "wires": [

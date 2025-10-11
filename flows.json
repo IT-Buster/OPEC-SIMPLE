@@ -1626,8 +1626,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 690,
-        "y": 860,
+        "x": 710,
+        "y": 980,
         "wires": [
             [
                 "a5e538dbed59d9ad"
@@ -1922,8 +1922,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 900,
-        "y": 860,
+        "x": 920,
+        "y": 980,
         "wires": [
             []
         ]

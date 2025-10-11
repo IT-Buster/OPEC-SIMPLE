@@ -1723,7 +1723,7 @@
         "sendOnEnter": true,
         "className": "",
         "clearable": false,
-        "icon": "fas fa-temperature-high",
+        "icon": "thermometer-plus",
         "iconPosition": "right",
         "iconInnerPosition": "outside",
         "spinner": "default",

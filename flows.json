@@ -1612,6 +1612,11 @@
                 "type": "str"
             },
             {
+                "label": "Ręcznie",
+                "value": "recznie",
+                "type": "str"
+            },
+            {
                 "label": "Harm. i Krzywa Grzewcza",
                 "value": "harm",
                 "type": "str"
@@ -1619,11 +1624,6 @@
             {
                 "label": "Harm. i Ręczna Temp CO",
                 "value": "harmstalatemp",
-                "type": "str"
-            },
-            {
-                "label": "Ręcznie",
-                "value": "recznie",
                 "type": "str"
             }
         ],

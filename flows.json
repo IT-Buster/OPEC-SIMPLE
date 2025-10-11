@@ -361,7 +361,7 @@
         "order": 1,
         "showTitle": true,
         "className": "",
-        "visible": false,
+        "visible": "true",
         "disabled": "false",
         "groupType": "default"
     },

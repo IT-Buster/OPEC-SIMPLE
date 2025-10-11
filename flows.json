@@ -347,14 +347,14 @@
     {
         "id": "484d649bdd92edf9",
         "type": "ui-group",
-        "name": "Włącznik Główny",
+        "name": "Sterowanie",
         "page": "83a09bf0e993f5a5",
         "width": "3",
         "height": 1,
         "order": 1,
         "showTitle": true,
         "className": "",
-        "visible": true,
+        "visible": "true",
         "disabled": "false",
         "groupType": "default"
     },

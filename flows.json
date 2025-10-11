@@ -2634,7 +2634,7 @@
         "type": "function",
         "z": "a1b0b12345678900",
         "name": "Przygotuj dane do tabeli",
-        "func": "let tabela = flow.get(\"tabelaNastaw\") || [];\nlet dane = tabela.map(el => ({ temp_zew: el[0], temp_nastawa: el[1] }));\nmsg.payload = dane;\nreturn msg;\n",
+        "func": "// Pobierz dane z flow\nlet tabela = flow.get(\"tabelaNastaw\") || [];\n\n// Zamień tablicę [[x,y], ...] na obiekty {temp_zew, temp_nastawa}\nmsg.payload = tabela.map(w => ({\n    temp_zew: w[0],\n    temp_nastawa: w[1]\n}));\n\n// Definicja kolumn z możliwością edycji\nmsg.ui_control = {\n    options: {\n        autoColumns: false,\n        columns: [\n            { title: \"Temp. zewnętrzna (°C)\", field: \"temp_zew\", editor: \"input\" },\n            { title: \"Temp. zasilania (°C)\", field: \"temp_nastawa\", editor: \"input\" }\n        ]\n    }\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,

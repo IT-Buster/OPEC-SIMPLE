@@ -863,7 +863,8 @@
             [
                 "7bab3e7370cace8d",
                 "ui_text_tempco",
-                "36418cb08ab2119c"
+                "36418cb08ab2119c",
+                "d4be91bd69e0bf8e"
             ],
             [
                 "8e93df1fe23a3b9b",
@@ -1594,6 +1595,68 @@
         "libs": [],
         "x": 440,
         "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4be91bd69e0bf8e",
+        "type": "ui-chart",
+        "z": "6249a630e13530e8",
+        "group": "aa57b43bfff6a1ad",
+        "name": "Temp CO",
+        "label": "",
+        "order": 2,
+        "chartType": "line",
+        "category": "",
+        "categoryType": "none",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "20",
+        "ymax": "70",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": false,
+        "removeOlder": "12",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "6",
+        "height": "3",
+        "className": "",
+        "interpolation": "linear",
+        "x": 980,
+        "y": 120,
         "wires": [
             []
         ]

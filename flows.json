@@ -2673,7 +2673,7 @@
         "label": "Krzywa grzewcza",
         "order": 0,
         "width": 6,
-        "height": 6,
+        "height": "12",
         "maxrows": 0,
         "passthru": false,
         "autocols": true,

@@ -1843,7 +1843,7 @@
         "label": "Temp Zew 15 °C",
         "order": 6,
         "width": 0,
-        "height": 0,
+        "height": 2,
         "topic": "topic",
         "topicType": "msg",
         "min": 0,

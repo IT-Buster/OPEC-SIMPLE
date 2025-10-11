@@ -2633,7 +2633,7 @@
         "type": "function",
         "z": "a1b0b12345678900",
         "name": "Przygotuj dane do tabeli",
-        "func": "let tabela = flow.get(\"tabelaNastaw\") || [];\n\nmsg.payload = tabela.map(([temp_zew, temp_nastawa]) => ({\n    \"temp_zew\": temp_zew,\n    \"temp_nastawa\": temp_nastawa\n}));\n\nreturn msg;\n",
+        "func": "// Pobierz tablicę z flow\nlet tabela = flow.get(\"tabelaNastaw\") || [];\n\n// Przekształć na obiekty\nlet dane = tabela.map(([temp_zew, temp_nastawa]) => ({\n    \"temp_zew\": temp_zew,\n    \"temp_nastawa\": temp_nastawa\n}));\n\n// Dashboard 2 wymaga formatu msg.payload = { data: [...] }\nmsg.payload = { data: dane };\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,

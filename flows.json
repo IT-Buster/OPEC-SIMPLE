@@ -1690,7 +1690,7 @@
         "sendOnEnter": true,
         "className": "",
         "clearable": false,
-        "icon": "thermometer-plus TEST",
+        "icon": "thermometer-plus",
         "iconPosition": "left",
         "iconInnerPosition": "outside",
         "spinner": "default",

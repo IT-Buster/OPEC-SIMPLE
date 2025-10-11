@@ -2676,8 +2676,8 @@
         "height": 6,
         "maxrows": 0,
         "passthru": false,
-        "autocols": false,
-        "showSearch": true,
+        "autocols": true,
+        "showSearch": false,
         "deselect": true,
         "selectionType": "none",
         "columns": [

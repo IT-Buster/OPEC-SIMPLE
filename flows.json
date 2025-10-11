@@ -1698,7 +1698,8 @@
         "y": 800,
         "wires": [
             [
-                "d0a695e367539055"
+                "d0a695e367539055",
+                "cfa99ba7ccac2eaf"
             ]
         ]
     },
@@ -1731,7 +1732,8 @@
         "y": 840,
         "wires": [
             [
-                "d0a695e367539055"
+                "d0a695e367539055",
+                "cfa99ba7ccac2eaf"
             ]
         ]
     },
@@ -1764,7 +1766,8 @@
         "y": 880,
         "wires": [
             [
-                "d0a695e367539055"
+                "d0a695e367539055",
+                "cfa99ba7ccac2eaf"
             ]
         ]
     },
@@ -1797,7 +1800,8 @@
         "y": 920,
         "wires": [
             [
-                "d0a695e367539055"
+                "d0a695e367539055",
+                "cfa99ba7ccac2eaf"
             ]
         ]
     },
@@ -1830,7 +1834,8 @@
         "y": 960,
         "wires": [
             [
-                "d0a695e367539055"
+                "d0a695e367539055",
+                "cfa99ba7ccac2eaf"
             ]
         ]
     },
@@ -1863,7 +1868,8 @@
         "y": 1000,
         "wires": [
             [
-                "d0a695e367539055"
+                "d0a695e367539055",
+                "cfa99ba7ccac2eaf"
             ]
         ]
     },
@@ -1879,8 +1885,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
-        "y": 900,
+        "x": 900,
+        "y": 980,
         "wires": []
     },
     {
@@ -1900,8 +1906,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 760,
+        "x": 210,
+        "y": 780,
         "wires": [
             [
                 "3dc3578340081ba4"
@@ -1941,6 +1947,24 @@
             [
                 "204708da7ce7cbc6"
             ]
+        ]
+    },
+    {
+        "id": "cfa99ba7ccac2eaf",
+        "type": "function",
+        "z": "6249a630e13530e8",
+        "name": "function 4",
+        "func": "// Odczyt bieżącej tabeli z globalnej zmiennej\nlet tabela = global.get(\"tabelaNastaw\") || [\n    [-10, 55],\n    [0, 50],\n    [5, 45],\n    [10, 42],\n    [12, 40],\n    [15, 10]\n];\n\n// Identyfikacja źródła zmiany po nazwie node-a (msg._source)\nlet nodeName = msg._source?.name || msg.topic || \"\";\n\n// Dopasowanie wartości do odpowiedniego wiersza w tabeli\nswitch (nodeName) {\n    case \"krzywa dane -10\":\n        tabela[0][1] = msg.payload;\n        break;\n    case \"krzywa dane 0\":\n        tabela[1][1] = msg.payload;\n        break;\n    case \"krzywa dane 5\":\n        tabela[2][1] = msg.payload;\n        break;\n    case \"krzywa dane 10\":\n        tabela[3][1] = msg.payload;\n        break;\n    case \"krzywa dane 12\":\n        tabela[4][1] = msg.payload;\n        break;\n    case \"krzywa dane 15\":\n        tabela[5][1] = msg.payload;\n        break;\n    default:\n        node.warn(\"Nieznane źródło danych: \" + nodeName);\n        break;\n}\n\n// Zapisz zaktualizowaną tabelę\nglobal.set(\"tabelaNastaw\", tabela);\n\n// Opcjonalnie wyślij dalej zaktualizowaną tablicę do debug\nmsg.payload = tabela;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 840,
+        "wires": [
+            []
         ]
     },
     {

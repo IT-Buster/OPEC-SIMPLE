@@ -1691,9 +1691,9 @@
         "className": "",
         "clearable": false,
         "icon": "",
-        "iconPosition": "left",
+        "iconPosition": "right",
         "iconInnerPosition": "outside",
-        "spinner": "stacked",
+        "spinner": "default",
         "x": 260,
         "y": 740,
         "wires": [

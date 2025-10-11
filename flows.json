@@ -1690,7 +1690,7 @@
         "sendOnEnter": true,
         "className": "",
         "clearable": false,
-        "icon": "",
+        "icon": "gesture-tap",
         "iconPosition": "right",
         "iconInnerPosition": "outside",
         "spinner": "default",

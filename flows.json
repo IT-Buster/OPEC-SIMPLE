@@ -1692,7 +1692,7 @@
         "clearable": false,
         "icon": "",
         "iconPosition": "left",
-        "iconInnerPosition": "inside",
+        "iconInnerPosition": "outside",
         "spinner": "default",
         "x": 260,
         "y": 740,

@@ -1631,8 +1631,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 710,
-        "y": 980,
+        "x": 410,
+        "y": 920,
         "wires": [
             [
                 "a5e538dbed59d9ad"
@@ -1928,8 +1928,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 920,
-        "y": 980,
+        "x": 620,
+        "y": 920,
         "wires": [
             []
         ]
@@ -1974,8 +1974,8 @@
         "topic": "",
         "payload": "krzywa",
         "payloadType": "str",
-        "x": 500,
-        "y": 980,
+        "x": 200,
+        "y": 920,
         "wires": [
             [
                 "648cb9a23ae31e28"

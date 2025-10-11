@@ -1684,7 +1684,7 @@
         "min": "10",
         "max": "60",
         "step": 1,
-        "tooltip": "",
+        "tooltip": "Ustaw temperaturę CO",
         "passthru": true,
         "sendOnBlur": true,
         "sendOnEnter": true,

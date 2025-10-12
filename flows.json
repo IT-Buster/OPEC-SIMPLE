@@ -864,7 +864,8 @@
                 "7bab3e7370cace8d",
                 "ui_text_tempco",
                 "36418cb08ab2119c",
-                "d4be91bd69e0bf8e"
+                "d4be91bd69e0bf8e",
+                "e62e288780486018"
             ],
             [
                 "8e93df1fe23a3b9b",
@@ -2005,6 +2006,30 @@
         "valueType": "msg",
         "x": 920,
         "y": 240,
+        "wires": []
+    },
+    {
+        "id": "e62e288780486018",
+        "type": "ui-text",
+        "z": "6249a630e13530e8",
+        "group": "6c5b1f1ebc002deb",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temp CO",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 920,
+        "y": 280,
         "wires": []
     },
     {

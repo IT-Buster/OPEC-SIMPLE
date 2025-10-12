@@ -1992,7 +1992,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "text",
+        "label": "Nastawa",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "style": false,
@@ -2001,10 +2001,10 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "value": "payloads",
+        "value": "payload",
         "valueType": "msg",
-        "x": 910,
-        "y": 260,
+        "x": 920,
+        "y": 240,
         "wires": []
     },
     {

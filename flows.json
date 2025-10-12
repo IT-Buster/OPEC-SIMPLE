@@ -872,7 +872,8 @@
             ],
             [
                 "7713b4ecfc3a32b3",
-                "ui_text_nastawa"
+                "ui_text_nastawa",
+                "6674b89b8d4ffe39"
             ]
         ]
     },
@@ -1646,7 +1647,7 @@
         "group": "6c5b1f1ebc002deb",
         "name": "krzywa dane -10",
         "label": "Temp Zew -10 °C",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "topic": "-10",
@@ -1679,7 +1680,7 @@
         "group": "6c5b1f1ebc002deb",
         "name": "krzywa dane 0",
         "label": "Temp Zew 0 °C",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "topic": "0",
@@ -1712,7 +1713,7 @@
         "group": "6c5b1f1ebc002deb",
         "name": "krzywa dane 5",
         "label": "Temp Zew 5 °C",
-        "order": 3,
+        "order": 4,
         "width": 0,
         "height": 0,
         "topic": "5",
@@ -1745,7 +1746,7 @@
         "group": "6c5b1f1ebc002deb",
         "name": "krzywa dane 10",
         "label": "Temp Zew 10 °C",
-        "order": 4,
+        "order": 5,
         "width": 0,
         "height": 0,
         "topic": "10",
@@ -1778,7 +1779,7 @@
         "group": "6c5b1f1ebc002deb",
         "name": "krzywa dane 12",
         "label": "Temp Zew 12 °C",
-        "order": 5,
+        "order": 6,
         "width": 0,
         "height": 0,
         "topic": "12",
@@ -1811,7 +1812,7 @@
         "group": "6c5b1f1ebc002deb",
         "name": "krzywa dane 15",
         "label": "Temp Zew 15 °C",
-        "order": 6,
+        "order": 7,
         "width": 0,
         "height": 2,
         "topic": "15",
@@ -1981,6 +1982,30 @@
                 "648cb9a23ae31e28"
             ]
         ]
+    },
+    {
+        "id": "6674b89b8d4ffe39",
+        "type": "ui-text",
+        "z": "6249a630e13530e8",
+        "group": "6c5b1f1ebc002deb",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payloads",
+        "valueType": "msg",
+        "x": 910,
+        "y": 260,
+        "wires": []
     },
     {
         "id": "6f48287671bc7669",

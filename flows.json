@@ -1599,6 +1599,7 @@
         "id": "648cb9a23ae31e28",
         "type": "ui-radio-group",
         "z": "6249a630e13530e8",
+        "d": true,
         "group": "484d649bdd92edf9",
         "name": "Tryb Pracy",
         "label": "Tryb Pracy:",

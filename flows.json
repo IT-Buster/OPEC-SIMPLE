@@ -2007,8 +2007,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 920,
-        "y": 240,
+        "x": 980,
+        "y": 160,
         "wires": []
     },
     {
@@ -2031,8 +2031,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 920,
-        "y": 280,
+        "x": 980,
+        "y": 200,
         "wires": []
     },
     {

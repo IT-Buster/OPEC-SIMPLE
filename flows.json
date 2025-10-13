@@ -864,8 +864,7 @@
                 "7bab3e7370cace8d",
                 "ui_text_tempco",
                 "36418cb08ab2119c",
-                "d4be91bd69e0bf8e",
-                "e62e288780486018"
+                "d4be91bd69e0bf8e"
             ],
             [
                 "8e93df1fe23a3b9b",
@@ -1016,7 +1015,9 @@
         "x": 740,
         "y": 80,
         "wires": [
-            []
+            [
+                "e62e288780486018"
+            ]
         ]
     },
     {
@@ -2032,8 +2033,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 980,
-        "y": 200,
+        "x": 1180,
+        "y": 120,
         "wires": []
     },
     {

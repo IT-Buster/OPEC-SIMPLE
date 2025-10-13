@@ -873,8 +873,7 @@
             ],
             [
                 "7713b4ecfc3a32b3",
-                "ui_text_nastawa",
-                "6674b89b8d4ffe39"
+                "ui_text_nastawa"
             ]
         ]
     },
@@ -1141,7 +1140,9 @@
         "x": 760,
         "y": 160,
         "wires": [
-            []
+            [
+                "6674b89b8d4ffe39"
+            ]
         ]
     },
     {

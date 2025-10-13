@@ -953,7 +953,9 @@
         "x": 750,
         "y": 20,
         "wires": [
-            []
+            [
+                "59fc6f5576bfc04c"
+            ]
         ]
     },
     {
@@ -2031,6 +2033,30 @@
         "valueType": "msg",
         "x": 920,
         "y": 280,
+        "wires": []
+    },
+    {
+        "id": "59fc6f5576bfc04c",
+        "type": "ui-text",
+        "z": "6249a630e13530e8",
+        "group": "484d649bdd92edf9",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temp Zew",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1170,
+        "y": 20,
         "wires": []
     },
     {

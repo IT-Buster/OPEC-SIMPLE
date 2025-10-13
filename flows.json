@@ -1593,8 +1593,8 @@
         "height": "3",
         "className": "",
         "interpolation": "linear",
-        "x": 980,
-        "y": 120,
+        "x": 1000,
+        "y": 180,
         "wires": [
             []
         ]
@@ -2009,8 +2009,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 980,
-        "y": 160,
+        "x": 1000,
+        "y": 240,
         "wires": []
     },
     {

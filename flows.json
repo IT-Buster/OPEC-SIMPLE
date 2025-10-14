@@ -837,7 +837,8 @@
             [
                 "27e0b1a1685cd8b1",
                 "19027639cd1c84f9",
-                "8a16b396e782a607"
+                "8a16b396e782a607",
+                "7ecf9fc1cf5c1305"
             ]
         ]
     },
@@ -2060,6 +2061,57 @@
         "x": 1170,
         "y": 20,
         "wires": []
+    },
+    {
+        "id": "4d8e754b95fe500b",
+        "type": "ui-text",
+        "z": "6249a630e13530e8",
+        "group": "484d649bdd92edf9",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Info",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 410,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "7ecf9fc1cf5c1305",
+        "type": "change",
+        "z": "6249a630e13530e8",
+        "name": "Get Info",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "info",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 160,
+        "wires": [
+            [
+                "4d8e754b95fe500b"
+            ]
+        ]
     },
     {
         "id": "6f48287671bc7669",

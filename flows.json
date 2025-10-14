@@ -850,7 +850,6 @@
         "wires": [
             [
                 "27e0b1a1685cd8b1",
-                "19027639cd1c84f9",
                 "8a16b396e782a607",
                 "7ecf9fc1cf5c1305"
             ]
@@ -1420,24 +1419,6 @@
         "x": 960,
         "y": 260,
         "wires": []
-    },
-    {
-        "id": "19027639cd1c84f9",
-        "type": "function",
-        "z": "6249a630e13530e8",
-        "name": "add degree",
-        "func": "msg.temperatura_nastawa = msg.temperatura_nastawa + \" &deg;C\";\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 190,
-        "y": 260,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "8a16b396e782a607",

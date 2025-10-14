@@ -316,7 +316,7 @@
         "path": "/sterowanie",
         "icon": "home",
         "layout": "grid",
-        "theme": "27d1e4a55863a4fe",
+        "theme": "d961ff1262703135",
         "breakpoints": [
             {
                 "name": "Default",

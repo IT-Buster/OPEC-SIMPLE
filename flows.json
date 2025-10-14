@@ -161,7 +161,7 @@
     {
         "id": "17e53577a75fc993",
         "type": "ui-base",
-        "name": "My Dashboard",
+        "name": "Opec Sterownik",
         "path": "/dashboard",
         "appIcon": "",
         "includeClientData": true,

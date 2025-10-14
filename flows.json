@@ -860,7 +860,7 @@
         "type": "function",
         "z": "6249a630e13530e8",
         "name": "rozdziel",
-        "func": "let tempzew = msg.tempzew;\nlet tempco = msg.tempco;\nlet pozycja = msg.pozycja;\nlet tempNastawa = msg.temperatura_nastawa;\n\nlet out1 = { \n    payload: tempzew,\n    ui_update: { \n        label: \"🌡️ Temp. Zewn.\",\n        fontSize: \"16px\",\n        color: tempzew < 0 ? \"blue\" : \"red\"\n    },\n    class: \"moj-widget\"   // tu możesz dodać własną klasę CSS\n};\n\nlet out2 = { \n    payload: tempco, \n    ui_update: { label: \"🔥 Temp. CO\" } \n};\n\nlet out3 = { \n    payload: pozycja, \n    ui_update: { label: \"⚙️ Pozycja Siłownika\" } \n};\n\nlet out4 = { \n    payload: tempNastawa, \n    ui_update: { label: \"🎛️ Temp. Nastawa\" } \n};\n\nreturn [out1, out2, out3, out4];\n\n",
+        "func": "let tempzew = msg.tempzew;\nlet tempco = msg.tempco;\nlet pozycja = msg.pozycja;\nlet tempNastawa = msg.temperatura_nastawa;\n\nlet out1 = { \n    payload: tempzew,\n    ui_update: { \n        label: \"🌡️ Temp. Zewn.\",\n        fontSize: \"16px\",\n        color: tempzew < 0 ? \"blue\" : \"red\"\n    },\n    class: \"my-class\"   // tu możesz dodać własną klasę CSS\n};\n\nlet out2 = { \n    payload: tempco, \n    ui_update: { label: \"🔥 Temp. CO\" } \n};\n\nlet out3 = { \n    payload: pozycja, \n    ui_update: { label: \"⚙️ Pozycja Siłownika\" } \n};\n\nlet out4 = { \n    payload: tempNastawa, \n    ui_update: { label: \"🎛️ Temp. Nastawa\" } \n};\n\nreturn [out1, out2, out3, out4];\n\n",
         "outputs": 4,
         "timeout": 0,
         "noerr": 0,

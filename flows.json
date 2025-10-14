@@ -1462,7 +1462,7 @@
         "id": "e7ae46dcbf10ff6f",
         "type": "ui-text",
         "z": "6249a630e13530e8",
-        "group": "a4dddb102165f23d",
+        "group": "657c50306b4f1249",
         "order": 2,
         "width": "2",
         "height": "1",
@@ -1478,7 +1478,7 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1160,
+        "x": 1320,
         "y": 60,
         "wires": []
     },
@@ -1608,8 +1608,8 @@
         "height": "3",
         "className": "",
         "interpolation": "linear",
-        "x": 1080,
-        "y": 180,
+        "x": 940,
+        "y": 120,
         "wires": [
             []
         ]
@@ -2024,8 +2024,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1000,
-        "y": 240,
+        "x": 1180,
+        "y": 140,
         "wires": []
     },
     {
@@ -2049,14 +2049,14 @@
         "value": "payload",
         "valueType": "msg",
         "x": 1180,
-        "y": 120,
+        "y": 100,
         "wires": []
     },
     {
         "id": "59fc6f5576bfc04c",
         "type": "ui-text",
         "z": "6249a630e13530e8",
-        "group": "a4dddb102165f23d",
+        "group": "657c50306b4f1249",
         "order": 3,
         "width": "2",
         "height": "1",
@@ -2072,7 +2072,7 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1170,
+        "x": 1330,
         "y": 20,
         "wires": []
     },
@@ -2080,7 +2080,7 @@
         "id": "4d8e754b95fe500b",
         "type": "ui-text",
         "z": "6249a630e13530e8",
-        "group": "a4dddb102165f23d",
+        "group": "657c50306b4f1249",
         "order": 1,
         "width": "2",
         "height": "1",

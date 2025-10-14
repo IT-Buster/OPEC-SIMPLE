@@ -1414,7 +1414,7 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "value": "temperatura_nastawa",
+        "value": "payload",
         "valueType": "msg",
         "x": 960,
         "y": 260,

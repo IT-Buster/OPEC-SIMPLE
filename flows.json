@@ -210,8 +210,8 @@
         },
         "sizes": {
             "density": "default",
-            "pagePadding": "5px",
-            "groupGap": "2px",
+            "pagePadding": "2px",
+            "groupGap": "5px",
             "groupBorderRadius": "5px",
             "widgetGap": "5px"
         }

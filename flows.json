@@ -2165,7 +2165,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <div>\n        <h4>Counter</h4>\n        <p :style=\"{'color' : (count > 5 ? 'red' : 'green' )}\">Current Count: {{ count }}</p>\n        <p class=\"my-class\">Formatted Count: {{ formattedCount }}</p>\n    </div>\n</template>\n<style>\n    /* define any styles here - supports raw CSS */\n    .my-class {\n        color: blue;\n        font-weight: bold;\n        fontSize: 8px;\n    }\n</style>",
+        "format": "<template>\n    <div>\n        <h4>Counter</h4>\n        <p :style=\"{'color' : (count > 5 ? 'red' : 'green' )}\">Current Count: {{ count }}</p>\n        <p class=\"my-class\">Formatted Count: {{ formattedCount }}</p>\n    </div>\n</template>\n<style>\n    /* define any styles here - supports raw CSS */\n    .my-class {\n        color: blue;\n        fontSize: 8px;\n    }\n</style>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,

@@ -205,7 +205,7 @@
             "surface": "#adadad",
             "primary": "#0fb4f5",
             "bgPage": "#eeeeee",
-            "groupBg": "#ffffff",
+            "groupBg": "#c7c7c7",
             "groupOutline": "#cccccc"
         },
         "sizes": {

@@ -967,7 +967,7 @@
         "y": 20,
         "wires": [
             [
-                "59fc6f5576bfc04c"
+                "3232d813cb29fb74"
             ]
         ]
     },
@@ -2124,6 +2124,26 @@
         "wires": [
             [
                 "4d8e754b95fe500b"
+            ]
+        ]
+    },
+    {
+        "id": "3232d813cb29fb74",
+        "type": "function",
+        "z": "6249a630e13530e8",
+        "name": "add degree",
+        "func": "msg.payload = msg.payload + \" &deg;C\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 20,
+        "wires": [
+            [
+                "59fc6f5576bfc04c"
             ]
         ]
     },

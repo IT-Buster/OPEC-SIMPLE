@@ -473,6 +473,14 @@
         "groupType": "default"
     },
     {
+        "id": "7edf4e5f51f74908",
+        "type": "prometheus-metric-config",
+        "name": "Temperatura CO",
+        "help": "tempco",
+        "labels": "Temp. CO",
+        "mtype": "gauge"
+    },
+    {
         "id": "2c8e29558bef67fc",
         "type": "function",
         "z": "1e78c2098878e540",
@@ -878,7 +886,8 @@
                 "7bab3e7370cace8d",
                 "ui_text_tempco",
                 "36418cb08ab2119c",
-                "d4be91bd69e0bf8e"
+                "d4be91bd69e0bf8e",
+                "b2f051fc031e481a"
             ],
             [
                 "8e93df1fe23a3b9b",
@@ -2196,6 +2205,16 @@
                 "d283e712b7285721"
             ]
         ]
+    },
+    {
+        "id": "b2f051fc031e481a",
+        "type": "prometheus-exporter",
+        "z": "6249a630e13530e8",
+        "name": "prom-tempco-out",
+        "metric": "7edf4e5f51f74908",
+        "x": 1110,
+        "y": 420,
+        "wires": []
     },
     {
         "id": "6f48287671bc7669",

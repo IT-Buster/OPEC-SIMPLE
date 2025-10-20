@@ -497,7 +497,6 @@
         "wires": [
             [
                 "568c2ffe47e00ceb",
-                "c03008d7c7b1400a",
                 "0e0c32ae656ae513"
             ]
         ]
@@ -518,7 +517,6 @@
         "y": 260,
         "wires": [
             [
-                "bd09d6777578e0a1",
                 "8b78f5a8abf76e4d"
             ]
         ]
@@ -538,64 +536,8 @@
         "x": 130,
         "y": 140,
         "wires": [
-            [
-                "9d6f3c55beed1de2"
-            ]
+            []
         ]
-    },
-    {
-        "id": "9d6f3c55beed1de2",
-        "type": "data-view",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "property": "payload",
-        "fieldType": "msg",
-        "width": "600",
-        "height": 160,
-        "points": "40",
-        "active": true,
-        "passthru": false,
-        "hide": true,
-        "outputs": 0,
-        "x": 870,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "c03008d7c7b1400a",
-        "type": "data-view",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "property": "payload",
-        "fieldType": "msg",
-        "width": "600",
-        "height": 160,
-        "points": "40",
-        "active": true,
-        "passthru": false,
-        "hide": true,
-        "outputs": 0,
-        "x": 870,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "bd09d6777578e0a1",
-        "type": "data-view",
-        "z": "1e78c2098878e540",
-        "name": "",
-        "property": "payload",
-        "fieldType": "msg",
-        "width": "600",
-        "height": 160,
-        "points": "40",
-        "active": true,
-        "passthru": false,
-        "hide": true,
-        "outputs": 0,
-        "x": 870,
-        "y": 560,
-        "wires": []
     },
     {
         "id": "a3d43e6609be7e87",

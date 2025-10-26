@@ -1045,7 +1045,8 @@
         "y": 120,
         "wires": [
             [
-                "29f8b1082c88b1b8"
+                "29f8b1082c88b1b8",
+                "5a09f37e6af9c44f"
             ]
         ]
     },
@@ -2100,8 +2101,8 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 1100,
-        "y": 220,
+        "x": 1180,
+        "y": 200,
         "wires": []
     },
     {
@@ -2157,6 +2158,68 @@
         "x": 1110,
         "y": 420,
         "wires": []
+    },
+    {
+        "id": "5a09f37e6af9c44f",
+        "type": "ui-chart",
+        "z": "6249a630e13530e8",
+        "group": "03b8f32c681918ed",
+        "name": "Pozycja",
+        "label": "",
+        "order": 2,
+        "chartType": "line",
+        "category": "",
+        "categoryType": "none",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": "1",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": "6",
+        "height": "3",
+        "className": "",
+        "interpolation": "linear",
+        "x": 1180,
+        "y": 260,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "6f48287671bc7669",

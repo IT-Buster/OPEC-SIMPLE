@@ -2226,7 +2226,7 @@
         "type": "ui-switch",
         "z": "6249a630e13530e8",
         "name": "",
-        "label": "switch",
+        "label": "Pompa 2",
         "group": "484d649bdd92edf9",
         "order": 0,
         "width": 0,
@@ -2247,7 +2247,7 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 1010,
+        "x": 1020,
         "y": 640,
         "wires": [
             []
@@ -2258,7 +2258,7 @@
         "type": "ui-switch",
         "z": "6249a630e13530e8",
         "name": "",
-        "label": "switch",
+        "label": "Pompa 5",
         "group": "484d649bdd92edf9",
         "order": 0,
         "width": 0,
@@ -2279,7 +2279,7 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 1010,
+        "x": 1020,
         "y": 700,
         "wires": [
             []

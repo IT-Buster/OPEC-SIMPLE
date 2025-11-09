@@ -2247,11 +2247,11 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 920,
+        "x": 880,
         "y": 640,
         "wires": [
             [
-                "d7122f60bf27a8f4"
+                "45f154418e957694"
             ]
         ]
     },
@@ -2281,11 +2281,11 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 920,
+        "x": 880,
         "y": 720,
         "wires": [
             [
-                "b723cd8d4c56d6d5"
+                "629e6d9094c9254f"
             ]
         ]
     },
@@ -2306,7 +2306,7 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 1250,
+        "x": 1290,
         "y": 640,
         "wires": [
             [],
@@ -2330,7 +2330,7 @@
         "keepMsgProperties": false,
         "delayOnStart": false,
         "startDelayTime": "",
-        "x": 1250,
+        "x": 1290,
         "y": 720,
         "wires": [
             [],
@@ -2368,6 +2368,46 @@
         "x": 1100,
         "y": 820,
         "wires": []
+    },
+    {
+        "id": "45f154418e957694",
+        "type": "function",
+        "z": "6249a630e13530e8",
+        "name": "function 5",
+        "func": "if (msg.payload === true) {\n    msg.payload = 1;\n} else if (msg.payload === false) {\n    msg.payload = 0;\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 640,
+        "wires": [
+            [
+                "d7122f60bf27a8f4"
+            ]
+        ]
+    },
+    {
+        "id": "629e6d9094c9254f",
+        "type": "function",
+        "z": "6249a630e13530e8",
+        "name": "function 6",
+        "func": "if (msg.payload === true) {\n    msg.payload = 1;\n} else if (msg.payload === false) {\n    msg.payload = 0;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 720,
+        "wires": [
+            [
+                "b723cd8d4c56d6d5"
+            ]
+        ]
     },
     {
         "id": "6f48287671bc7669",

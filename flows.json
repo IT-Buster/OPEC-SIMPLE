@@ -2247,10 +2247,12 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 1020,
+        "x": 920,
         "y": 640,
         "wires": [
-            []
+            [
+                "d7122f60bf27a8f4"
+            ]
         ]
     },
     {
@@ -2279,11 +2281,93 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 1020,
-        "y": 700,
+        "x": 920,
+        "y": 720,
         "wires": [
+            [
+                "b723cd8d4c56d6d5"
+            ]
+        ]
+    },
+    {
+        "id": "9284c8fbfce82e49",
+        "type": "modbus-write",
+        "z": "6249a630e13530e8",
+        "name": "Y02",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "Coil",
+        "adr": "2",
+        "quantity": "1",
+        "server": "2a13aec920287264",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 1250,
+        "y": 640,
+        "wires": [
+            [],
             []
         ]
+    },
+    {
+        "id": "8cf2c1fa92fa501f",
+        "type": "modbus-write",
+        "z": "6249a630e13530e8",
+        "name": "Y03",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "Coil",
+        "adr": "3",
+        "quantity": "1",
+        "server": "2a13aec920287264",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 1250,
+        "y": 720,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d7122f60bf27a8f4",
+        "type": "debug",
+        "z": "6249a630e13530e8",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "b723cd8d4c56d6d5",
+        "type": "debug",
+        "z": "6249a630e13530e8",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 820,
+        "wires": []
     },
     {
         "id": "6f48287671bc7669",

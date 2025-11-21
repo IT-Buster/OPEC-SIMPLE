@@ -822,7 +822,8 @@
         "wires": [
             [
                 "29303f6b47338634",
-                "ui_text_tempzew"
+                "ui_text_tempzew",
+                "d1e4ca8a99ad4d7c"
             ],
             [
                 "7bab3e7370cace8d",
@@ -2410,6 +2411,30 @@
                 "8cf2c1fa92fa501f"
             ]
         ]
+    },
+    {
+        "id": "d1e4ca8a99ad4d7c",
+        "type": "ui-text",
+        "z": "6249a630e13530e8",
+        "group": "6c5b1f1ebc002deb",
+        "order": 1,
+        "width": "4",
+        "height": 1,
+        "name": "Temp Zew",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 710,
+        "y": 600,
+        "wires": []
     },
     {
         "id": "6f48287671bc7669",

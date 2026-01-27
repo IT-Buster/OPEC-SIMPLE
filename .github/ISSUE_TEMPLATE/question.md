@@ -2,7 +2,7 @@
 name: Pytanie / Question
 about: Zadaj pytanie dotyczące projektu / Ask a question about the project
 title: '[Pytanie] '
-labels: question
+labels: pytanie
 assignees: ''
 
 ---

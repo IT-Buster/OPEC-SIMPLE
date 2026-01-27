@@ -41,7 +41,7 @@ Moja konfiguracja:
 - Prędkość transmisji: 115200
 
 Komunikat błędu:
-[błąd]
+Error: EACCES: Permission denied, cannot access '/dev/ttyUSB0'
 
 Co próbowałem:
 - Sprawdziłem uprawnienia do /dev/ttyUSB0

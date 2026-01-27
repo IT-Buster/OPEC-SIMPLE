@@ -29,7 +29,7 @@ Aby zadać pytanie lub uzyskać pomoc:
 
 1. Sklonuj repozytorium
 2. Zainstaluj zależności: `npm install`
-3. Skonfiguruj Node-RED zgodnie z ustawieniami w `package.json`
+3. Uruchom Node-RED i zaimportuj przepływy z pliku `flows.json`
 
 ### Wymagania
 

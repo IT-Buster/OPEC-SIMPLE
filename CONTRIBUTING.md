@@ -48,7 +48,7 @@ Masz pomysł na nową funkcję?
 OPEC-SIMPLE to projekt Node-RED do prostego sterowania siłownikiem. Używa:
 - Node-RED Dashboard do interfejsu użytkownika
 - Modbus do komunikacji
-- Kontroli termostatu
+- Kontrola termostatu
 
 ---
 
